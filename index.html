@@ -191,10 +191,9 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 80px}
     border-radius:20px 20px 0 0;
     height:85vh !important;
     max-height:85vh !important;
-    transform:translateY(100%) !important;
+    transform:none !important;
   }
   .chat-window.open{
-    transform:translateY(0) !important;
     opacity:1 !important;
     pointer-events:all !important;
   }
@@ -563,7 +562,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 80px}
   <div class="chat-btn-inner" id="chatIcon"><i class="fa-solid fa-comment-dots" style="font-size:26px;color:var(--gold)"></i></div>
   <div class="chat-badge" id="chatBadge">1</div>
 </div>
-<div class="chat-window" id="chatWindow" style="position:relative">
+<div class="chat-window" id="chatWindow">
 
 <!-- HS PANEL -->
 <div id="hsPanel" style="display:none;position:absolute;inset:0;background:#fff;z-index:10;flex-direction:column;border-radius:20px;overflow:hidden">
