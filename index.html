@@ -209,6 +209,19 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 80px}
   .lang-switcher{gap:3px}
   .lang-btn{padding:4px 7px;font-size:11px}
 }
+
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.news-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(13,31,60,.08);transition:.2s;cursor:pointer}
+.news-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(13,31,60,.14)}
+.news-img{height:160px;background:linear-gradient(135deg,var(--navy),#1a3a6c);display:flex;align-items:center;justify-content:center;font-size:48px}
+.news-body{padding:20px}
+.news-tag{display:inline-block;background:rgba(200,169,110,.15);color:var(--gold2);font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;margin-bottom:10px;text-transform:uppercase;letter-spacing:.5px}
+.news-title{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:8px;line-height:1.4}
+.news-date{font-size:12px;color:#999;margin-bottom:10px}
+.news-excerpt{font-size:13px;color:#666;line-height:1.5}
+.news-read{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:13px;font-weight:600;color:var(--gold2);text-decoration:none}
+@media(max-width:768px){.news-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -224,6 +237,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 80px}
       <a href="#how" data-i18n="nav_how">Как работаем</a>
       <a href="#why" data-i18n="nav_why">О нас</a>
       <a href="#faq">FAQ</a>
+      <a href="#news" data-i18n="nav_news">Новости</a>
       <a href="#contact" class="nav-cta" data-i18n="nav_cta">Консультация</a>
     </div>
     <div style="display:flex;align-items:center;gap:8px">
@@ -379,6 +393,51 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 80px}
   </div>
 </section>
 
+<section class="section" id="news">
+  <div class="section-inner">
+    <div class="section-label" data-i18n="news_label">Актуально</div>
+    <h2 class="section-title" data-i18n="news_title">Новости таможни и перевозок</h2>
+    <p class="section-sub" data-i18n="news_sub">Изменения в законодательстве, ставки пошлин, практические советы импортёрам</p>
+    <div class="news-grid" id="newsGrid">
+
+      <div class="news-card">
+        <div class="news-img"><i class="fa-solid fa-truck-fast" style="color:var(--gold)"></i></div>
+        <div class="news-body">
+          <span class="news-tag" data-i18n="ntag_customs">Таможня</span>
+          <div class="news-date">10 июня 2025</div>
+          <div class="news-title" data-i18n="n1_title">Новые правила ввоза товаров из Китая через Грузию</div>
+          <div class="news-excerpt" data-i18n="n1_text">Служба доходов Грузии обновила процедуру декларирования грузов из КНР: расширен перечень товаров, требующих сертификата происхождения.</div>
+          <a href="#contact" class="news-read" data-i18n="news_read"><i class="fa-solid fa-arrow-right"></i> Подробнее</a>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <div class="news-img"><i class="fa-solid fa-ship" style="color:var(--gold)"></i></div>
+        <div class="news-body">
+          <span class="news-tag" data-i18n="ntag_port">Порт Поти</span>
+          <div class="news-date">28 мая 2025</div>
+          <div class="news-title" data-i18n="n2_title">СЭЗ Поти: обновлённые условия для резидентов 2025</div>
+          <div class="news-excerpt" data-i18n="n2_text">Свободная индустриальная зона Поти расширила список разрешённых видов деятельности. Нулевой НДС и нулевая пошлина сохраняются.</div>
+          <a href="#contact" class="news-read" data-i18n="news_read"><i class="fa-solid fa-arrow-right"></i> Подробнее</a>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <div class="news-img"><i class="fa-solid fa-file-invoice" style="color:var(--gold)"></i></div>
+        <div class="news-body">
+          <span class="news-tag" data-i18n="ntag_duty">Пошлины</span>
+          <div class="news-date">15 мая 2025</div>
+          <div class="news-title" data-i18n="n3_title">Изменение ставок акциза на автомобили: что важно знать</div>
+          <div class="news-excerpt" data-i18n="n3_text">С июня 2025 года акцизный налог на ввоз автомобилей старше 8 лет вырос. Рассчитайте стоимость ввоза до подачи декларации.</div>
+          <a href="#contact" class="news-read" data-i18n="news_read"><i class="fa-solid fa-arrow-right"></i> Подробнее</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
@@ -481,11 +540,12 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 80px}
 // ─── TRANSLATIONS ───
 const LANGS = {
   ru: {
-    nav_services:'Услуги', nav_how:'Как работаем', nav_why:'О нас', nav_cta:'Консультация',
+    nav_services:'Услуги', nav_how:'Как работаем', nav_why:'О нас', nav_news:'Новости', nav_cta:'Консультация',
     hero_badge:'Работаем 24/7 · Ответ за 30 минут',
     hero_title:'Таможенный брокер<br>в <span>Грузии</span> — быстро,<br>без ошибок и лишних затрат',
     hero_desc:'Растаможка, сертификация, консультации. Работаем с импортёрами из России, Турции, Китая и Европы. AI-консультант онлайн — ответит сразу.',
     hero_btn1:"Спросить Ану · Бесплатно", hero_btn2:"Получить КП",
+    news_label:'Актуально', news_title:'Новости таможни и перевозок', news_sub:'Изменения в законодательстве, ставки пошлин, практические советы импортёрам', news_read:'Подробнее', ntag_customs:'Таможня', ntag_port:'Порт Поти', ntag_duty:'Пошлины', n1_title:'Новые правила ввоза товаров из Китая через Грузию', n1_text:'Служба доходов Грузии обновила процедуру декларирования грузов из КНР: расширен перечень товаров, требующих сертификата происхождения.', n2_title:'СЭЗ Поти: обновлённые условия для резидентов 2025', n2_text:'Свободная индустриальная зона Поти расширила список разрешённых видов деятельности. Нулевой НДС и нулевая пошлина сохраняются.', n3_title:'Изменение ставок акциза на автомобили: что важно знать', n3_text:'С июня 2025 года акцизный налог на ввоз автомобилей старше 8 лет вырос. Рассчитайте стоимость ввоза до подачи декларации.',
     stat1:'Грузов оформлено', stat2:'Лет на рынке', stat3:'AI-поддержка',
     card_title:'Наши услуги',
     svc1_name:'Таможенное оформление', svc1_sub:'Импорт, экспорт, транзит',
@@ -541,11 +601,12 @@ const LANGS = {
     ph_name:'Имя Фамилия', form_sent:'✅ Заявка принята!',
   },
   ge: {
-    nav_services:'სერვისები', nav_how:'გამოცდილება', nav_why:'ჩვენს შესახებ', nav_cta:'კონსულტაცია',
+    nav_services:'სერვისები', nav_how:'გამოცდილება', nav_why:'ჩვენს შესახებ', nav_news:'სიახლეები', nav_cta:'კონსულტაცია',
     hero_badge:'ვმუშაობთ 24/7 · პასუხი 30 წუთში',
     hero_title:'საბაჟო ბროკერი<br><span>საქართველოში</span> — სწრაფად<br>და ჯარიმების გარეშე',
     hero_desc:'განბაჟება, სერტიფიცირება, კონსულტაციები. ვმუშაობთ რუსეთის, თურქეთის, ჩინეთისა და ევროპის იმპორტიორებთან. AI-კონსულტანტი ონლაინ.',
     hero_btn1:"ანას დასვი კითხვა · უფასოდ", hero_btn2:"კომ. წინადადება",
+    news_label:'სიახლეები', news_title:'საბაჟო და ტრანსპორტის სიახლეები', news_sub:'კანონმდებლობის ცვლილებები, საბაჟო განაკვეთები, პრაქტიკული რჩევები', news_read:'დეტალურად', ntag_customs:'საბაჟო', ntag_port:'ფოთის პორტი', ntag_duty:'გადასახადები', n1_title:'ჩინეთიდან საქონლის შემოტანის ახალი წესები', n1_text:'საქართველოს შემოსავლების სამსახურმა განაახლა ჩინეთიდან ტვირთების დეკლარირების პროცედურა.', n2_title:'ფოთის სეზ: განახლებული პირობები 2025', n2_text:'ფოთის თავისუფალი ინდუსტრიული ზონა გააფართოვა დაშვებული საქმიანობის სია. 0% დღგ და 0% ბაჟი.', n3_title:'ავტომობილების აქციზის განაკვეთების ცვლილება', n3_text:'2025 წლის ივნისიდან 8 წელზე ძველ მანქანებზე აქციზი გაიზარდა.',
     stat1:'დამუშავებული ტვირთი', stat2:'წელი ბაზარზე', stat3:'AI-მხარდაჭერა',
     card_title:'ჩვენი სერვისები',
     svc1_name:'საბაჟო გაფორმება', svc1_sub:'იმპორტი, ექსპორტი, ტრანზიტი',
@@ -601,11 +662,12 @@ const LANGS = {
     ph_name:'სახელი გვარი', form_sent:'✅ მოთხოვნა მიღებულია!',
   },
   en: {
-    nav_services:'Services', nav_how:'Process', nav_why:'About', nav_cta:'Get Consultation',
+    nav_services:'Services', nav_how:'Process', nav_why:'About', nav_news:'News', nav_cta:'Get Consultation',
     hero_badge:'Available 24/7 · Reply within 30 minutes',
     hero_title:'Customs Broker<br>in <span>Georgia</span> — Fast,<br>Accurate & Cost-Effective',
     hero_desc:'Customs clearance, certification, consultations. We work with importers from Russia, Turkey, China & Europe. AI consultant online — answers instantly.',
     hero_btn1:"Ask Ana · Free", hero_btn2:"Get a Quote",
+    news_label:'Latest', news_title:'Customs & Logistics News', news_sub:'Legislative updates, duty rates, practical advice for importers', news_read:'Read more', ntag_customs:'Customs', ntag_port:'Poti Port', ntag_duty:'Duties', n1_title:'New Rules for Importing Goods from China via Georgia', n1_text:'Georgia Revenue Service updated the declaration procedure for shipments from China, expanding the list of goods requiring certificates of origin.', n2_title:'Poti FIZ: Updated Conditions for Residents 2025', n2_text:'The Free Industrial Zone of Poti expanded the list of permitted activities. Zero VAT and zero customs duty remain.', n3_title:'Car Excise Tax Changes: What Importers Should Know', n3_text:'From June 2025, excise tax on vehicles older than 8 years has increased. Calculate import costs before filing a declaration.',
     stat1:'Shipments cleared', stat2:'Years on market', stat3:'AI support',
     card_title:'Our Services',
     svc1_name:'Customs Clearance', svc1_sub:'Import, export, transit',
