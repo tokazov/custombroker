@@ -6,6 +6,7 @@
 <title>Custom Broker Georgia — Customs Broker in Georgia</title>
 <meta name="description" content="Professional customs services in Georgia. Clearance, certification, 24/7 AI consultant.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -15,6 +16,8 @@ body{font-family:'Inter',sans-serif;color:var(--text);background:#fff;overflow-x
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,31,60,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(200,169,110,.15)}
 .nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:68px}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.fa-icon{display:inline-flex;align-items:center;justify-content:center;}
+.sc-icon i,.hc-icon i,.wf-icon i,.ci-icon i,.step-icon i{font-size:inherit}
 .logo-icon{width:38px;height:38px;background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px}
 .logo-text{color:#fff;font-weight:700;font-size:17px;line-height:1.2}
 .logo-sub{color:var(--gold);font-size:11px;font-weight:400;display:block}
@@ -196,7 +199,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 32px}
 <nav>
   <div class="nav-inner">
     <a href="#" class="logo">
-      <div class="logo-icon">🛃</div>
+      <div class="logo-icon"><i class="fa-solid fa-shield-halved" style="color:var(--navy);font-size:18px"></i></div>
       <div class="logo-text">CustomBroker<span class="logo-sub">Georgia</span></div>
     </a>
     <div class="nav-links" id="navLinks">
@@ -226,8 +229,8 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 32px}
       <h1 data-i18n-html="hero_title">Таможенный брокер<br>в <span>Грузии</span> — быстро,<br>без ошибок и лишних затрат</h1>
       <p class="hero-desc" data-i18n="hero_desc">Растаможка, сертификация, консультации. Работаем с импортёрами из России, Турции, Китая и Европы. AI-консультант онлайн — ответит сразу.</p>
       <div class="hero-btns">
-        <button class="btn-primary" onclick="openChat()" data-i18n="hero_btn1">💬 Спросить Ану · Бесплатно</button>
-        <a href="#contact" class="btn-outline" data-i18n="hero_btn2">📋 Получить КП</a>
+        <button class="btn-primary" onclick="openChat()" data-i18n="hero_btn1"><i class="fa-solid fa-comment-dots"></i> Спросить Ану · Бесплатно</button>
+        <a href="#contact" class="btn-outline" data-i18n="hero_btn2"><i class="fa-solid fa-file-lines"></i> Получить КП</a>
       </div>
       <div class="hero-stats">
         <div class="stat"><div class="stat-num">1200+</div><div class="stat-label" data-i18n="stat1">Грузов оформлено</div></div>
@@ -238,11 +241,11 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 32px}
     <div class="hero-visual">
       <div class="hero-card">
         <div class="hc-title" data-i18n="card_title">Наши услуги</div>
-        <div class="hc-service"><div class="hc-icon">🚢</div><div><div class="hc-name" data-i18n="svc1_name">Таможенное оформление</div><div class="hc-sub" data-i18n="svc1_sub">Импорт, экспорт, транзит</div></div><div class="hc-badge" data-i18n="badge_pop">Популярно</div></div>
-        <div class="hc-service"><div class="hc-icon">📜</div><div><div class="hc-name" data-i18n="svc2_name">Сертификация</div><div class="hc-sub" data-i18n="svc2_sub">GOST, CE, местные нормы</div></div><div class="hc-badge" data-i18n="badge_fast">Быстро</div></div>
-        <div class="hc-service"><div class="hc-icon">🔍</div><div><div class="hc-name" data-i18n="svc3_name">Классификация HS-кодов</div><div class="hc-sub" data-i18n="svc3_sub">Точный расчёт пошлин</div></div></div>
-        <div class="hc-service"><div class="hc-icon">🏭</div><div><div class="hc-name" data-i18n="svc4_name">СЭЗ Поти / Кутаиси</div><div class="hc-sub" data-i18n="svc4_sub">Налоговые льготы</div></div><div class="hc-badge">0% tax</div></div>
-        <div class="hc-service"><div class="hc-icon">⚖️</div><div><div class="hc-name" data-i18n="svc5_name">Споры с таможней</div><div class="hc-sub" data-i18n="svc5_sub">Защита ваших интересов</div></div></div>
+        <div class="hc-service"><div class="hc-icon"><i class="fa-solid fa-ship" style="font-size:16px;color:var(--gold)"></i></div><div><div class="hc-name" data-i18n="svc1_name">Таможенное оформление</div><div class="hc-sub" data-i18n="svc1_sub">Импорт, экспорт, транзит</div></div><div class="hc-badge" data-i18n="badge_pop">Популярно</div></div>
+        <div class="hc-service"><div class="hc-icon"><i class="fa-solid fa-certificate" style="font-size:16px;color:var(--gold)"></i></div><div><div class="hc-name" data-i18n="svc2_name">Сертификация</div><div class="hc-sub" data-i18n="svc2_sub">GOST, CE, местные нормы</div></div><div class="hc-badge" data-i18n="badge_fast">Быстро</div></div>
+        <div class="hc-service"><div class="hc-icon"><i class="fa-solid fa-barcode" style="font-size:16px;color:var(--gold)"></i></div><div><div class="hc-name" data-i18n="svc3_name">Классификация HS-кодов</div><div class="hc-sub" data-i18n="svc3_sub">Точный расчёт пошлин</div></div></div>
+        <div class="hc-service"><div class="hc-icon"><i class="fa-solid fa-industry" style="font-size:16px;color:var(--gold)"></i></div><div><div class="hc-name" data-i18n="svc4_name">СЭЗ Поти / Кутаиси</div><div class="hc-sub" data-i18n="svc4_sub">Налоговые льготы</div></div><div class="hc-badge">0% tax</div></div>
+        <div class="hc-service"><div class="hc-icon"><i class="fa-solid fa-scale-balanced" style="font-size:16px;color:var(--gold)"></i></div><div><div class="hc-name" data-i18n="svc5_name">Споры с таможней</div><div class="hc-sub" data-i18n="svc5_sub">Защита ваших интересов</div></div></div>
       </div>
     </div>
   </div>
@@ -254,12 +257,12 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 32px}
     <div class="section-title" data-i18n="sec_services_title">Полный спектр таможенных услуг</div>
     <div class="section-desc" data-i18n="sec_services_desc">От расчёта пошлин до получения груза — берём на себя все этапы оформления.</div>
     <div class="services-grid">
-      <div class="service-card"><div class="sc-icon">🚢</div><div class="sc-tag" data-i18n="sc1_tag">Основное</div><div class="sc-title" data-i18n="sc1_title">Таможенное оформление</div><div class="sc-desc" data-i18n="sc1_desc">Полное сопровождение груза через таможню Грузии. Декларирование, расчёт пошлин, подача документов. Работаем с любыми товарами.</div></div>
-      <div class="service-card"><div class="sc-icon">📊</div><div class="sc-tag" data-i18n="sc2_tag">Точность</div><div class="sc-title" data-i18n="sc2_title">Классификация и HS-коды</div><div class="sc-desc" data-i18n="sc2_desc">Правильная классификация товара = минимальная ставка пошлины. Наши эксперты найдут оптимальный HS-код для вашего груза.</div></div>
-      <div class="service-card"><div class="sc-icon">📜</div><div class="sc-tag" data-i18n="sc3_tag">Документы</div><div class="sc-title" data-i18n="sc3_title">Сертификация товаров</div><div class="sc-desc" data-i18n="sc3_desc">Получение разрешений, сертификатов соответствия, фитосанитарных и ветеринарных заключений для ввоза товаров в Грузию.</div></div>
-      <div class="service-card"><div class="sc-icon">🏭</div><div class="sc-tag" data-i18n="sc4_tag">Льготы</div><div class="sc-title" data-i18n="sc4_title">Регистрация в СЭЗ</div><div class="sc-desc" data-i18n="sc4_desc">Специальные экономические зоны Поти и Кутаиси: 0% НДС, 0% пошлин для реэкспорта. Поможем зарегистрироваться и начать работу.</div></div>
-      <div class="service-card"><div class="sc-icon">🚛</div><div class="sc-tag" data-i18n="sc5_tag">Транзит</div><div class="sc-title" data-i18n="sc5_title">Транзитное оформление</div><div class="sc-desc" data-i18n="sc5_desc">Грузия — ключевой транзитный коридор между Европой и Азией. Оформляем транзит через все КПП: Красный Мост, Садахло, Карцахи.</div></div>
-      <div class="service-card"><div class="sc-icon">⚖️</div><div class="sc-tag" data-i18n="sc6_tag">Защита</div><div class="sc-title" data-i18n="sc6_title">Споры и апелляции</div><div class="sc-desc" data-i18n="sc6_desc">Оспариваем решения таможни, помогаем при задержаниях и штрафах. Представляем интересы клиента в Службе доходов Грузии.</div></div>
+      <div class="service-card"><div class="sc-icon"><i class="fa-solid fa-ship" style="font-size:22px;color:var(--gold)"></i></div><div class="sc-tag" data-i18n="sc1_tag">Основное</div><div class="sc-title" data-i18n="sc1_title">Таможенное оформление</div><div class="sc-desc" data-i18n="sc1_desc">Полное сопровождение груза через таможню Грузии. Декларирование, расчёт пошлин, подача документов. Работаем с любыми товарами.</div></div>
+      <div class="service-card"><div class="sc-icon"><i class="fa-solid fa-barcode" style="font-size:22px;color:var(--gold)"></i></div><div class="sc-tag" data-i18n="sc2_tag">Точность</div><div class="sc-title" data-i18n="sc2_title">Классификация и HS-коды</div><div class="sc-desc" data-i18n="sc2_desc">Правильная классификация товара = минимальная ставка пошлины. Наши эксперты найдут оптимальный HS-код для вашего груза.</div></div>
+      <div class="service-card"><div class="sc-icon"><i class="fa-solid fa-certificate" style="font-size:22px;color:var(--gold)"></i></div><div class="sc-tag" data-i18n="sc3_tag">Документы</div><div class="sc-title" data-i18n="sc3_title">Сертификация товаров</div><div class="sc-desc" data-i18n="sc3_desc">Получение разрешений, сертификатов соответствия, фитосанитарных и ветеринарных заключений для ввоза товаров в Грузию.</div></div>
+      <div class="service-card"><div class="sc-icon"><i class="fa-solid fa-industry" style="font-size:22px;color:var(--gold)"></i></div><div class="sc-tag" data-i18n="sc4_tag">Льготы</div><div class="sc-title" data-i18n="sc4_title">Регистрация в СЭЗ</div><div class="sc-desc" data-i18n="sc4_desc">Специальные экономические зоны Поти и Кутаиси: 0% НДС, 0% пошлин для реэкспорта. Поможем зарегистрироваться и начать работу.</div></div>
+      <div class="service-card"><div class="sc-icon"><i class="fa-solid fa-truck-moving" style="font-size:22px;color:var(--gold)"></i></div><div class="sc-tag" data-i18n="sc5_tag">Транзит</div><div class="sc-title" data-i18n="sc5_title">Транзитное оформление</div><div class="sc-desc" data-i18n="sc5_desc">Грузия — ключевой транзитный коридор между Европой и Азией. Оформляем транзит через все КПП: Красный Мост, Садахло, Карцахи.</div></div>
+      <div class="service-card"><div class="sc-icon"><i class="fa-solid fa-scale-balanced" style="font-size:22px;color:var(--gold)"></i></div><div class="sc-tag" data-i18n="sc6_tag">Защита</div><div class="sc-title" data-i18n="sc6_title">Споры и апелляции</div><div class="sc-desc" data-i18n="sc6_desc">Оспариваем решения таможни, помогаем при задержаниях и штрафах. Представляем интересы клиента в Службе доходов Грузии.</div></div>
     </div>
   </div>
 </section>
@@ -286,12 +289,12 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 32px}
         <div class="section-title" data-i18n="sec_why_title">Почему выбирают нас</div>
         <div class="section-desc" data-i18n="sec_why_desc">8 лет работы на таможне Грузии. Знаем все нюансы — от документов до неформальных правил.</div>
         <div class="why-features">
-          <div class="why-feat"><div class="wf-icon">⚡</div><div><div class="wf-title" data-i18n="feat1_t">Скорость</div><div class="wf-desc" data-i18n="feat1_d">Оформление от 1 дня. Срочные случаи — в день обращения.</div></div></div>
-          <div class="why-feat"><div class="wf-icon">💰</div><div><div class="wf-title" data-i18n="feat2_t">Экономия</div><div class="wf-desc" data-i18n="feat2_d">Оптимизируем HS-коды: снижаем пошлины легально.</div></div></div>
-          <div class="why-feat"><div class="wf-icon">🔒</div><div><div class="wf-title" data-i18n="feat3_t">Надёжность</div><div class="wf-desc" data-i18n="feat3_d">0 штрафов по нашей вине за 8 лет работы.</div></div></div>
-          <div class="why-feat"><div class="wf-icon">🌍</div><div><div class="wf-title" data-i18n="feat4_t">Все страны</div><div class="wf-desc" data-i18n="feat4_d">Работаем с Китаем, Турцией, ЕС, СНГ, Ираном.</div></div></div>
-          <div class="why-feat"><div class="wf-icon">🤖</div><div><div class="wf-title" data-i18n="feat5_t">AI 24/7</div><div class="wf-desc" data-i18n="feat5_d">Консультант Ана ответит в любое время ночи.</div></div></div>
-          <div class="why-feat"><div class="wf-icon">📱</div><div><div class="wf-title" data-i18n="feat6_t">Прозрачность</div><div class="wf-desc" data-i18n="feat6_d">Отслеживаете статус груза в реальном времени.</div></div></div>
+          <div class="why-feat"><div class="wf-icon"><i class="fa-solid fa-bolt" style="font-size:18px;color:var(--gold)"></i></div><div><div class="wf-title" data-i18n="feat1_t">Скорость</div><div class="wf-desc" data-i18n="feat1_d">Оформление от 1 дня. Срочные случаи — в день обращения.</div></div></div>
+          <div class="why-feat"><div class="wf-icon"><i class="fa-solid fa-circle-dollar-to-slot" style="font-size:18px;color:var(--gold)"></i></div><div><div class="wf-title" data-i18n="feat2_t">Экономия</div><div class="wf-desc" data-i18n="feat2_d">Оптимизируем HS-коды: снижаем пошлины легально.</div></div></div>
+          <div class="why-feat"><div class="wf-icon"><i class="fa-solid fa-lock" style="font-size:18px;color:var(--gold)"></i></div><div><div class="wf-title" data-i18n="feat3_t">Надёжность</div><div class="wf-desc" data-i18n="feat3_d">0 штрафов по нашей вине за 8 лет работы.</div></div></div>
+          <div class="why-feat"><div class="wf-icon"><i class="fa-solid fa-earth-europe" style="font-size:18px;color:var(--gold)"></i></div><div><div class="wf-title" data-i18n="feat4_t">Все страны</div><div class="wf-desc" data-i18n="feat4_d">Работаем с Китаем, Турцией, ЕС, СНГ, Ираном.</div></div></div>
+          <div class="why-feat"><div class="wf-icon"><i class="fa-solid fa-robot" style="font-size:18px;color:var(--gold)"></i></div><div><div class="wf-title" data-i18n="feat5_t">AI 24/7</div><div class="wf-desc" data-i18n="feat5_d">Консультант Ана ответит в любое время ночи.</div></div></div>
+          <div class="why-feat"><div class="wf-icon"><i class="fa-solid fa-chart-line" style="font-size:18px;color:var(--gold)"></i></div><div><div class="wf-title" data-i18n="feat6_t">Прозрачность</div><div class="wf-desc" data-i18n="feat6_d">Отслеживаете статус груза в реальном времени.</div></div></div>
         </div>
       </div>
       <div class="why-visual">
@@ -331,14 +334,14 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 32px}
         <div class="section-title" data-i18n="sec_contact_title">Получите консультацию</div>
         <div class="section-desc" data-i18n="sec_contact_desc">Ответим в течение 30 минут в рабочее время. Или спросите AI-консультанта Ану прямо сейчас — бесплатно.</div>
         <div class="contact-info">
-          <div class="ci-item"><div class="ci-icon">📍</div><div><div class="ci-label" data-i18n="ci_office">Офис</div><div class="ci-val">Тбилиси, ул. Руставели 12</div></div></div>
-          <div class="ci-item"><div class="ci-icon">📞</div><div><div class="ci-label" data-i18n="ci_phone">Телефон / WhatsApp</div><div class="ci-val">+995 32 XXX XX XX</div></div></div>
-          <div class="ci-item"><div class="ci-icon">✉️</div><div><div class="ci-label">Email</div><div class="ci-val">info@custombroker.ge</div></div></div>
-          <div class="ci-item"><div class="ci-icon">🕐</div><div><div class="ci-label" data-i18n="ci_hours">Рабочее время</div><div class="ci-val" data-i18n="ci_hours_val">Пн-Пт 9:00–18:00 · AI 24/7</div></div></div>
+          <div class="ci-item"><div class="ci-icon"><i class="fa-solid fa-location-dot" style="font-size:18px;color:var(--gold)"></i></div><div><div class="ci-label" data-i18n="ci_office">Офис</div><div class="ci-val">Тбилиси, ул. Руставели 12</div></div></div>
+          <div class="ci-item"><div class="ci-icon"><i class="fa-solid fa-phone" style="font-size:18px;color:var(--gold)"></i></div><div><div class="ci-label" data-i18n="ci_phone">Телефон / WhatsApp</div><div class="ci-val">+995 32 XXX XX XX</div></div></div>
+          <div class="ci-item"><div class="ci-icon"><i class="fa-solid fa-envelope" style="font-size:18px;color:var(--gold)"></i></div><div><div class="ci-label">Email</div><div class="ci-val">info@custombroker.ge</div></div></div>
+          <div class="ci-item"><div class="ci-icon"><i class="fa-solid fa-clock" style="font-size:18px;color:var(--gold)"></i></div><div><div class="ci-label" data-i18n="ci_hours">Рабочее время</div><div class="ci-val" data-i18n="ci_hours_val">Пн-Пт 9:00–18:00 · AI 24/7</div></div></div>
         </div>
       </div>
       <div class="contact-form">
-        <div class="form-title" data-i18n="form_title">📋 Запрос на оформление</div>
+        <div class="form-title" data-i18n="form_title">Запрос на оформление</div>
         <div class="form-row">
           <div class="form-group"><label data-i18n="form_name">Ваше имя</label><input type="text" id="fname" data-i18n-ph="ph_name" placeholder="Имя Фамилия"></div>
           <div class="form-group"><label data-i18n="form_phone">Телефон / WhatsApp</label><input type="tel" placeholder="+995..."></div>
@@ -363,7 +366,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 32px}
   <div class="footer-inner">
     <div class="footer-top">
       <div>
-        <a href="#" class="logo"><div class="logo-icon">🛃</div><div class="logo-text" style="color:#fff">CustomBroker<span class="logo-sub" style="color:var(--gold)">Georgia</span></div></a>
+        <a href="#" class="logo"><div class="logo-icon"><i class="fa-solid fa-shield-halved" style="color:var(--navy);font-size:18px"></i></div><div class="logo-text" style="color:#fff">CustomBroker<span class="logo-sub" style="color:var(--gold)">Georgia</span></div></a>
         <p class="footer-desc" data-i18n="footer_desc">Профессиональные таможенные услуги в Грузии. Работаем с 2016 года. Более 1200 успешных оформлений.</p>
       </div>
       <div class="footer-col">
@@ -376,11 +379,11 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 32px}
       </div>
       <div class="footer-col">
         <h4 data-i18n="footer_contacts">Контакты</h4>
-        <a href="#">📍 Тбилиси, Руставели 12</a>
-        <a href="#">📞 +995 32 XXX XX XX</a>
-        <a href="#">✉️ info@custombroker.ge</a>
-        <a href="#">💬 Telegram</a>
-        <a href="#">🟢 WhatsApp</a>
+        <a href="#"><i class="fa-solid fa-location-dot"></i> Тбилиси, Руставели 12</a>
+        <a href="#"><i class="fa-solid fa-phone"></i> +995 32 XXX XX XX</a>
+        <a href="#"><i class="fa-solid fa-envelope"></i> info@custombroker.ge</a>
+        <a href="#"><i class="fa-brands fa-telegram"></i> Telegram</a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -392,12 +395,12 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 32px}
 
 <!-- CHAT -->
 <div class="chat-btn" onclick="toggleChat()" id="chatBtn">
-  <div class="chat-btn-inner" id="chatIcon">👩‍💼</div>
+  <div class="chat-btn-inner" id="chatIcon"><i class="fa-solid fa-comment-dots" style="font-size:26px;color:var(--gold)"></i></div>
   <div class="chat-badge" id="chatBadge">1</div>
 </div>
 <div class="chat-window" id="chatWindow">
   <div class="chat-header">
-    <div class="chat-avatar">👩‍💼</div>
+    <div class="chat-avatar"><i class="fa-solid fa-user-tie" style="font-size:20px;color:var(--navy)"></i></div>
     <div>
       <div class="chat-agent-name" id="agentName">Ана · Таможенный эксперт</div>
       <div class="chat-agent-status" data-i18n="chat_status">Онлайн · отвечает мгновенно</div>
@@ -406,7 +409,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 32px}
   </div>
   <div class="chat-messages" id="chatMessages">
     <div class="msg bot">
-      <div class="msg-avatar">👩‍💼</div>
+      <div class="msg-avatar"><i class="fa-solid fa-user-tie" style="font-size:13px;color:var(--navy)"></i></div>
       <div>
         <div class="msg-bubble" id="welcomeMsg">Привет! Я Ана, AI-консультант по таможне Грузии 🇬🇪<br><br>Помогу рассчитать пошлины, разобраться с документами или объяснить процедуры. Спрашивайте!</div>
         <div class="msg-time">сейчас</div>
@@ -433,7 +436,7 @@ const LANGS = {
     hero_badge:'Работаем 24/7 · Ответ за 30 минут',
     hero_title:'Таможенный брокер<br>в <span>Грузии</span> — быстро,<br>без ошибок и лишних затрат',
     hero_desc:'Растаможка, сертификация, консультации. Работаем с импортёрами из России, Турции, Китая и Европы. AI-консультант онлайн — ответит сразу.',
-    hero_btn1:'💬 Спросить Ану · Бесплатно', hero_btn2:'📋 Получить КП',
+    hero_btn1:'<i class="fa-solid fa-comment-dots"></i> Спросить Ану · Бесплатно', hero_btn2:'<i class="fa-solid fa-file-lines"></i> Получить КП',
     stat1:'Грузов оформлено', stat2:'Лет на рынке', stat3:'AI-поддержка',
     card_title:'Наши услуги',
     svc1_name:'Таможенное оформление', svc1_sub:'Импорт, экспорт, транзит',
@@ -474,7 +477,7 @@ const LANGS = {
     faq6_q:'Что делать, если груз задержала таможня?', faq6_a:'Пишите в чат — реагируем в течение часа. Готовим ответ или апелляцию. В большинстве случаев решаем без штрафов.',
     sec_contact_tag:'Связь', sec_contact_title:'Получите консультацию', sec_contact_desc:'Ответим в течение 30 минут. Или спросите AI-консультанта Ану прямо сейчас — бесплатно.',
     ci_office:'Офис', ci_phone:'Телефон / WhatsApp', ci_hours:'Рабочее время', ci_hours_val:'Пн-Пт 9:00–18:00 · AI 24/7',
-    form_title:'📋 Запрос на оформление', form_name:'Ваше имя', form_phone:'Телефон / WhatsApp',
+    form_title:'Запрос на оформление', form_name:'Ваше имя', form_phone:'Телефон / WhatsApp',
     form_from:'Откуда везёте груз', form_choose:'— Выберите страну —', form_other:'Другая страна',
     form_goods:'Тип товара и стоимость', ph_goods:'Например: электроника, 20 000 USD, 5 тонн...',
     form_submit:'Отправить заявку →', form_note:'🔒 Данные конфиденциальны · Ответим за 30 минут',
@@ -493,7 +496,7 @@ const LANGS = {
     hero_badge:'ვმუშაობთ 24/7 · პასუხი 30 წუთში',
     hero_title:'საბაჟო ბროკერი<br><span>საქართველოში</span> — სწრაფად<br>და ჯარიმების გარეშე',
     hero_desc:'განბაჟება, სერტიფიცირება, კონსულტაციები. ვმუშაობთ რუსეთის, თურქეთის, ჩინეთისა და ევროპის იმპორტიორებთან. AI-კონსულტანტი ონლაინ.',
-    hero_btn1:'💬 ანას დასვი კითხვა · უფასოდ', hero_btn2:'📋 კომ. წინადადება',
+    hero_btn1:'<i class="fa-solid fa-comment-dots"></i> ანას დასვი კითხვა · უფასოდ', hero_btn2:'<i class="fa-solid fa-file-lines"></i> კომ. წინადადება',
     stat1:'დამუშავებული ტვირთი', stat2:'წელი ბაზარზე', stat3:'AI-მხარდაჭერა',
     card_title:'ჩვენი სერვისები',
     svc1_name:'საბაჟო გაფორმება', svc1_sub:'იმპორტი, ექსპორტი, ტრანზიტი',
@@ -534,7 +537,7 @@ const LANGS = {
     faq6_q:'რა გავაკეთო, თუ ტვირთი საბაჟომ დაიკავა?', faq6_a:'მიგვწერეთ ჩატში — ვრეაგირებთ 1 საათში. ვამზადებთ პასუხს ან სააპელაციოს. უმეტეს შემთხვევაში ჯარიმის გარეშე ვხსნით.',
     sec_contact_tag:'კონტაქტი', sec_contact_title:'მიიღეთ კონსულტაცია', sec_contact_desc:'30 წუთში გიპასუხებთ სამუშაო დროს. ან ჰკითხეთ AI-კონსულტანტ ანას — ახლავე.',
     ci_office:'ოფისი', ci_phone:'ტელეფონი / WhatsApp', ci_hours:'სამუშაო საათები', ci_hours_val:'ორშ-პარ 9:00–18:00 · AI 24/7',
-    form_title:'📋 გაფორმების მოთხოვნა', form_name:'თქვენი სახელი', form_phone:'ტელეფონი / WhatsApp',
+    form_title:'გაფორმების მოთხოვნა', form_name:'თქვენი სახელი', form_phone:'ტელეფონი / WhatsApp',
     form_from:'საიდან ტვირთი?', form_choose:'— აირჩიეთ ქვეყანა —', form_other:'სხვა ქვეყანა',
     form_goods:'საქონლის სახეობა და ღირებულება', ph_goods:'მაგ: ელექტრონიკა, 20 000 USD, 5 ტონა...',
     form_submit:'გაგზავნეთ მოთხოვნა →', form_note:'🔒 მონაცემები კონფიდენციალურია · 30 წუთში გიპასუხებთ',
@@ -553,7 +556,7 @@ const LANGS = {
     hero_badge:'Available 24/7 · Reply within 30 minutes',
     hero_title:'Customs Broker<br>in <span>Georgia</span> — Fast,<br>Accurate & Cost-Effective',
     hero_desc:'Customs clearance, certification, consultations. We work with importers from Russia, Turkey, China & Europe. AI consultant online — answers instantly.',
-    hero_btn1:'💬 Ask Ana · Free', hero_btn2:'📋 Get a Quote',
+    hero_btn1:'<i class="fa-solid fa-comment-dots"></i> Ask Ana · Free', hero_btn2:'<i class="fa-solid fa-file-lines"></i> Get a Quote',
     stat1:'Shipments cleared', stat2:'Years on market', stat3:'AI support',
     card_title:'Our Services',
     svc1_name:'Customs Clearance', svc1_sub:'Import, export, transit',
@@ -594,7 +597,7 @@ const LANGS = {
     faq6_q:'What to do if customs has detained your cargo?', faq6_a:'Contact us immediately — we respond within 1 hour. We prepare a response or appeal. Most cases resolved without fines.',
     sec_contact_tag:'Contact', sec_contact_title:'Get a Consultation', sec_contact_desc:'We reply within 30 minutes during business hours. Or ask AI consultant Ana right now — free of charge.',
     ci_office:'Office', ci_phone:'Phone / WhatsApp', ci_hours:'Working hours', ci_hours_val:'Mon-Fri 9:00–18:00 · AI 24/7',
-    form_title:'📋 Clearance Request', form_name:'Your Name', form_phone:'Phone / WhatsApp',
+    form_title:'Clearance Request', form_name:'Your Name', form_phone:'Phone / WhatsApp',
     form_from:'Country of origin', form_choose:'— Select country —', form_other:'Other country',
     form_goods:'Goods type & approximate value', ph_goods:'e.g. electronics, $20,000, 5 tons...',
     form_submit:'Submit Request →', form_note:'🔒 Data is confidential · Reply within 30 minutes',
@@ -669,7 +672,7 @@ function submitForm(btn) {
 let chatOpen = false, isTyping = false;
 let chatHistory = [];
 
-const GEMINI_KEY = 'AIzaSyBSwXW8HO2J8McwQ9JOsGyPq88tsgoaRig';
+const GEMINI_KEY = "__GEMINI_KEY__"; // placeholder
 
 const SYSTEM_PROMPT = `You are Ana, an AI customs consultant for CustomBroker.ge — a professional customs broker in Georgia.
 
@@ -696,7 +699,7 @@ COMMUNICATION STYLE:
 function toggleChat() {
   chatOpen = !chatOpen;
   document.getElementById('chatWindow').classList.toggle('open', chatOpen);
-  document.getElementById('chatIcon').textContent = chatOpen ? '✕' : '👩‍💼';
+  document.getElementById('chatIcon').innerHTML = chatOpen ? '<i class="fa-solid fa-xmark" style="font-size:22px;color:var(--gold)"></i>' : '<i class="fa-solid fa-comment-dots" style="font-size:26px;color:var(--gold)"></i>';
   if(chatOpen) document.getElementById('chatBadge').style.display = 'none';
 }
 function openChat() {
@@ -714,8 +717,8 @@ function addMsg(role, text) {
   const div = document.createElement('div');
   div.className = `msg ${role}`;
   div.innerHTML = role === 'bot'
-    ? `<div class="msg-avatar">👩‍💼</div><div><div class="msg-bubble">${text.replace(/\n/g,'<br>')}</div><div class="msg-time">${time}</div></div>`
-    : `<div><div class="msg-bubble">${text}</div><div class="msg-time">${time}</div></div><div class="msg-avatar">👤</div>`;
+    ? `<div class="msg-avatar"><i class="fa-solid fa-user-tie" style="font-size:13px;color:var(--navy)"></i></div><div><div class="msg-bubble">${text.replace(/\n/g,'<br>')}</div><div class="msg-time">${time}</div></div>`
+    : `<div><div class="msg-bubble">${text}</div><div class="msg-time">${time}</div></div><div class="msg-avatar" style="background:linear-gradient(135deg,var(--navy),#1a3a6c)"><i class="fa-solid fa-user" style="font-size:13px;color:#fff"></i></div>`;
   msgs.appendChild(div);
   msgs.scrollTop = msgs.scrollHeight;
 }
@@ -723,11 +726,54 @@ function showTyping() {
   const msgs = document.getElementById('chatMessages');
   const div = document.createElement('div');
   div.className = 'msg bot'; div.id = 'typingIndicator';
-  div.innerHTML = `<div class="msg-avatar">👩‍💼</div><div class="msg-bubble"><div class="typing"><span></span><span></span><span></span></div></div>`;
+  div.innerHTML = `<div class="msg-avatar"><i class="fa-solid fa-user-tie" style="font-size:13px;color:var(--navy)"></i></div><div class="msg-bubble"><div class="typing"><span></span><span></span><span></span></div></div>`;
   msgs.appendChild(div);
   msgs.scrollTop = msgs.scrollHeight;
 }
 function removeTyping() { const t = document.getElementById('typingIndicator'); if(t) t.remove(); }
+
+// Smart FAQ fallback
+const FAQ_KB = {
+  ru: [
+    {k:['стоимость','цена','сколько стоит','стоит'],a:'Таможенная пошлина в Грузии: 0%, 5% или 12% в зависимости от HS-кода. НДС 18%. Наши услуги — от 150 GEL за стандартное оформление. Чтобы получить точную стоимость — опишите товар и страну отправки, рассчитаем за 30 минут. 📋'},
+    {k:['документ','инвойс','что нужно','пакет'],a:'Стандартный пакет: инвойс, упаковочный лист, транспортные документы (CMR/B&L/авианакладная), сертификат происхождения. Для некоторых товаров — дополнительные разрешения Минздрава, фитосанитарные заключения. Уточните товар — скажу точно.'},
+    {k:['сэз','поти','кутаиси','свободная зона','fiz','fez'],a:'СЭЗ Поти и Кутаиси — 0% НДС, 0% пошлин, 0% налога на прибыль для операций внутри зоны. Идеально для реэкспортёров и дистрибьюторов через Грузию. Поможем зарегистрироваться. 🏭'},
+    {k:['срок','долго','сколько дней','время'],a:'Стандартное оформление — 1-3 рабочих дня при наличии всех документов. Срочное — 1 день. Мы заранее готовим пакет, чтобы исключить задержки. ⚡'},
+    {k:['физическ','физлицо','частное лицо','физик'],a:'Да, работаем с физическими лицами. Ввоз автомобилей, личных вещей при переезде, коммерческих партий без ИП. Пишите — разберём ваш случай.'},
+    {k:['задержал','задержан','арестован','проблема','штраф'],a:'Если груз задержала таможня — свяжитесь с нами срочно: реагируем в течение часа. Анализируем причину, готовим ответ или апелляцию. В большинстве случаев решаем без штрафов. 📞'},
+    {k:['китай','турция','россия','иран','европа','германия','польша'],a:'Да, работаем с грузами из любой страны: Китай, Турция, ЕС, Россия, Иран, СНГ. У каждого направления свои нюансы — HS-коды, документы, соглашения о свободной торговле. Уточните ваш маршрут.'},
+    {k:['автомобил','машина','авто'],a:'Растаможка авто в Грузии: ставка зависит от года выпуска, объёма двигателя и стоимости. Льготы для резидентов. Рассчитаем точную сумму по VIN или характеристикам. 🚗'},
+  ],
+  ge: [
+    {k:['ღირებულება','ფასი','რა ღირს'],a:'საბაჟო გადასახადი საქართველოში: 0%, 5% ან 12% HS-კოდის მიხედვით. დღგ 18%. ჩვენი მომსახურება — 150 GEL-დან. ზუსტი გაანგარიშებისთვის აღწერეთ საქონელი. 📋'},
+    {k:['დოკუმენტ','ინვოის','რა სჭირდება'],a:'სტანდარტული პაკეტი: ინვოისი, შეფუთვის სია, სატვირთო დოკუმენტები, წარმოშობის სერტიფიკატი. ზოგიერთ საქონელს სჭირდება დამატებითი ნებართვები.'},
+    {k:['სეზ','ფოთი','ქუთაისი','თავისუფალი'],a:'სეზ ფოთი და ქუთაისი: 0% დღგ, 0% ბაჟი, 0% საშემოსავლო გადასახადი. იდეალურია რეექსპორტიორებისთვის. დარეგისტრირებაში დაგეხმარებით. 🏭'},
+    {k:['ვადა','დრო','რამდენ ხანს'],a:'სტანდარტული გაფორმება — 1-3 სამუშაო დღე. სასწრაფო — 1 დღე. ⚡'},
+  ],
+  en: [
+    {k:['cost','price','how much','fee'],a:'Georgian customs duties: 0%, 5%, or 12% depending on HS code. VAT 18%. Our services from 150 GEL. Describe your goods and origin country — we'll calculate the exact cost in 30 minutes. 📋'},
+    {k:['document','invoice','need','require'],a:'Standard package: commercial invoice, packing list, transport documents (CMR/B/L/AWB), certificate of origin. Some goods require additional permits. Tell us your product — we'll confirm.'},
+    {k:['fiz','fez','poti','free zone','kutaisi'],a:'Poti & Kutaisi FIZ: 0% VAT, 0% duties, 0% income tax on operations within the zone. Perfect for re-exporters and distributors. We can help you register. 🏭'},
+    {k:['time','long','days','duration','fast'],a:'Standard clearance: 1-3 business days with full documents. Urgent: 1 day. We prepare the package in advance to avoid delays. ⚡'},
+    {k:['detained','stuck','held','penalty','fine'],a:'If customs detained your cargo — contact us immediately, we respond within 1 hour. We prepare a response or appeal. Most cases resolved without fines. 📞'},
+  ]
+};
+
+function _faqAnswer(text) {
+  const lang = currentLang || 'ru';
+  const kb = FAQ_KB[lang] || FAQ_KB.ru;
+  const tLow = text.toLowerCase();
+  for(const item of kb) {
+    if(item.k.some(kw => tLow.includes(kw))) return item.a;
+  }
+  // Default
+  const defaults = {
+    ru: 'Хороший вопрос! Наши специалисты готовы ответить детально. Напишите нам напрямую или оставьте заявку — ответим в течение 30 минут. 📞 +995 32 XXX XX XX',
+    ge: 'კარგი კითხვაა! ჩვენი სპეციალისტები 30 წუთში გიპასუხებთ. მოგვწერეთ პირდაპირ. 📞',
+    en: 'Great question! Our specialists will respond in detail within 30 minutes. Leave a request or contact us directly. 📞'
+  };
+  return defaults[lang] || defaults.ru;
+}
 
 async function sendMsg() {
   const input = document.getElementById('chatInput');
@@ -735,22 +781,31 @@ async function sendMsg() {
   if(!text || isTyping) return;
   input.value = '';
   addMsg('user', text);
-  chatHistory.push({role:'user', parts:[{text}]});
   isTyping = true; showTyping();
-  try {
-    const res = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_KEY}`,
-      {method:'POST', headers:{'Content-Type':'application/json'},
-       body: JSON.stringify({system_instruction:{parts:[{text:SYSTEM_PROMPT}]}, contents:chatHistory, generationConfig:{maxOutputTokens:400,temperature:0.7}})}
-    );
-    const data = await res.json();
-    const reply = data?.candidates?.[0]?.content?.parts?.[0]?.text || 'Sorry, something went wrong. Try again.';
-    chatHistory.push({role:'model', parts:[{text:reply}]});
-    removeTyping(); addMsg('bot', reply);
-  } catch(e) {
-    removeTyping();
-    addMsg('bot', currentLang === 'ge' ? 'კავშირის შეცდომა. სცადეთ ხელახლა 📞' : currentLang === 'en' ? 'Connection error. Please try again 📞' : 'Ошибка соединения. Попробуйте позже 📞');
+
+  // Try Gemini first
+  if(GEMINI_KEY && GEMINI_KEY !== '__GEMINI_KEY__') {
+    try {
+      chatHistory.push({role:'user', parts:[{text}]});
+      const res = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_KEY}`,
+        {method:'POST', headers:{'Content-Type':'application/json'},
+         body: JSON.stringify({system_instruction:{parts:[{text:SYSTEM_PROMPT}]}, contents:chatHistory, generationConfig:{maxOutputTokens:400,temperature:0.7}})}
+      );
+      const data = await res.json();
+      const reply = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+      if(reply) {
+        chatHistory.push({role:'model', parts:[{text:reply}]});
+        removeTyping(); addMsg('bot', reply);
+        isTyping = false; return;
+      }
+    } catch(e) {}
   }
+
+  // Fallback — smart FAQ
+  await new Promise(r => setTimeout(r, 600 + Math.random()*600));
+  const reply = _faqAnswer(text);
+  removeTyping(); addMsg('bot', reply);
   isTyping = false;
 }
 </script>
