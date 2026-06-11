@@ -222,6 +222,30 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 80px}
 .news-read{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:13px;font-weight:600;color:var(--gold2);text-decoration:none}
 @media(max-width:768px){.news-grid{grid-template-columns:1fr}}
 
+
+/* ─── PRICING ─── */
+.pricing-section{background:#f6f8fb}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.tier{background:#fff;border:1px solid #e3e9f1;border-radius:14px;padding:26px 24px;position:relative;display:flex;flex-direction:column}
+.tier.popular{border-color:#c8922a;box-shadow:0 8px 28px rgba(200,146,42,.14)}
+.tier-badge{position:absolute;top:-12px;right:18px;background:#c8922a;color:#fff;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:999px}
+.tier h3{font-size:17px;color:var(--navy);margin-bottom:4px}
+.tier .tier-for{font-size:13px;color:#6b7a90;min-height:38px}
+.tier-price{margin:16px 0 4px;font-size:30px;font-weight:800;color:var(--navy)}
+.tier-per{font-size:12px;color:#6b7a90;margin-bottom:14px}
+.tier ul{list-style:none;margin-top:6px;flex:1}
+.tier li{padding:7px 0 7px 26px;position:relative;font-size:14px;border-top:1px dashed #e3e9f1}
+.tier li:first-child{border-top:0}
+.tier li::before{content:"✓";position:absolute;left:0;color:#1e7f4f;font-weight:700}
+.tier .tier-cta{display:block;text-align:center;margin-top:18px;padding:11px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;background:var(--navy);color:#fff}
+.tier.popular .tier-cta{background:#c8922a}
+.pricing-extras{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pricing-extra{background:#fff;border:1px solid #e3e9f1;border-radius:14px;padding:16px 18px;font-size:14px}
+.pricing-extra b{color:var(--navy);display:block;margin-bottom:3px}
+.pricing-extra .extra-tag{float:right;font-weight:800;color:#7a5410;white-space:nowrap}
+.pricing-note{margin-top:22px;font-size:13px;color:#6b7a90;background:#fff;border:1px solid #e3e9f1;border-left:4px solid #c8922a;border-radius:10px;padding:14px 18px}
+@media(max-width:860px){.tiers{grid-template-columns:1fr}.pricing-extras{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -237,6 +261,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 80px}
       <a href="#how" data-i18n="nav_how">Как работаем</a>
       <a href="#why" data-i18n="nav_why">О нас</a>
       <a href="#faq">FAQ</a>
+      <a href="#pricing" data-i18n="nav_pricing">Цены</a>
       <a href="#news" data-i18n="nav_news">Новости</a>
       <a href="#contact" class="nav-cta" data-i18n="nav_cta">Консультация</a>
     </div>
@@ -393,6 +418,70 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 80px}
   </div>
 </section>
 
+<section class="section pricing-section" id="pricing">
+  <div class="section-inner">
+    <div class="section-label" data-i18n="pricing_label">Прайс-лист</div>
+    <h2 class="section-title" data-i18n="pricing_title">Прозрачные цены на оформление</h2>
+    <p class="section-sub" data-i18n="pricing_sub">Фиксированная стоимость известна до начала работы. В каждый тариф включены подбор HS-кода и проверка инвойса.</p>
+
+    <div class="tiers">
+      <div class="tier">
+        <h3 data-i18n="t1_name">Простая декларация</h3>
+        <p class="tier-for" data-i18n="t1_for">Груз стоимостью до 3 000 GEL, 1–2 HS-кода</p>
+        <p class="tier-price" data-i18n="t1_price">от 150 GEL</p>
+        <p class="tier-per" data-i18n="t1_per">за декларацию</p>
+        <ul>
+          <li data-i18n="t1_f1">Подбор HS-кода и расчёт платежей</li>
+          <li data-i18n="t1_f2">Проверка инвойса и упаковочного листа</li>
+          <li data-i18n="t1_f3">Подача декларации в системе</li>
+          <li data-i18n="t1_f4">Оформление 1–2 рабочих дня</li>
+        </ul>
+        <a class="tier-cta" href="#contact" data-i18n="t1_cta">Рассчитать груз</a>
+      </div>
+
+      <div class="tier popular">
+        <span class="tier-badge" data-i18n="t_popular">Популярно</span>
+        <h3 data-i18n="t2_name">Стандартное оформление</h3>
+        <p class="tier-for" data-i18n="t2_for">Коммерческие партии до 15 000 GEL</p>
+        <p class="tier-price" data-i18n="t2_price">от 300 GEL</p>
+        <p class="tier-per" data-i18n="t2_per">за декларацию</p>
+        <ul>
+          <li data-i18n="t2_f1">Всё из тарифа «Простая декларация»</li>
+          <li data-i18n="t2_f2">До 10 HS-кодов в одной партии</li>
+          <li data-i18n="t2_f3">Сопровождение при досмотре</li>
+          <li data-i18n="t2_f4">Связь с инспектором — на нашей стороне</li>
+          <li data-i18n="t2_f5">Отчёт и полный пакет документов</li>
+        </ul>
+        <a class="tier-cta" href="#contact" data-i18n="t2_cta">Получить КП за 30 минут</a>
+      </div>
+
+      <div class="tier">
+        <h3 data-i18n="t3_name">Сложное оформление</h3>
+        <p class="tier-for" data-i18n="t3_for">Косметика, БАДы, фарма, реэкспорт, СЭЗ, временный ввоз</p>
+        <p class="tier-price" data-i18n="t3_price">от 450 GEL</p>
+        <p class="tier-per" data-i18n="t3_per">цена фиксируется до старта</p>
+        <ul>
+          <li data-i18n="t3_f1">Неограниченное число HS-кодов</li>
+          <li data-i18n="t3_f2">Сертификаты и разрешения Минздрава</li>
+          <li data-i18n="t3_f3">Фитосанитарные / вет. заключения</li>
+          <li data-i18n="t3_f4">Режимы СЭЗ Поти и Кутаиси</li>
+          <li data-i18n="t3_f5">Споры и апелляции при задержании</li>
+        </ul>
+        <a class="tier-cta" href="#contact" data-i18n="t3_cta">Обсудить груз</a>
+      </div>
+    </div>
+
+    <div class="pricing-extras">
+      <div class="pricing-extra"><span class="extra-tag" data-i18n="ex1_tag">+40%</span><b data-i18n="ex1_name">Срочное оформление</b><span data-i18n="ex1_desc">Выпуск в день обращения — при готовых документах.</span></div>
+      <div class="pricing-extra"><span class="extra-tag" data-i18n="ex2_tag">−20–30%</span><b data-i18n="ex2_name">Абонемент импортёра</b><span data-i18n="ex2_desc">От 5 деклараций в месяц. Личный брокер и приоритет в очереди.</span></div>
+      <div class="pricing-extra"><span class="extra-tag" data-i18n="ex3_tag">−10%</span><b data-i18n="ex3_name">Брокер + перевозка</b><span data-i18n="ex3_desc">Скидка при заказе доставки через Cargo Rapido.</span></div>
+    </div>
+
+    <p class="pricing-note" data-i18n="pricing_note">Государственные сборы и налоги (пошлина 0/5/12%, НДС 18%, сбор за декларацию) оплачиваются отдельно в казначейство Грузии и не входят в стоимость услуг. Точный расчёт пришлём за 30 минут.</p>
+  </div>
+</section>
+
+
 <section class="section" id="news">
   <div class="section-inner">
     <div class="section-label" data-i18n="news_label">Актуально</div>
@@ -540,11 +629,20 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 80px}
 // ─── TRANSLATIONS ───
 const LANGS = {
   ru: {
-    nav_services:'Услуги', nav_how:'Как работаем', nav_why:'О нас', nav_news:'Новости', nav_cta:'Консультация',
+    nav_services:'Услуги', nav_how:'Как работаем', nav_why:'О нас', nav_pricing:'Цены', nav_news:'Новости', nav_cta:'Консультация',
     hero_badge:'Работаем 24/7 · Ответ за 30 минут',
     hero_title:'Таможенный брокер<br>в <span>Грузии</span> — быстро,<br>без ошибок и лишних затрат',
     hero_desc:'Растаможка, сертификация, консультации. Работаем с импортёрами из России, Турции, Китая и Европы. AI-консультант онлайн — ответит сразу.',
     hero_btn1:"Спросить Ану · Бесплатно", hero_btn2:"Получить КП",
+        pricing_label:'Прайс-лист', pricing_title:'Прозрачные цены на оформление', pricing_sub:'Фиксированная стоимость известна до начала работы. В каждый тариф включены подбор HS-кода и проверка инвойса.',
+    t_popular:'Популярно',
+    t1_name:'Простая декларация', t1_for:'Груз стоимостью до 3 000 GEL, 1–2 HS-кода', t1_price:'от 150 GEL', t1_per:'за декларацию', t1_f1:'Подбор HS-кода и расчёт платежей', t1_f2:'Проверка инвойса и упаковочного листа', t1_f3:'Подача декларации в системе', t1_f4:'Оформление 1–2 рабочих дня', t1_cta:'Рассчитать груз',
+    t2_name:'Стандартное оформление', t2_for:'Коммерческие партии до 15 000 GEL', t2_price:'от 300 GEL', t2_per:'за декларацию', t2_f1:'Всё из тарифа «Простая декларация»', t2_f2:'До 10 HS-кодов в одной партии', t2_f3:'Сопровождение при досмотре', t2_f4:'Связь с инспектором — на нашей стороне', t2_f5:'Отчёт и полный пакет документов', t2_cta:'Получить КП за 30 минут',
+    t3_name:'Сложное оформление', t3_for:'Косметика, БАДы, фарма, реэкспорт, СЭЗ, временный ввоз', t3_price:'от 450 GEL', t3_per:'цена фиксируется до старта', t3_f1:'Неограниченное число HS-кодов', t3_f2:'Сертификаты и разрешения Минздрава', t3_f3:'Фитосанитарные / вет. заключения', t3_f4:'Режимы СЭЗ Поти и Кутаиси', t3_f5:'Споры и апелляции при задержании', t3_cta:'Обсудить груз',
+    ex1_tag:'+40%', ex1_name:'Срочное оформление', ex1_desc:'Выпуск в день обращения — при готовых документах.',
+    ex2_tag:'−20–30%', ex2_name:'Абонемент импортёра', ex2_desc:'От 5 деклараций в месяц. Личный брокер и приоритет.',
+    ex3_tag:'−10%', ex3_name:'Брокер + перевозка', ex3_desc:'Скидка при заказе доставки через Cargo Rapido.',
+    pricing_note:'Государственные сборы и налоги (пошлина 0/5/12%, НДС 18%) оплачиваются отдельно. Точный расчёт — за 30 минут.',
     news_label:'Актуально', news_title:'Новости таможни и перевозок', news_sub:'Изменения в законодательстве, ставки пошлин, практические советы импортёрам', news_read:'Подробнее', ntag_customs:'Таможня', ntag_port:'Порт Поти', ntag_duty:'Пошлины', n1_title:'Новые правила ввоза товаров из Китая через Грузию', n1_text:'Служба доходов Грузии обновила процедуру декларирования грузов из КНР: расширен перечень товаров, требующих сертификата происхождения.', n2_title:'СЭЗ Поти: обновлённые условия для резидентов 2025', n2_text:'Свободная индустриальная зона Поти расширила список разрешённых видов деятельности. Нулевой НДС и нулевая пошлина сохраняются.', n3_title:'Изменение ставок акциза на автомобили: что важно знать', n3_text:'С июня 2025 года акцизный налог на ввоз автомобилей старше 8 лет вырос. Рассчитайте стоимость ввоза до подачи декларации.',
     stat1:'Грузов оформлено', stat2:'Лет на рынке', stat3:'AI-поддержка',
     card_title:'Наши услуги',
@@ -601,11 +699,20 @@ const LANGS = {
     ph_name:'Имя Фамилия', form_sent:'✅ Заявка принята!',
   },
   ge: {
-    nav_services:'სერვისები', nav_how:'გამოცდილება', nav_why:'ჩვენს შესახებ', nav_news:'სიახლეები', nav_cta:'კონსულტაცია',
+    nav_services:'სერვისები', nav_how:'გამოცდილება', nav_why:'ჩვენს შესახებ', nav_pricing:'ფასები', nav_news:'სიახლეები', nav_cta:'კონსულტაცია',
     hero_badge:'ვმუშაობთ 24/7 · პასუხი 30 წუთში',
     hero_title:'საბაჟო ბროკერი<br><span>საქართველოში</span> — სწრაფად<br>და ჯარიმების გარეშე',
     hero_desc:'განბაჟება, სერტიფიცირება, კონსულტაციები. ვმუშაობთ რუსეთის, თურქეთის, ჩინეთისა და ევროპის იმპორტიორებთან. AI-კონსულტანტი ონლაინ.',
     hero_btn1:"ანას დასვი კითხვა · უფასოდ", hero_btn2:"კომ. წინადადება",
+        pricing_label:'ფასები', pricing_title:'გამჭვირვალე ფასები განბაჟებაზე', pricing_sub:'ფიქსირებული ღირებულება ცნობილია მუშაობის დაწყებამდე.',
+    t_popular:'პოპულარული',
+    t1_name:'მარტივი დეკლარაცია', t1_for:'ტვირთი 3 000 ლარამდე, 1–2 HS-კოდი', t1_price:'150 ლარიდან', t1_per:'ერთ დეკლარაციაზე', t1_f1:'HS-კოდის შერჩევა და გადასახადების გაანგარიშება', t1_f2:'ინვოისის შემოწმება', t1_f3:'დეკლარაციის რეგისტრაცია', t1_f4:'განბაჟება 1–2 სამუშაო დღეში', t1_cta:'ღირებულების გაანგარიშება',
+    t2_name:'სტანდარტული განბაჟება', t2_for:'კომერციული პარტიები 15 000 ლარამდე', t2_price:'300 ლარიდან', t2_per:'ერთ დეკლარაციაზე', t2_f1:'ყველაფერი მარტივი დეკლარაციიდან', t2_f2:'10-მდე HS-კოდი', t2_f3:'თანხლება დათვალიერებისას', t2_f4:'კომუნიკაცია ინსპექტორთან', t2_f5:'დოკუმენტების სრული პაკეტი', t2_cta:'შეთავაზება 30 წუთში',
+    t3_name:'რთული განბაჟება', t3_for:'კოსმეტიკა, ბადები, ფარმაცია, რეექსპორტი, თიზ', t3_price:'450 ლარიდან', t3_per:'ფასი ფიქსირდება დაწყებამდე', t3_f1:'HS-კოდების შეუზღუდავი რაოდენობა', t3_f2:'სერტიფიკატები და ნებართვები', t3_f3:'ფიტოსანიტარული დასკვნები', t3_f4:'ფოთისა და ქუთაისის თიზ', t3_f5:'დავები და აპელაციები', t3_cta:'ტვირთის განხილვა',
+    ex1_tag:'+40%', ex1_name:'სასწრაფო განბაჟება', ex1_desc:'გაშვება მიმართვის დღესვე.',
+    ex2_tag:'−20–30%', ex2_name:'იმპორტიორის აბონემენტი', ex2_desc:'თვეში 5+ დეკლარაცია. პირადი ბროკერი.',
+    ex3_tag:'−10%', ex3_name:'ბროკერი + გადაზიდვა', ex3_desc:'ფასდაკლება Cargo Rapido-თი მიწოდებისას.',
+    pricing_note:'სახელმწიფო მოსაკრებლები (ბაჟი 0/5/12%, დღგ 18%) იხდება ცალკე. ზუსტ გაანგარიშებას გამოგიგზავნით 30 წუთში.',
     news_label:'სიახლეები', news_title:'საბაჟო და ტრანსპორტის სიახლეები', news_sub:'კანონმდებლობის ცვლილებები, საბაჟო განაკვეთები, პრაქტიკული რჩევები', news_read:'დეტალურად', ntag_customs:'საბაჟო', ntag_port:'ფოთის პორტი', ntag_duty:'გადასახადები', n1_title:'ჩინეთიდან საქონლის შემოტანის ახალი წესები', n1_text:'საქართველოს შემოსავლების სამსახურმა განაახლა ჩინეთიდან ტვირთების დეკლარირების პროცედურა.', n2_title:'ფოთის სეზ: განახლებული პირობები 2025', n2_text:'ფოთის თავისუფალი ინდუსტრიული ზონა გააფართოვა დაშვებული საქმიანობის სია. 0% დღგ და 0% ბაჟი.', n3_title:'ავტომობილების აქციზის განაკვეთების ცვლილება', n3_text:'2025 წლის ივნისიდან 8 წელზე ძველ მანქანებზე აქციზი გაიზარდა.',
     stat1:'დამუშავებული ტვირთი', stat2:'წელი ბაზარზე', stat3:'AI-მხარდაჭერა',
     card_title:'ჩვენი სერვისები',
@@ -662,11 +769,20 @@ const LANGS = {
     ph_name:'სახელი გვარი', form_sent:'✅ მოთხოვნა მიღებულია!',
   },
   en: {
-    nav_services:'Services', nav_how:'Process', nav_why:'About', nav_news:'News', nav_cta:'Get Consultation',
+    nav_services:'Services', nav_how:'Process', nav_why:'About', nav_pricing:'Pricing', nav_news:'News', nav_cta:'Get Consultation',
     hero_badge:'Available 24/7 · Reply within 30 minutes',
     hero_title:'Customs Broker<br>in <span>Georgia</span> — Fast,<br>Accurate & Cost-Effective',
     hero_desc:'Customs clearance, certification, consultations. We work with importers from Russia, Turkey, China & Europe. AI consultant online — answers instantly.',
     hero_btn1:"Ask Ana · Free", hero_btn2:"Get a Quote",
+        pricing_label:'Pricing', pricing_title:'Transparent clearance pricing', pricing_sub:'Fixed cost agreed before work starts. Every plan includes HS classification and invoice review.',
+    t_popular:'Popular',
+    t1_name:'Simple declaration', t1_for:'Cargo up to 3,000 GEL, 1–2 HS codes', t1_price:'from 150 GEL', t1_per:'per declaration', t1_f1:'HS code classification and duty calculation', t1_f2:'Invoice and packing list review', t1_f3:'Declaration filing', t1_f4:'Clearance in 1–2 business days', t1_cta:'Get a quote',
+    t2_name:'Standard clearance', t2_for:'Commercial shipments up to 15,000 GEL', t2_price:'from 300 GEL', t2_per:'per declaration', t2_f1:'Everything in Simple declaration', t2_f2:'Up to 10 HS codes', t2_f3:'Support during inspection', t2_f4:'We handle customs communication', t2_f5:'Full document package', t2_cta:'Quote in 30 minutes',
+    t3_name:'Complex clearance', t3_for:'Cosmetics, supplements, pharma, re-export, FIZ', t3_price:'from 450 GEL', t3_per:'price fixed before we start', t3_f1:'Unlimited HS codes', t3_f2:'Certificates and permits', t3_f3:'Phytosanitary clearances', t3_f4:'Poti and Kutaisi FIZ regimes', t3_f5:'Disputes and appeals', t3_cta:'Discuss your cargo',
+    ex1_tag:'+40%', ex1_name:'Express clearance', ex1_desc:'Same-day release when documents are ready.',
+    ex2_tag:'−20–30%', ex2_name:'Importer subscription', ex2_desc:'5+ declarations/month. Dedicated broker.',
+    ex3_tag:'−10%', ex3_name:'Broker + freight', ex3_desc:'Discount when shipping with Cargo Rapido.',
+    pricing_note:'Government duties and taxes (0/5/12%, VAT 18%) are paid separately to the Georgian Treasury. Exact calculation within 30 minutes.',
     news_label:'Latest', news_title:'Customs & Logistics News', news_sub:'Legislative updates, duty rates, practical advice for importers', news_read:'Read more', ntag_customs:'Customs', ntag_port:'Poti Port', ntag_duty:'Duties', n1_title:'New Rules for Importing Goods from China via Georgia', n1_text:'Georgia Revenue Service updated the declaration procedure for shipments from China, expanding the list of goods requiring certificates of origin.', n2_title:'Poti FIZ: Updated Conditions for Residents 2025', n2_text:'The Free Industrial Zone of Poti expanded the list of permitted activities. Zero VAT and zero customs duty remain.', n3_title:'Car Excise Tax Changes: What Importers Should Know', n3_text:'From June 2025, excise tax on vehicles older than 8 years has increased. Calculate import costs before filing a declaration.',
     stat1:'Shipments cleared', stat2:'Years on market', stat3:'AI support',
     card_title:'Our Services',
