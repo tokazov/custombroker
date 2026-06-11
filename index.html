@@ -245,6 +245,19 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 80px}
 .pricing-note{margin-top:22px;font-size:13px;color:#6b7a90;background:#fff;border:1px solid #e3e9f1;border-left:4px solid #c8922a;border-radius:10px;padding:14px 18px}
 @media(max-width:860px){.tiers{grid-template-columns:1fr}.pricing-extras{grid-template-columns:1fr}}
 
+
+/* ─── SERVICE CARD PRICE HOVER ─── */
+.svc-card{position:relative!important;overflow:hidden!important}
+.price-badge{position:absolute;top:18px;right:18px;background:rgba(200,169,110,.15);color:#8a6420;border:1px solid rgba(200,169,110,.4);font-size:12px;font-weight:800;padding:4px 11px;border-radius:999px;white-space:nowrap;z-index:2}
+.price-panel{position:absolute!important;left:0;right:0;bottom:0;background:var(--navy);color:#fff;padding:18px 22px;border-radius:0 0 16px 16px;transform:translateY(101%);transition:transform .3s ease;z-index:3}
+.pp-row{display:flex;justify-content:space-between;gap:10px;font-size:13px;padding:5px 0;border-bottom:1px dashed rgba(255,255,255,.15)}
+.pp-row:last-of-type{border-bottom:0}
+.pp-row span{color:#b9c4d8}
+.pp-row b{color:var(--gold);white-space:nowrap}
+.pp-link{display:inline-block;margin-top:10px;font-size:13px;font-weight:700;color:var(--gold);text-decoration:none}
+.pp-link::after{content:" →"}
+@media(hover:hover){.svc-card:hover .price-panel{transform:translateY(0)}}
+.svc-card.open .price-panel{transform:translateY(0)}
 </style>
 </head>
 <body>
@@ -312,75 +325,90 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 80px}
     <div class="section-title" data-i18n="sec_services_title">Полный спектр таможенных услуг</div>
     <div class="section-desc" data-i18n="sec_services_desc">От расчёта пошлин до получения груза — берём на себя все этапы оформления.</div>
     <div class="services-grid">
+
       <div class="service-card svc-card">
-  <span class="price-badge" data-i18n="sc1_price">от 150 ₾</span>
-  <div class="sc-icon"><i class="fa-solid fa-ship" style="font-size:22px;color:var(--gold)"></i></div>
-  <div class="sc-tag" data-i18n="sc1_tag">Основное</div>
-  <div class="sc-title" data-i18n="sc1_title">Таможенное оформление</div>
-  <div class="sc-desc" data-i18n="sc1_desc">Полное сопровождение груза через таможню Грузии. Декларирование, расчёт пошлин, подача документов.</div>
-  <div class="price-panel">
-    <div class="pp-row"><span data-i18n="pp1_r1">Простая декларация (до 3 000 ₾)</span><b>от 150 ₾</b></div>
-    <div class="pp-row"><span data-i18n="pp1_r2">Стандарт (до 15 000 ₾)</span><b>от 300 ₾</b></div>
-    <div class="pp-row"><span data-i18n="pp1_r3">Сложное оформление</span><b>от 450 ₾</b></div>
-    <a href="#contact" class="pp-link" data-i18n="pp_cta">Рассчитать груз</a>
-  </div>
-</div>
+        <span class="price-badge" data-i18n="sc1_price">от 150 ₾</span>
+        <div class="sc-icon"><i class="fa-solid fa-ship" style="font-size:22px;color:var(--gold)"></i></div>
+        <div class="sc-tag" data-i18n="sc1_tag">Основное</div>
+        <div class="sc-title" data-i18n="sc1_title">Таможенное оформление</div>
+        <div class="sc-desc" data-i18n="sc1_desc">Полное сопровождение груза через таможню Грузии. Декларирование, расчёт пошлин, подача документов.</div>
+        <div class="price-panel">
+          <div class="pp-row"><span data-i18n="pp1_r1">Простая декларация</span><b>от 150 ₾</b></div>
+          <div class="pp-row"><span data-i18n="pp1_r2">Стандарт (до 15 000 ₾)</span><b>от 300 ₾</b></div>
+          <div class="pp-row"><span data-i18n="pp1_r3">Сложное оформление</span><b>от 450 ₾</b></div>
+          <a href="#contact" class="pp-link" data-i18n="pp_cta">Рассчитать груз</a>
+        </div>
+      </div>
+
       <div class="service-card svc-card">
-  <span class="price-badge" data-i18n="sc2_price">0 ₾ при оформлении</span>
-  <div class="sc-icon"><i class="fa-solid fa-barcode" style="font-size:22px;color:var(--gold)"></i></div>
-  <div class="sc-tag" data-i18n="sc2_tag">Точность</div>
-  <div class="sc-title" data-i18n="sc2_title">Классификация и HS-коды</div>
-  <div class="sc-desc" data-i18n="sc2_desc">Правильная классификация товара = минимальная ставка пошлины. Наши эксперты найдут оптимальный HS-код для вашего груза.</div>
-  <div class="price-panel">
-    <div class="pp-row"><span data-i18n="pp2_r1">В составе оформления</span><b data-i18n="pp2_v1">бесплатно</b></div>
-    <div class="pp-row"><span data-i18n="pp2_r2">Предварительно, за код</span><b>50–80 ₾</b></div>
-    <div class="pp-row"><span data-i18n="pp2_r3">Пакет от 5 кодов</span><b>от 200 ₾</b></div>
-    <a href="#contact" class="pp-link" data-i18n="pp_cta2">Проверить мой товар</a>
-  </div>
-</div>
+        <span class="price-badge" data-i18n="sc2_price">0 ₾ при оформлении</span>
+        <div class="sc-icon"><i class="fa-solid fa-barcode" style="font-size:22px;color:var(--gold)"></i></div>
+        <div class="sc-tag" data-i18n="sc2_tag">Точность</div>
+        <div class="sc-title" data-i18n="sc2_title">Классификация и HS-коды</div>
+        <div class="sc-desc" data-i18n="sc2_desc">Правильная классификация товара = минимальная ставка пошлины. Найдём оптимальный HS-код для вашего груза.</div>
+        <div class="price-panel">
+          <div class="pp-row"><span>В составе оформления</span><b>бесплатно</b></div>
+          <div class="pp-row"><span>Предварительно, за код</span><b>50–80 ₾</b></div>
+          <div class="pp-row"><span>Пакет от 5 кодов</span><b>от 200 ₾</b></div>
+          <a href="#contact" class="pp-link">Проверить мой товар</a>
+        </div>
+      </div>
+
       <div class="service-card svc-card">
-  <span class="price-badge">от 150 ₾</span>
-  <div class="sc-icon"><i class="fa-solid fa-certificate" style="font-size:22px;color:var(--gold)"></i></div><div class="sc-tag" data-i18n="sc3_tag">Документы</div><div class="sc-title" data-i18n="sc3_title">Сертификация товаров</div><div class="sc-desc" data-i18n="sc3_desc">Получение разрешений, сертификатов соответствия, фитосанитарных и ветеринарных заключений для ввоза товаров в Грузию.</div></div>
-  <div class="price-panel">
-    <div class="pp-row"><span>Фито / вет. сопровождение</span><b>150–250 ₾</b></div>
-    <div class="pp-row"><span>Разрешение Минздрава</span><b>от 400 ₾</b></div>
-    <a href="#contact" class="pp-link">Узнать подробнее</a>
-  </div>
-</div>
+        <span class="price-badge">от 150 ₾</span>
+        <div class="sc-icon"><i class="fa-solid fa-certificate" style="font-size:22px;color:var(--gold)"></i></div>
+        <div class="sc-tag" data-i18n="sc3_tag">Документы</div>
+        <div class="sc-title" data-i18n="sc3_title">Сертификация товаров</div>
+        <div class="sc-desc" data-i18n="sc3_desc">Получение разрешений, сертификатов соответствия, фитосанитарных и ветеринарных заключений для ввоза в Грузию.</div>
+        <div class="price-panel">
+          <div class="pp-row"><span>Фито / вет. сопровождение</span><b>150–250 ₾</b></div>
+          <div class="pp-row"><span>Разрешение Минздрава</span><b>от 400 ₾</b></div>
+          <a href="#contact" class="pp-link">Узнать подробнее</a>
+        </div>
+      </div>
+
       <div class="service-card svc-card">
-  <span class="price-badge">от $800</span>
-  <div class="sc-icon"><i class="fa-solid fa-industry" style="font-size:22px;color:var(--gold)"></i></div><div class="sc-tag" data-i18n="sc4_tag">Льготы</div><div class="sc-title" data-i18n="sc4_title">Регистрация в СЭЗ</div><div class="sc-desc" data-i18n="sc4_desc">Специальные экономические зоны Поти и Кутаиси: 0% НДС, 0% пошлин для реэкспорта. Поможем зарегистрироваться и начать работу.</div></div>
-  <div class="price-panel">
-    <div class="pp-row"><span>Сопровождение под ключ</span><b>$800–1 500</b></div>
-    <div class="pp-row"><span>Сборы зоны (отдельно)</span><b>от $1 100</b></div>
-    <a href="#contact" class="pp-link">Подобрать зону</a>
-  </div>
-</div>
+        <span class="price-badge">от $800</span>
+        <div class="sc-icon"><i class="fa-solid fa-industry" style="font-size:22px;color:var(--gold)"></i></div>
+        <div class="sc-tag" data-i18n="sc4_tag">Льготы</div>
+        <div class="sc-title" data-i18n="sc4_title">Регистрация в СЭЗ</div>
+        <div class="sc-desc" data-i18n="sc4_desc">Специальные экономические зоны Поти и Кутаиси: 0% НДС, 0% пошлин для реэкспорта. Поможем зарегистрироваться.</div>
+        <div class="price-panel">
+          <div class="pp-row"><span>Сопровождение под ключ</span><b>$800–1 500</b></div>
+          <div class="pp-row"><span>Сборы зоны (отдельно)</span><b>от $1 100</b></div>
+          <a href="#contact" class="pp-link">Подобрать зону</a>
+        </div>
+      </div>
+
       <div class="service-card svc-card">
-  <span class="price-badge">от 100 ₾</span>
-  <div class="sc-icon"><i class="fa-solid fa-truck-moving" style="font-size:22px;color:var(--gold)"></i></div><div class="sc-tag" data-i18n="sc5_tag">Транзит</div><div class="sc-title" data-i18n="sc5_title">Транзитное оформление</div><div class="sc-desc" data-i18n="sc5_desc">Грузия — ключевой транзитный коридор между Европой и Азией. Оформляем транзит через все КПП: Красный Мост, Садахло, Карцахи.</div></div>
-  <div class="price-panel">
-    <div class="pp-row"><span>Декларация T1</span><b>100–150 ₾</b></div>
-    <div class="pp-row"><span>Для перевозчиков 10+/мес</span><b>от 80 ₾/шт</b></div>
-    <a href="#contact" class="pp-link">Запросить тариф</a>
-  </div>
-</div>
+        <span class="price-badge">от 100 ₾</span>
+        <div class="sc-icon"><i class="fa-solid fa-truck-moving" style="font-size:22px;color:var(--gold)"></i></div>
+        <div class="sc-tag" data-i18n="sc5_tag">Транзит</div>
+        <div class="sc-title" data-i18n="sc5_title">Транзитное оформление</div>
+        <div class="sc-desc" data-i18n="sc5_desc">Грузия — ключевой транзитный коридор между Европой и Азией. Оформляем транзит через все КПП.</div>
+        <div class="price-panel">
+          <div class="pp-row"><span>Декларация T1</span><b>100–150 ₾</b></div>
+          <div class="pp-row"><span>Для перевозчиков 10+/мес</span><b>от 80 ₾/шт</b></div>
+          <a href="#contact" class="pp-link">Запросить тариф</a>
+        </div>
+      </div>
+
       <div class="service-card svc-card">
-  <span class="price-badge">от 200 ₾</span>
-  <div class="sc-icon"><i class="fa-solid fa-scale-balanced" style="font-size:22px;color:var(--gold)"></i></div>
-  <div class="sc-tag" data-i18n="sc6_tag">Защита</div>
-  <div class="sc-title" data-i18n="sc6_title">Споры и апелляции</div>
-  <div class="sc-desc" data-i18n="sc6_desc">Оспариваем решения таможни, помогаем при задержаниях и штрафах. Представляем интересы клиента в Службе доходов Грузии.</div>
-  <div class="price-panel">
-    <div class="pp-row"><span>Анализ ситуации</span><b>200 ₾</b></div>
-    <div class="pp-row"><span>Ведение спора</span><b>от 500 ₾</b></div>
-    <div class="pp-row"><span>+ от сэкономленного</span><b>5–10%</b></div>
-    <a href="#contact" class="pp-link">Описать ситуацию</a>
-  </div>
-</div>
+        <span class="price-badge">от 200 ₾</span>
+        <div class="sc-icon"><i class="fa-solid fa-scale-balanced" style="font-size:22px;color:var(--gold)"></i></div>
+        <div class="sc-tag" data-i18n="sc6_tag">Защита</div>
+        <div class="sc-title" data-i18n="sc6_title">Споры и апелляции</div>
+        <div class="sc-desc" data-i18n="sc6_desc">Оспариваем решения таможни, помогаем при задержаниях и штрафах. Представляем интересы клиента в Службе доходов Грузии.</div>
+        <div class="price-panel">
+          <div class="pp-row"><span>Анализ ситуации</span><b>200 ₾</b></div>
+          <div class="pp-row"><span>Ведение спора</span><b>от 500 ₾</b></div>
+          <div class="pp-row"><span>+ от сэкономленного</span><b>5–10%</b></div>
+          <a href="#contact" class="pp-link">Описать ситуацию</a>
+        </div>
+      </div>
+
     </div>
-  </div>
-</section>
+  </div></section>
 
 <section class="section how" id="how">
   <div class="section-inner">
