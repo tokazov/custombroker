@@ -398,7 +398,39 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 32px}
   <div class="chat-btn-inner" id="chatIcon"><i class="fa-solid fa-comment-dots" style="font-size:26px;color:var(--gold)"></i></div>
   <div class="chat-badge" id="chatBadge">1</div>
 </div>
-<div class="chat-window" id="chatWindow">
+<div class="chat-window" id="chatWindow" style="position:relative">
+
+<!-- HS PANEL -->
+<div id="hsPanel" style="display:none;position:absolute;inset:0;background:#fff;z-index:10;flex-direction:column;border-radius:20px;overflow:hidden">
+  <div style="background:linear-gradient(135deg,var(--navy),#1a3a6c);padding:16px 20px;display:flex;align-items:center;gap:12px">
+    <div style="width:36px;height:36px;background:rgba(200,169,110,.2);border-radius:8px;display:flex;align-items:center;justify-content:center"><i class="fa-solid fa-barcode" style="color:var(--gold)"></i></div>
+    <div>
+      <div style="color:#fff;font-weight:700;font-size:14px" id="hsPanelTitle">Поиск HS-кода и пошлин</div>
+      <div style="color:rgba(255,255,255,.55);font-size:12px">Данные по базе rs.ge · Revenue Service of Georgia</div>
+    </div>
+    <button onclick="closeHsPanel()" style="margin-left:auto;background:rgba(255,255,255,.1);border:none;color:#fff;width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div style="padding:16px;flex:1;overflow-y:auto">
+    <div style="font-size:13px;color:var(--muted);margin-bottom:12px" id="hsSearchLabel">Введите название товара:</div>
+    <div style="display:flex;gap:8px;margin-bottom:16px">
+      <input id="hsInput" type="text" placeholder="Телефон, одежда, авто, мебель..." style="flex:1;padding:10px 14px;border:1.5px solid var(--border);border-radius:8px;font-size:14px;font-family:inherit;outline:none" onkeydown="if(event.key==='Enter')hsSearch()" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'">
+      <button onclick="hsSearch()" style="padding:10px 16px;background:var(--navy);color:#fff;border:none;border-radius:8px;cursor:pointer;font-weight:700;font-size:14px"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px">
+      <button onclick="hsQuick('телефон')" class="quick-btn" style="font-size:11px">📱 Телефоны</button>
+      <button onclick="hsQuick('одежда')" class="quick-btn" style="font-size:11px">👕 Одежда</button>
+      <button onclick="hsQuick('автомобиль')" class="quick-btn" style="font-size:11px">🚗 Авто</button>
+      <button onclick="hsQuick('мебель')" class="quick-btn" style="font-size:11px">🛋 Мебель</button>
+      <button onclick="hsQuick('лекарство')" class="quick-btn" style="font-size:11px">💊 Фарма</button>
+      <button onclick="hsQuick('еда')" class="quick-btn" style="font-size:11px">🍎 Продукты</button>
+    </div>
+    <div id="hsResult" style="font-size:13px;line-height:1.7"></div>
+  </div>
+  <div style="padding:10px 16px;border-top:1px solid var(--border);text-align:center">
+    <a href="https://rs.ge/CommodityCodes-en?cat=1&tab=1" target="_blank" style="color:var(--gold);font-size:12px;font-weight:600;text-decoration:none"><i class="fa-solid fa-arrow-up-right-from-square"></i> Официальная база rs.ge</a>
+  </div>
+</div>
+
   <div class="chat-header">
     <div class="chat-avatar"><i class="fa-solid fa-user-tie" style="font-size:20px;color:var(--navy)"></i></div>
     <div>
@@ -417,10 +449,10 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 32px}
     </div>
   </div>
   <div class="chat-quick" id="quickButtons">
-    <button class="quick-btn" onclick="quickAsk(T.q1)" data-i18n="q1">💰 Стоимость</button>
-    <button class="quick-btn" onclick="quickAsk(T.q2)" data-i18n="q2">📄 Документы</button>
-    <button class="quick-btn" onclick="quickAsk(T.q3)" data-i18n="q3">🏭 СЭЗ Поти</button>
-    <button class="quick-btn" onclick="quickAsk(T.q4)" data-i18n="q4">⏱ Сроки</button>
+    <button class="quick-btn hs-btn" onclick="showHsPanel()" data-i18n="q_hs"><i class="fa-solid fa-barcode"></i> HS-код товара</button>
+    <button class="quick-btn" onclick="quickAsk(T.q1)" data-i18n="q1"><i class="fa-solid fa-circle-dollar-to-slot"></i> Стоимость</button>
+    <button class="quick-btn" onclick="quickAsk(T.q2)" data-i18n="q2"><i class="fa-solid fa-file-lines"></i> Документы</button>
+    <button class="quick-btn" onclick="quickAsk(T.q3)" data-i18n="q3"><i class="fa-solid fa-industry"></i> СЭЗ Поти</button>
   </div>
   <div class="chat-input-row">
     <input class="chat-input" id="chatInput" data-i18n-ph="chat_ph" placeholder="Ваш вопрос про таможню..." onkeydown="if(event.key==='Enter')sendMsg()">
@@ -436,7 +468,7 @@ const LANGS = {
     hero_badge:'Работаем 24/7 · Ответ за 30 минут',
     hero_title:'Таможенный брокер<br>в <span>Грузии</span> — быстро,<br>без ошибок и лишних затрат',
     hero_desc:'Растаможка, сертификация, консультации. Работаем с импортёрами из России, Турции, Китая и Европы. AI-консультант онлайн — ответит сразу.',
-    hero_btn1:'<i class="fa-solid fa-comment-dots"></i> Спросить Ану · Бесплатно', hero_btn2:'<i class="fa-solid fa-file-lines"></i> Получить КП',
+    hero_btn1:"Спросить Ану · Бесплатно", hero_btn2:"Получить КП",
     stat1:'Грузов оформлено', stat2:'Лет на рынке', stat3:'AI-поддержка',
     card_title:'Наши услуги',
     svc1_name:'Таможенное оформление', svc1_sub:'Импорт, экспорт, транзит',
@@ -496,7 +528,7 @@ const LANGS = {
     hero_badge:'ვმუშაობთ 24/7 · პასუხი 30 წუთში',
     hero_title:'საბაჟო ბროკერი<br><span>საქართველოში</span> — სწრაფად<br>და ჯარიმების გარეშე',
     hero_desc:'განბაჟება, სერტიფიცირება, კონსულტაციები. ვმუშაობთ რუსეთის, თურქეთის, ჩინეთისა და ევროპის იმპორტიორებთან. AI-კონსულტანტი ონლაინ.',
-    hero_btn1:'<i class="fa-solid fa-comment-dots"></i> ანას დასვი კითხვა · უფასოდ', hero_btn2:'<i class="fa-solid fa-file-lines"></i> კომ. წინადადება',
+    hero_btn1:"ანას დასვი კითხვა · უფასოდ", hero_btn2:"კომ. წინადადება",
     stat1:'დამუშავებული ტვირთი', stat2:'წელი ბაზარზე', stat3:'AI-მხარდაჭერა',
     card_title:'ჩვენი სერვისები',
     svc1_name:'საბაჟო გაფორმება', svc1_sub:'იმპორტი, ექსპორტი, ტრანზიტი',
@@ -556,7 +588,7 @@ const LANGS = {
     hero_badge:'Available 24/7 · Reply within 30 minutes',
     hero_title:'Customs Broker<br>in <span>Georgia</span> — Fast,<br>Accurate & Cost-Effective',
     hero_desc:'Customs clearance, certification, consultations. We work with importers from Russia, Turkey, China & Europe. AI consultant online — answers instantly.',
-    hero_btn1:'<i class="fa-solid fa-comment-dots"></i> Ask Ana · Free', hero_btn2:'<i class="fa-solid fa-file-lines"></i> Get a Quote',
+    hero_btn1:"Ask Ana · Free", hero_btn2:"Get a Quote",
     stat1:'Shipments cleared', stat2:'Years on market', stat3:'AI support',
     card_title:'Our Services',
     svc1_name:'Customs Clearance', svc1_sub:'Import, export, transit',
@@ -607,7 +639,7 @@ const LANGS = {
     footer_lic:'Licensed Customs Broker · <span class="footer-gold">Revenue Service of Georgia</span>',
     chat_status:'Online · instant replies', chat_ph:'Your customs question...',
     agent_name:'Ana · Customs Expert',
-    welcome:'Hi! I\'m Ana, AI customs consultant for Georgia 🇬🇪<br><br>I can help you calculate duties, understand documents, or explain procedures. Ask away!',
+    welcome:"Hi! I'm Ana, AI customs consultant for Georgia 🇬🇪<br><br>I can help you calculate duties, understand documents, or explain procedures. Ask away!" ,
     q1:'💰 Pricing', q2:'📄 Documents', q3:'🏭 Poti FIZ', q4:'⏱ Timelines',
     ph_name:'First Last', form_sent:'✅ Request received!',
   }
@@ -732,6 +764,109 @@ function showTyping() {
 }
 function removeTyping() { const t = document.getElementById('typingIndicator'); if(t) t.remove(); }
 
+
+// ═══════════════════════════════════════════════
+// HS CODE ENGINE — база товаров Грузии (rs.ge)
+// ═══════════════════════════════════════════════
+const HS_DB = [
+  // Электроника
+  {k:['телефон','смартфон','iphone','samsung','phone','smartphone','ტელეფონი'], hs:'8517.12', duty:0, vat:18, name:'Смартфоны', docs:['Инвойс','Упаковочный лист','CMR/AWB']},
+  {k:['ноутбук','laptop','компьютер','computer','ლეპტოპი'], hs:'8471.30', duty:0, vat:18, name:'Ноутбуки/ПК', docs:['Инвойс','Упаковочный лист','AWB']},
+  {k:['телевизор','tv','television','телевізор','ტელევიზორი'], hs:'8528.72', duty:0, vat:18, name:'Телевизоры', docs:['Инвойс','CMR/AWB']},
+  {k:['планшет','tablet','ipad','ტაბლეტი'], hs:'8471.30', duty:0, vat:18, name:'Планшеты', docs:['Инвойс','AWB']},
+  {k:['наушник','airpods','headphone','earphone'], hs:'8518.30', duty:0, vat:18, name:'Наушники', docs:['Инвойс','AWB']},
+  {k:['холодильник','fridge','refrigerator','მაცივარი'], hs:'8418.10', duty:0, vat:18, name:'Холодильники', docs:['Инвойс','CMR']},
+  {k:['стиральная','washing machine','стиралка','სარეცხი'], hs:'8450.11', duty:0, vat:18, name:'Стиральные машины', docs:['Инвойс','CMR']},
+  {k:['кондиционер','кондиционер','air conditioner','კონდიციონერი'], hs:'8415.10', duty:0, vat:18, name:'Кондиционеры', docs:['Инвойс','CMR']},
+  {k:['принтер','printer','პრინტერი'], hs:'8443.32', duty:0, vat:18, name:'Принтеры', docs:['Инвойс','AWB']},
+  {k:['камера','camera','фотоаппарат','კამერა'], hs:'8525.80', duty:0, vat:18, name:'Камеры/Фотоаппараты', docs:['Инвойс','AWB']},
+  // Одежда и обувь
+  {k:['одежда','clothes','clothing','textile','ткань','текстиль','ტანსაცმელი'], hs:'6109.10', duty:12, vat:18, name:'Одежда/Текстиль', docs:['Инвойс','Упаковочный лист','CMR','Сертификат происхождения']},
+  {k:['обувь','shoes','footwear','кроссовки','boots','ფეხსაცმელი'], hs:'6403.99', duty:12, vat:18, name:'Обувь', docs:['Инвойс','CMR','Сертификат происхождения']},
+  {k:['сумка','bags','bag','handbag','luggage','ჩანთა'], hs:'4202.21', duty:12, vat:18, name:'Сумки/Аксессуары', docs:['Инвойс','CMR']},
+  // Автомобили
+  {k:['автомобиль','машина','авто','car','vehicle','автомобіль','მანქანა'], hs:'8703.23', duty:0, vat:18, name:'Легковые авто', docs:['ПТС/Title','Инвойс','CMR','Страховка'], note:'⚠️ Акциз зависит от объёма двигателя и года выпуска. Уточните характеристики.'},
+  {k:['грузовик','truck','cargo vehicle','სატვირთო'], hs:'8704.22', duty:0, vat:18, name:'Грузовые авто', docs:['ПТС','Инвойс','CMR'], note:'⚠️ Ставка акциза зависит от полной массы.'},
+  {k:['запчасть','запчасти','auto parts','spare parts','სათადარიგო'], hs:'8708.99', duty:0, vat:18, name:'Автозапчасти', docs:['Инвойс','CMR/AWB']},
+  // Продукты питания
+  {k:['продукт','еда','food','продовольство','სურსათი'], hs:'2106.90', duty:12, vat:0, name:'Продукты питания (общие)', docs:['Инвойс','Фитосанитарный сертификат','Ветеринарное заключение (для мяса/рыбы)'], note:'⚠️ НДС 0% на базовые продукты. Для мяса, рыбы, молочки — ветсправка обязательна.'},
+  {k:['мясо','meat','chicken','говядина','ხორცი'], hs:'0201.20', duty:12, vat:0, name:'Мясо/Птица', docs:['Инвойс','Ветеринарный сертификат','Фитосанитарный'], note:'⚠️ Обязателен ветеринарный сертификат страны происхождения.'},
+  {k:['рыба','fish','морепродукт','seafood','თევზი'], hs:'0302.91', duty:12, vat:0, name:'Рыба/Морепродукты', docs:['Инвойс','Ветеринарный сертификат'], note:'⚠️ Ветеринарный сертификат обязателен.'},
+  {k:['сахар','sugar','შაქარი'], hs:'1701.99', duty:12, vat:0, name:'Сахар', docs:['Инвойс','Сертификат происхождения']},
+  {k:['мука','flour','wheat','пшеница','ფქვილი'], hs:'1101.00', duty:5, vat:0, name:'Мука/Зерно', docs:['Инвойс','Фитосанитарный сертификат']},
+  {k:['масло','oil','оливковое','sunflower','ზეთი'], hs:'1507.10', duty:0, vat:0, name:'Растительное масло', docs:['Инвойс','Сертификат качества']},
+  {k:['алкоголь','alcohol','вино','wine','водка','spirits','ღვინო'], hs:'2204.21', duty:0, vat:18, name:'Алкоголь/Вино', docs:['Инвойс','Акцизная декларация','Сертификат качества'], note:'⚠️ Акциз: вино ~0.3 GEL/л, крепкий алкоголь — выше.'},
+  // Строительство
+  {k:['цемент','cement','ცემენტი'], hs:'2523.29', duty:0, vat:18, name:'Цемент', docs:['Инвойс','CMR']},
+  {k:['сталь','steel','металл','metal','iron','ლითონი'], hs:'7208.10', duty:0, vat:18, name:'Сталь/Металлопрокат', docs:['Инвойс','CMR','Сертификат качества']},
+  {k:['арматура','rebar','reinforcement'], hs:'7214.20', duty:0, vat:18, name:'Арматура', docs:['Инвойс','CMR','Сертификат']},
+  {k:['кирпич','brick','плитка','tile','კერამიკა'], hs:'6907.21', duty:12, vat:18, name:'Кирпич/Плитка', docs:['Инвойс','CMR']},
+  {k:['мебель','furniture','диван','стол','стул','ავეჯი'], hs:'9401.61', duty:12, vat:18, name:'Мебель', docs:['Инвойс','CMR','Сертификат происхождения']},
+  // Медицина и фарма
+  {k:['лекарство','medicine','pharmaceutical','медикамент','წამალი'], hs:'3004.90', duty:0, vat:0, name:'Лекарственные препараты', docs:['Инвойс','Регистрационное удостоверение НЦЭЛМП','Сертификат качества'], note:'⚠️ Обязательна регистрация в НЦЭЛМП (Нац. центр лекарств Грузии).'},
+  {k:['медоборудование','medical equipment','хирургический','სამედიცინო'], hs:'9018.90', duty:0, vat:0, name:'Медицинское оборудование', docs:['Инвойс','Регистрация НЦЭЛМП','CE/FDA сертификат']},
+  // Удобрения и с/х
+  {k:['удобрение','fertilizer','сельхоз','agricultural','სასუქი'], hs:'3102.10', duty:0, vat:0, name:'Удобрения', docs:['Инвойс','Фитосанитарный сертификат']},
+  {k:['семена','seeds','посевной','თესლი'], hs:'1209.91', duty:0, vat:0, name:'Семена', docs:['Инвойс','Фитосанитарный сертификат','Сертификат сортовой чистоты']},
+  // Химия
+  {k:['химия','chemicals','краска','paint','растворитель','ქიმია'], hs:'3208.10', duty:0, vat:18, name:'Химические товары/Краски', docs:['Инвойс','MSDS (паспорт безопасности)','CMR']},
+  {k:['пластик','plastic','полиэтилен','plastic material'], hs:'3901.20', duty:0, vat:18, name:'Пластик/Полимеры', docs:['Инвойс','CMR']},
+  // Топливо
+  {k:['топливо','fuel','бензин','дизель','diesel','petrol','საწვავი'], hs:'2710.12', duty:0, vat:18, name:'Топливо/Нефтепродукты', docs:['Инвойс','Паспорт качества','CMR'], note:'⚠️ Акциз: бензин ~0.6 GEL/л, дизель ~0.4 GEL/л.'},
+  // Оборудование
+  {k:['станок','machinery','промышленное','оборудование','equipment','машина','დანადგარი'], hs:'8479.89', duty:0, vat:18, name:'Промышленное оборудование', docs:['Инвойс','CMR','Техпаспорт']},
+  {k:['генератор','generator','გენერატორი'], hs:'8502.11', duty:0, vat:18, name:'Генераторы', docs:['Инвойс','CMR','Техпаспорт']},
+  {k:['насос','pump','pump','ტუმბო'], hs:'8413.70', duty:0, vat:18, name:'Насосы', docs:['Инвойс','CMR']},
+  // Игрушки / спорт
+  {k:['игрушки','toys','toy','სათამაშო'], hs:'9503.00', duty:12, vat:18, name:'Игрушки', docs:['Инвойс','CMR/AWB','Сертификат безопасности CE']},
+  {k:['спорт','sport','тренажер','bicycle','велосипед','სპორტი'], hs:'9506.91', duty:0, vat:18, name:'Спортинвентарь', docs:['Инвойс','CMR/AWB']},
+  // Косметика
+  {k:['косметика','cosmetics','парфюм','perfume','კოსმეტიკა'], hs:'3303.00', duty:0, vat:18, name:'Косметика/Парфюмерия', docs:['Инвойс','AWB','Уведомление в НЦЭЛМП (для отдельных категорий)']},
+];
+
+function _hsLookup(text) {
+  const tLow = text.toLowerCase();
+  for(const item of HS_DB) {
+    if(item.k.some(kw => tLow.includes(kw.toLowerCase()))) return item;
+  }
+  return null;
+}
+
+function _formatHsAnswer(item, lang) {
+  const fta = 'СНГ, Турция, ЕС (DCFTA), ЕАСТ, Китай — льготные ставки';
+  const ftaGe = 'დსთ, თურქეთი, EU (DCFTA) — შეღავათიანი განაკვეთები';
+  const ftaEn = 'CIS, Turkey, EU (DCFTA), EFTA, China — preferential rates';
+
+  if(lang === 'ge') {
+    return "<b>🔎 "+item.name+"</b>\n\n" +
+      "📋 <b>HS კოდი:</b> "+item.hs+"\n" +
+      `💰 <b>სaaბაჟო გადასახადი:</b> ${item.duty}%\n` +
+      `🧾 <b>დღგ:</b> ${item.vat}%\n` +
+      (item.note ? `⚠️ ${item.note}\n` : '') +
+      `\n📄 <b>საჭირო დოკუმენტები:</b>\n${item.docs.map(d=>`• ${d}`).join('\n')}\n` +
+      `\n🌍 <b>FTA:</b> ${ftaGe}\n` +
+      `\n🔗 <a href="https://rs.ge/CommodityCodes-en?cat=1&tab=1" target="_blank" style="color:var(--gold)">გადაამოწმეთ rs.ge-ზე →</a>`;
+  }
+  if(lang === 'en') {
+    return `<b>🔎 ${item.name}</b>\n\n` +
+      `📋 <b>HS Code:</b> ${item.hs}\n` +
+      `💰 <b>Import Duty:</b> ${item.duty}%\n` +
+      `🧾 <b>VAT:</b> ${item.vat}%\n` +
+      (item.note ? `⚠️ ${item.note}\n` : '') +
+      `\n📄 <b>Required Documents:</b>\n${item.docs.map(d=>`• ${d}`).join('\n')}\n` +
+      `\n🌍 <b>FTA (0% duty):</b> ${ftaEn}\n` +
+      `\n🔗 <a href="https://rs.ge/CommodityCodes-en?cat=1&tab=1" target="_blank" style="color:var(--gold)">Verify on rs.ge →</a>`;
+  }
+  return `<b>🔎 ${item.name}</b>\n\n` +
+    `📋 <b>HS-код:</b> ${item.hs}\n` +
+    `💰 <b>Ввозная пошлина:</b> ${item.duty}%\n` +
+    `🧾 <b>НДС:</b> ${item.vat}%\n` +
+    (item.note ? `${item.note}\n` : '') +
+    `\n📄 <b>Документы для таможни:</b>\n${item.docs.map(d=>`• ${d}`).join('\n')}\n` +
+    `\n🌍 <b>Льготная ставка 0% для:</b> ${fta}\n` +
+    `\n🔗 <a href="https://rs.ge/CommodityCodes-en?cat=1&tab=1" target="_blank" style="color:var(--gold)">Проверить официально на rs.ge →</a>`;
+}
+
 // Smart FAQ fallback
 const FAQ_KB = {
   ru: [
@@ -746,13 +881,13 @@ const FAQ_KB = {
   ],
   ge: [
     {k:['ღირებულება','ფასი','რა ღირს'],a:'საბაჟო გადასახადი საქართველოში: 0%, 5% ან 12% HS-კოდის მიხედვით. დღგ 18%. ჩვენი მომსახურება — 150 GEL-დან. ზუსტი გაანგარიშებისთვის აღწერეთ საქონელი. 📋'},
-    {k:['დოკუმენტ','ინვოის','რა სჭირდება'],a:'სტანდარტული პაკეტი: ინვოისი, შეფუთვის სია, სატვირთო დოკუმენტები, წარმოშობის სერტიფიკატი. ზოგიერთ საქონელს სჭირდება დამატებითი ნებართვები.'},
-    {k:['სეზ','ფოთი','ქუთაისი','თავისუფალი'],a:'სეზ ფოთი და ქუთაისი: 0% დღგ, 0% ბაჟი, 0% საშემოსავლო გადასახადი. იდეალურია რეექსპორტიორებისთვის. დარეგისტრირებაში დაგეხმარებით. 🏭'},
-    {k:['ვადა','დრო','რამდენ ხანს'],a:'სტანდარტული გაფორმება — 1-3 სამუშაო დღე. სასწრაფო — 1 დღე. ⚡'},
+    {k:['დოკუმენტ','ინვოის','რა სჭირდება'],a:"სტანდარტული პაკეტი: ინვოისი, შეფუთვის სია, სატვირთო დოკუმენტები, წარმოშობის სერტიფიკატი. ზოგიერთ საქონელს სჭირდება დამატებითი ნებართვები."},
+    {k:['სეზ','ფოთი','ქუთაისი','თავისუფალი'],a:"სეზ ფოთი და ქუთაისი: 0% დღგ, 0% ბაჟი, 0% საშემოსავლო გადასახადი. იდეალურია რეექსპორტიორებისთვის. დარეგისტრირებაში დაგეხმარებით. 🏭"},
+    {k:['ვადა','დრო','რამდენ ხანს'],a:"სტანდარტული გაფორმება — 1-3 სამუშაო დღე. სასწრაფო — 1 დღე. ⚡"},
   ],
   en: [
-    {k:['cost','price','how much','fee'],a:'Georgian customs duties: 0%, 5%, or 12% depending on HS code. VAT 18%. Our services from 150 GEL. Describe your goods and origin country — we'll calculate the exact cost in 30 minutes. 📋'},
-    {k:['document','invoice','need','require'],a:'Standard package: commercial invoice, packing list, transport documents (CMR/B/L/AWB), certificate of origin. Some goods require additional permits. Tell us your product — we'll confirm.'},
+    {k:['cost','price','how much','fee'],a:'Georgian customs duties: 0%, 5%, or 12% depending on HS code. VAT 18%. Our services from 150 GEL. Describe your goods and origin country — we will calculate the exact cost in 30 minutes. 📋'},
+    {k:['document','invoice','need','require'],a:'Standard package: commercial invoice, packing list, transport documents (CMR/B/L/AWB), certificate of origin. Some goods require additional permits. Tell us your product — we will confirm.'},
     {k:['fiz','fez','poti','free zone','kutaisi'],a:'Poti & Kutaisi FIZ: 0% VAT, 0% duties, 0% income tax on operations within the zone. Perfect for re-exporters and distributors. We can help you register. 🏭'},
     {k:['time','long','days','duration','fast'],a:'Standard clearance: 1-3 business days with full documents. Urgent: 1 day. We prepare the package in advance to avoid delays. ⚡'},
     {k:['detained','stuck','held','penalty','fine'],a:'If customs detained your cargo — contact us immediately, we respond within 1 hour. We prepare a response or appeal. Most cases resolved without fines. 📞'},
@@ -802,12 +937,91 @@ async function sendMsg() {
     } catch(e) {}
   }
 
+  // HS Code lookup
+  const hsItem = _hsLookup(text);
+  if(hsItem) {
+    await new Promise(r => setTimeout(r, 500 + Math.random()*400));
+    const hsReply = _formatHsAnswer(hsItem, currentLang);
+    removeTyping(); addMsg('bot', hsReply);
+    isTyping = false; return;
+  }
+
   // Fallback — smart FAQ
   await new Promise(r => setTimeout(r, 600 + Math.random()*600));
   const reply = _faqAnswer(text);
   removeTyping(); addMsg('bot', reply);
   isTyping = false;
 }
+
+window.showHsPanel = function showHsPanel() {
+  const p = document.getElementById('hsPanel');
+  p.style.display = 'flex';
+  setTimeout(() => document.getElementById('hsInput').focus(), 100);
+}
+window.closeHsPanel = function closeHsPanel() {
+  document.getElementById('hsPanel').style.display = 'none';
+  document.getElementById('hsResult').innerHTML = '';
+  document.getElementById('hsInput').value = '';
+}
+window.hsQuick = function hsQuick(term) {
+  document.getElementById('hsInput').value = term;
+  hsSearch();
+}
+window.hsSearch = function hsSearch() {
+  const q = document.getElementById('hsInput').value.trim();
+  const res = document.getElementById('hsResult');
+  if(!q) { res.innerHTML = '<span style="color:var(--muted)">Введите название товара</span>'; return; }
+  const item = _hsLookup(q);
+  if(!item) {
+    res.innerHTML = '<div style="background:#fff8e6;border:1px solid #f7b731;border-radius:8px;padding:14px;font-size:13px"><b>Товар не найден в базе</b><br><span style="color:var(--muted)">Попробуйте другое название или уточните у специалиста</span><br><br><a href="https://rs.ge/CommodityCodes-en?cat=1&tab=1" target="_blank" style="color:var(--gold);font-weight:600">Поиск на rs.ge →</a></div>';
+    return;
+  }
+  const dutyColor = item.duty === 0 ? '#2ecc71' : item.duty === 5 ? '#f39c12' : '#e74c3c';
+  const vatColor = item.vat === 0 ? '#2ecc71' : '#e74c3c';
+  res.innerHTML = `
+    <div style="background:var(--gray);border-radius:12px;padding:16px;border-left:4px solid var(--gold)">
+      <div style="font-size:15px;font-weight:800;color:var(--navy);margin-bottom:12px">${item.name}</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px">
+        <div style="background:#fff;border-radius:8px;padding:10px;text-align:center;border:1px solid var(--border)">
+          <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">HS-код</div>
+          <div style="font-size:16px;font-weight:800;color:var(--navy);font-family:monospace">${item.hs}</div>
+        </div>
+        <div style="background:#fff;border-radius:8px;padding:10px;text-align:center;border:1px solid var(--border)">
+          <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Пошлина</div>
+          <div style="font-size:20px;font-weight:800;color:${dutyColor}">${item.duty}%</div>
+        </div>
+        <div style="background:#fff;border-radius:8px;padding:10px;text-align:center;border:1px solid var(--border)">
+          <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">НДС</div>
+          <div style="font-size:20px;font-weight:800;color:${vatColor}">${item.vat}%</div>
+        </div>
+      </div>
+      ${item.note ? `<div style="background:#fff8e6;border:1px solid #f7b731;border-radius:6px;padding:10px;font-size:12px;color:#7d5a00;margin-bottom:12px">${item.note}</div>` : ''}
+      <div style="margin-bottom:6px;font-size:12px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.5px">Необходимые документы:</div>
+      ${item.docs.map(d=>`<div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid rgba(0,0,0,.04);font-size:13px"><i class="fa-solid fa-check" style="color:var(--gold);font-size:10px;flex-shrink:0"></i>${d}</div>`).join('')}
+      <div style="margin-top:12px;padding-top:10px;border-top:1px solid var(--border);font-size:11px;color:var(--muted)">
+        <i class="fa-solid fa-circle-info" style="color:var(--gold)"></i> Льготная ставка 0% для: СНГ, Турция, ЕС (DCFTA), ЕАСТ, Китай
+      </div>
+    </div>
+    <div style="margin-top:10px;text-align:center">
+      <a href="https://rs.ge/CommodityCodes-en?cat=1&tab=1" target="_blank" style="color:var(--gold);font-size:12px;font-weight:600;text-decoration:none"><i class="fa-solid fa-arrow-up-right-from-square"></i> Проверить официально на rs.ge</a>
+    </div>`;
+}
+
+
+// === Global exports ===
+window.showHsPanel = showHsPanel;
+window.closeHsPanel = closeHsPanel;
+window.hsSearch = hsSearch;
+window.hsQuick = hsQuick;
+window.openChat = openChat;
+window.toggleChat = toggleChat;
+window.sendMsg = sendMsg;
+window.quickAsk = quickAsk;
+window.setLang = setLang;
+window.toggleFaq = toggleFaq;
+window.submitForm = submitForm;
+window.toggleMenu = toggleMenu;
+
 </script>
 </body>
 </html>
