@@ -353,15 +353,15 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 80px}
         <div class="contact-info">
           <div class="ci-item"><div class="ci-icon"><i class="fa-solid fa-location-dot" style="font-size:18px;color:var(--gold)"></i></div><div><div class="ci-label" data-i18n="ci_office">Офис</div><div class="ci-val">Тбилиси, ул. Руставели 12</div></div></div>
           <div class="ci-item"><div class="ci-icon"><i class="fa-solid fa-phone" style="font-size:18px;color:var(--gold)"></i></div><div><div class="ci-label" data-i18n="ci_phone">Телефон / WhatsApp</div><div class="ci-val">+995 32 XXX XX XX</div></div></div>
-          <div class="ci-item"><div class="ci-icon"><i class="fa-solid fa-envelope" style="font-size:18px;color:var(--gold)"></i></div><div><div class="ci-label">Email</div><div class="ci-val">info@custombroker.ge</div></div></div>
+          <div class="ci-item"><div class="ci-icon"><i class="fa-solid fa-envelope" style="font-size:18px;color:var(--gold)"></i></div><div><div class="ci-label">Email</div><div class="ci-val">custombroker.ge@gmail.com</div></div></div>
           <div class="ci-item"><div class="ci-icon"><i class="fa-solid fa-clock" style="font-size:18px;color:var(--gold)"></i></div><div><div class="ci-label" data-i18n="ci_hours">Рабочее время</div><div class="ci-val" data-i18n="ci_hours_val">Пн-Пт 9:00–18:00 · AI 24/7</div></div></div>
         </div>
       </div>
       <div class="contact-form">
         <div class="form-title" data-i18n="form_title">Запрос на оформление</div>
         <div class="form-row">
-          <div class="form-group"><label data-i18n="form_name">Ваше имя</label><input type="text" id="fname" data-i18n-ph="ph_name" placeholder="Имя Фамилия"></div>
-          <div class="form-group"><label data-i18n="form_phone">Телефон / WhatsApp</label><input type="tel" placeholder="+995..."></div>
+          <div class="form-group"><label data-i18n="form_name">Ваше имя</label><input type="text" id="fname" name="name" data-i18n-ph="ph_name" placeholder="Имя Фамилия"></div>
+          <div class="form-group"><label data-i18n="form_phone">Телефон / WhatsApp</label><input type="tel" name="phone" placeholder="+995..."></div>
         </div>
         <div class="form-group">
           <label data-i18n="form_from">Откуда везёте груз</label>
@@ -371,7 +371,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 80px}
             <option>Russia 🇷🇺</option><option>Iran 🇮🇷</option><option data-i18n="form_other">Другая страна</option>
           </select>
         </div>
-        <div class="form-group"><label data-i18n="form_goods">Тип товара и примерная стоимость</label><textarea data-i18n-ph="ph_goods" placeholder="Например: электроника, 20 000 USD, 5 тонн..."></textarea></div>
+        <div class="form-group"><label data-i18n="form_goods">Тип товара и примерная стоимость</label><textarea name="message" data-i18n-ph="ph_goods" placeholder="Например: электроника, 20 000 USD, 5 тонн..."></textarea></div>
         <button class="form-submit" onclick="submitForm(this)" data-i18n="form_submit">Отправить заявку →</button>
         <div class="form-note" data-i18n="form_note">🔒 Данные конфиденциальны · Ответим за 30 минут</div>
       </div>
@@ -398,7 +398,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 80px}
         <h4 data-i18n="footer_contacts">Контакты</h4>
         <a href="#"><i class="fa-solid fa-location-dot"></i> Тбилиси, Руставели 12</a>
         <a href="#"><i class="fa-solid fa-phone"></i> +995 32 XXX XX XX</a>
-        <a href="#"><i class="fa-solid fa-envelope"></i> info@custombroker.ge</a>
+        <a href="#"><i class="fa-solid fa-envelope"></i> custombroker.ge@gmail.com</a>
         <a href="#"><i class="fa-brands fa-telegram"></i> Telegram</a>
         <a href="#"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
       </div>
@@ -707,14 +707,26 @@ function toggleFaq(el) {
 
 // ─── FORM ───
 function submitForm(btn) {
-  const orig = btn.textContent;
-  btn.textContent = '⏳...';
+  const form = btn.closest('form') || document.getElementById('contactForm');
+  const name = form ? form.querySelector('[name=name]') : null;
+  const phone = form ? form.querySelector('[name=phone]') : null;
+  const msg = form ? form.querySelector('[name=message]') : null;
+  const orig = btn.innerHTML;
+  btn.innerHTML = '⏳...';
   btn.disabled = true;
-  setTimeout(() => {
-    btn.textContent = T.form_sent || '✅ Sent!';
-    btn.style.background = '#2ecc71';
-    setTimeout(() => { btn.textContent = orig; btn.disabled = false; btn.style.background = ''; }, 3000);
-  }, 1200);
+
+  const body = encodeURIComponent(
+    'Имя: ' + (name&&name.value||'—') + '\n' +
+    'Телефон: ' + (phone&&phone.value||'—') + '\n' +
+    'Сообщение: ' + (msg&&msg.value||'—')
+  );
+  const subject = encodeURIComponent('Заявка с custombroker.ge');
+
+  // Отправляем через mailto
+  window.location.href = 'mailto:custombroker.ge@gmail.com?subject=' + subject + '&body=' + body;
+  btn.innerHTML = T.form_sent || '✅ Заявка отправлена!';
+  btn.style.background = '#2ecc71';
+  setTimeout(() => { btn.innerHTML = orig; btn.disabled = false; btn.style.background = ''; }, 4000);
 }
 
 // ─── CHAT ───
