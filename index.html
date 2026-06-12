@@ -1129,6 +1129,25 @@ const HS_DB = [
   // Игрушки / спорт
   {k:['игрушки','toys','toy','სათამაშო'], hs:'9503.00', duty:12, vat:18, name:'Игрушки', docs:['Инвойс','CMR/AWB','Сертификат безопасности CE']},
   {k:['спорт','sport','тренажер','bicycle','велосипед','სპორტი'], hs:'9506.91', duty:0, vat:18, name:'Спортинвентарь', docs:['Инвойс','CMR/AWB']},
+  // Резина и изделия из неё
+  {k:['шланг','hose','резиновый шланг','rubber hose','rubber pipe'], hs:'4009.11', duty:0, vat:18, name:'Шланги резиновые', docs:['Инвойс','CMR/AWB']},
+  {k:['резина','rubber','каучук','latex','латекс'], hs:'4016.99', duty:0, vat:18, name:'Изделия из резины', docs:['Инвойс','CMR/AWB']},
+  {k:['уплотнитель','прокладка','gasket','seal','сальник'], hs:'4016.93', duty:0, vat:18, name:'Уплотнители/Прокладки', docs:['Инвойс','CMR/AWB']},
+  // Трубы и фитинги
+  {k:['труба','pipe','трубопровод','трубка','пластиковая труба'], hs:'3917.32', duty:0, vat:18, name:'Трубы пластиковые', docs:['Инвойс','CMR']},
+  {k:['стальная труба','steel pipe','металлическая труба'], hs:'7304.39', duty:0, vat:18, name:'Трубы стальные', docs:['Инвойс','CMR','Сертификат качества']},
+  {k:['фитинг','fitting','муфта','coupling','тройник','угольник'], hs:'3917.33', duty:0, vat:18, name:'Фитинги/Соединения', docs:['Инвойс','CMR']},
+  // Инструменты
+  {k:['инструмент','tool','дрель','drill','болгарка','шуруповерт'], hs:'8467.11', duty:0, vat:18, name:'Электроинструменты', docs:['Инвойс','CMR/AWB']},
+  {k:['ручной инструмент','hand tool','молоток','ключ гаечный','гаечный ключ'], hs:'8204.11', duty:0, vat:18, name:'Ручной инструмент', docs:['Инвойс','CMR/AWB']},
+  // Строительные материалы
+  {k:['стекло','glass','окно','window','стеклопакет'], hs:'7005.10', duty:0, vat:18, name:'Стекло листовое', docs:['Инвойс','CMR']},
+  {k:['утеплитель','insulation','пенопласт','минвата','mineral wool'], hs:'6806.20', duty:0, vat:18, name:'Теплоизоляция', docs:['Инвойс','CMR']},
+  {k:['кабель','cable','провод','wire','электрокабель'], hs:'8544.49', duty:0, vat:18, name:'Кабели/Провода', docs:['Инвойс','CMR/AWB']},
+  {k:['светильник','lamp','лампа','led','освещение','люстра'], hs:'9405.11', duty:0, vat:18, name:'Осветительное оборудование', docs:['Инвойс','CMR/AWB']},
+  // Сантехника
+  {k:['кран','faucet','смеситель','valve','вентиль','задвижка'], hs:'8481.80', duty:0, vat:18, name:'Краны/Запорная арматура', docs:['Инвойс','CMR']},
+  {k:['унитаз','toilet','раковина','sink','ванна','bath','санфаянс'], hs:'6910.10', duty:12, vat:18, name:'Сантехника', docs:['Инвойс','CMR']},
   // Косметика
   {k:['косметика','cosmetics','парфюм','perfume','კოსმეტიკა'], hs:'3303.00', duty:0, vat:18, name:'Косметика/Парфюмерия', docs:['Инвойс','AWB','Уведомление в НЦЭЛМП (для отдельных категорий)']},
 ];
@@ -1282,7 +1301,7 @@ window.hsSearch = function hsSearch() {
   if(!q) { res.innerHTML = '<span style="color:var(--muted)">Введите название товара</span>'; return; }
   const item = _hsLookup(q);
   if(!item) {
-    res.innerHTML = '<div style="background:#fff8e6;border:1px solid #f7b731;border-radius:8px;padding:14px;font-size:13px"><b>Товар не найден в базе</b><br><span style="color:var(--muted)">Попробуйте другое название или уточните у специалиста</span><br><br><a href="https://rs.ge/CommodityCodes-en?cat=1&tab=1" target="_blank" style="color:var(--gold);font-weight:600">Поиск на rs.ge →</a></div>';
+    res.innerHTML = '<div style="background:#fff8e6;border:1px solid #f7b731;border-radius:8px;padding:14px;font-size:13px"><b>Товар не найден в базе</b><br><span style="color:var(--muted)">Попробуйте синоним или английское название</span><br><br><button onclick="closeHsPanel();document.getElementById(\'chatInput\').value=\'HS-код и пошлина: \'+document.getElementById(\'hsInput\').value;toggleChat();document.getElementById(\'chatInput\').focus();" style="background:var(--navy);color:#fff;border:none;border-radius:6px;padding:8px 14px;cursor:pointer;font-size:12px;font-weight:700;margin-bottom:8px;width:100%">💬 Спросить у Аны</button><a href="https://rs.ge/CommodityCodes-en?cat=1&tab=1" target="_blank" style="color:var(--gold);font-weight:600;font-size:12px">Поиск на rs.ge →</a></div>';
     return;
   }
   const dutyColor = item.duty === 0 ? '#2ecc71' : item.duty === 5 ? '#f39c12' : '#e74c3c';
