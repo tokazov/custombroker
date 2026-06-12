@@ -269,13 +269,13 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 80px}
       <div class="logo-text">CustomBroker<span class="logo-sub">Georgia</span></div>
     </a>
     <div class="nav-links" id="navLinks">
-      <a href="#services" data-i18n="nav_services">Услуги</a>
-      <a href="#how" data-i18n="nav_how">Как работаем</a>
-      <a href="#why" data-i18n="nav_why">О нас</a>
-      <a href="#faq">FAQ</a>
-      <a href="#pricing" data-i18n="nav_pricing">Цены</a>
-      <a href="#news" data-i18n="nav_news">Новости</a>
-      <a href="#contact" class="nav-cta" data-i18n="nav_cta">Консультация</a>
+      <a href="#services" data-i18n="nav_services" onclick="closeMenu()">Услуги</a>
+      <a href="#how" data-i18n="nav_how" onclick="closeMenu()">Как работаем</a>
+      <a href="#why" data-i18n="nav_why" onclick="closeMenu()">О нас</a>
+      <a href="#faq" onclick="closeMenu()">FAQ</a>
+      <a href="#pricing" data-i18n="nav_pricing" onclick="closeMenu()">Цены</a>
+      <a href="#news" data-i18n="nav_news" onclick="closeMenu()">Новости</a>
+      <a href="#contact" class="nav-cta" data-i18n="nav_cta" onclick="closeMenu()">Консультация</a>
     </div>
     <div style="display:flex;align-items:center;gap:8px">
       <div class="lang-switcher">
@@ -960,6 +960,12 @@ function toggleMenu() {
   links.style.display = open ? 'none' : 'flex';
   if(!open) {
     Object.assign(links.style, {flexDirection:'column',position:'absolute',top:'68px',left:'0',right:'0',background:'var(--navy)',padding:'20px 24px',gap:'16px',borderTop:'1px solid rgba(255,255,255,.1)'});
+  }
+}
+function closeMenu() {
+  const links = document.getElementById('navLinks');
+  if(links.style.display === 'flex') {
+    links.style.display = 'none';
   }
 }
 
