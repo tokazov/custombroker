@@ -1295,51 +1295,74 @@ window.hsQuick = function hsQuick(term) {
   document.getElementById('hsInput').value = term;
   hsSearch();
 }
-window.hsSearch = function hsSearch() {
+window.hsSearch = async function hsSearch() {
   const q = document.getElementById('hsInput').value.trim();
   const res = document.getElementById('hsResult');
   if(!q) { res.innerHTML = '<span style="color:var(--muted)">Введите название товара</span>'; return; }
+
+  // 1. Быстрый поиск в локальной базе
   const item = _hsLookup(q);
-  if(!item) {
-    res.innerHTML = '<div style="background:#fff8e6;border:1px solid #f7b731;border-radius:8px;padding:14px;font-size:13px"><b>Товар не найден в базе</b><br><span style="color:var(--muted)">Попробуйте синоним или английское название</span><br><br><button onclick="closeHsPanel();document.getElementById(\'chatInput\').value=\'HS-код и пошлина: \'+document.getElementById(\'hsInput\').value;toggleChat();document.getElementById(\'chatInput\').focus();" style="background:var(--navy);color:#fff;border:none;border-radius:6px;padding:8px 14px;cursor:pointer;font-size:12px;font-weight:700;margin-bottom:8px;width:100%">💬 Спросить у Аны</button><a href="https://rs.ge/CommodityCodes-en?cat=1&tab=1" target="_blank" style="color:var(--gold);font-weight:600;font-size:12px">Поиск на rs.ge →</a></div>';
+  if(item) {
+    const dutyColor = item.duty === 0 ? '#2ecc71' : item.duty === 5 ? '#f39c12' : '#e74c3c';
+    const vatColor = item.vat === 0 ? '#2ecc71' : '#e74c3c';
+    res.innerHTML = `
+      <div style="background:var(--gray);border-radius:12px;padding:16px;border-left:4px solid var(--gold)">
+        <div style="font-size:15px;font-weight:800;color:var(--navy);margin-bottom:12px">${item.name}</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px">
+          <div style="background:#fff;border-radius:8px;padding:10px;text-align:center;border:1px solid var(--border)">
+            <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">HS-код</div>
+            <div style="font-size:16px;font-weight:800;color:var(--navy);font-family:monospace">${item.hs}</div>
+          </div>
+          <div style="background:#fff;border-radius:8px;padding:10px;text-align:center;border:1px solid var(--border)">
+            <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Пошлина</div>
+            <div style="font-size:20px;font-weight:800;color:${dutyColor}">${item.duty}%</div>
+          </div>
+          <div style="background:#fff;border-radius:8px;padding:10px;text-align:center;border:1px solid var(--gold)/20">
+            <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">НДС</div>
+            <div style="font-size:20px;font-weight:800;color:${vatColor}">${item.vat}%</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted);margin-bottom:6px">Документы: ${item.docs.join(', ')}</div>
+        ${item.note ? `<div style="font-size:12px;color:#e74c3c;margin-top:4px">${item.note}</div>` : ''}
+      </div>`;
     return;
   }
-  const dutyColor = item.duty === 0 ? '#2ecc71' : item.duty === 5 ? '#f39c12' : '#e74c3c';
-  const vatColor = item.vat === 0 ? '#2ecc71' : '#e74c3c';
-  res.innerHTML = `
-    <div style="background:var(--gray);border-radius:12px;padding:16px;border-left:4px solid var(--gold)">
-      <div style="font-size:15px;font-weight:800;color:var(--navy);margin-bottom:12px">${item.name}</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px">
-        <div style="background:#fff;border-radius:8px;padding:10px;text-align:center;border:1px solid var(--border)">
-          <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">HS-код</div>
-          <div style="font-size:16px;font-weight:800;color:var(--navy);font-family:monospace">${item.hs}</div>
-        </div>
-        <div style="background:#fff;border-radius:8px;padding:10px;text-align:center;border:1px solid var(--border)">
-          <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Пошлина</div>
-          <div style="font-size:20px;font-weight:800;color:${dutyColor}">${item.duty}%</div>
-        </div>
-        <div style="background:#fff;border-radius:8px;padding:10px;text-align:center;border:1px solid var(--border)">
-          <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">НДС</div>
-          <div style="font-size:20px;font-weight:800;color:${vatColor}">${item.vat}%</div>
-        </div>
-      </div>
-      ${item.note ? `<div style="background:#fff8e6;border:1px solid #f7b731;border-radius:6px;padding:10px;font-size:12px;color:#7d5a00;margin-bottom:12px">${item.note}</div>` : ''}
-      <div style="margin-bottom:6px;font-size:12px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.5px">Необходимые документы:</div>
-      ${item.docs.map(d=>`<div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid rgba(0,0,0,.04);font-size:13px"><i class="fa-solid fa-check" style="color:var(--gold);font-size:10px;flex-shrink:0"></i>${d}</div>`).join('')}
-      <div style="margin-top:12px;padding-top:10px;border-top:1px solid var(--border);font-size:11px;color:var(--muted)">
-        <i class="fa-solid fa-circle-info" style="color:var(--gold)"></i> Льготная ставка 0% для: СНГ, Турция, ЕС (DCFTA), ЕАСТ, Китай
-      </div>
-    </div>
-    <div style="margin-top:10px;text-align:center">
-      <a href="https://rs.ge/CommodityCodes-en?cat=1&tab=1" target="_blank" style="color:var(--gold);font-size:12px;font-weight:600;text-decoration:none"><i class="fa-solid fa-arrow-up-right-from-square"></i> Проверить официально на rs.ge</a>
-    </div>`;
+
+  // 2. Поиск через API rs.ge
+  res.innerHTML = '<div style="color:var(--muted);font-size:13px;padding:12px 0">🔍 Ищем в базе rs.ge...</div>';
+  try {
+    const resp = await fetch('https://rs-proxy.t-tokazov.workers.dev/search?q=' + encodeURIComponent(q) + '&lang=en', {
+      signal: AbortSignal.timeout(8000)
+    });
+    const data = await resp.json();
+    if(data && data.length > 0) {
+      const top = data.slice(0, 5);
+      let html = '<div style="font-size:12px;color:var(--muted);margin-bottom:8px">Найдено в базе rs.ge · топ ' + top.length + ' позиций:</div>';
+      for(const it of top) {
+        const duty = it.duty !== null ? it.duty + '%' : '—';
+        const vat = it.vat !== null ? it.vat + '%' : '18%';
+        html += `<div style="background:#f8f9fa;border-radius:8px;padding:10px;margin-bottom:8px;border:1px solid var(--border)">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px">
+            <div style="font-size:12px;color:var(--navy);font-weight:700;flex:1;line-height:1.4">${it.name.replace(/\r\n/g,' ').substring(0,120)}${it.name.length>120?'...':''}</div>
+            <div style="font-size:11px;font-weight:800;color:var(--navy);font-family:monospace;white-space:nowrap">${it.code}</div>
+          </div>
+          <div style="display:flex;gap:8px;margin-top:6px">
+            <span style="font-size:11px;background:#e8f5e9;color:#2e7d32;padding:2px 7px;border-radius:4px">Пошлина: ${duty}</span>
+            <span style="font-size:11px;background:#e3f2fd;color:#1565c0;padding:2px 7px;border-radius:4px">НДС: ${vat}</span>
+          </div>
+        </div>`;
+      }
+      if(data.length > 5) html += `<div style="font-size:11px;color:var(--muted);text-align:center">+ ещё ${data.length-5} позиций на <a href="https://rs.ge/CommodityCodes-en?cat=1&tab=1" target="_blank" style="color:var(--gold)">rs.ge →</a></div>`;
+      res.innerHTML = html;
+      return;
+    }
+  } catch(e) {
+    console.warn('RS.GE API error:', e);
+  }
+
+  // 3. Ничего не нашли
+  res.innerHTML = '<div style="background:#fff8e6;border:1px solid #f7b731;border-radius:8px;padding:14px;font-size:13px"><b>Товар не найден</b><br><span style="color:var(--muted)">Попробуйте на английском или уточните название</span><br><br><button onclick="closeHsPanel();document.getElementById(\'chatInput\').value=\'HS-код: \'+document.getElementById(\'hsInput\').value;toggleChat();document.getElementById(\'chatInput\').focus();" style="background:var(--navy);color:#fff;border:none;border-radius:6px;padding:8px 14px;cursor:pointer;font-size:12px;font-weight:700;margin-bottom:8px;width:100%">💬 Спросить у Аны</button><a href="https://rs.ge/CommodityCodes-en?cat=1&tab=1" target="_blank" style="color:var(--gold);font-weight:600;font-size:12px">Открыть rs.ge →</a></div>';
 }
-
-
-// === Global exports ===
-window.showHsPanel = showHsPanel;
-window.closeHsPanel = closeHsPanel;
-window.hsSearch = hsSearch;
 window.hsQuick = hsQuick;
 window.openChat = openChat;
 window.toggleChat = toggleChat;
