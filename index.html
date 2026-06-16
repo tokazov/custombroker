@@ -246,6 +246,33 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 80px}
 @media(max-width:860px){.tiers{grid-template-columns:1fr}.pricing-extras{grid-template-columns:1fr}}
 
 
+/* ─── PRICE LIST & HOW WE WORK ─── */
+.rate-cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.rate-card{background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:28px 24px;text-align:center;transition:.25s}
+.rate-card:hover{border-color:var(--gold);box-shadow:0 8px 24px rgba(200,169,110,.15);transform:translateY(-2px)}
+.rate-card--warning{border-color:rgba(231,76,60,.18)}
+.rate-card--warning:hover{border-color:#e74c3c;box-shadow:0 8px 24px rgba(231,76,60,.12)}
+.rate-icon{width:52px;height:52px;background:var(--gray);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin:0 auto 16px}
+.rate-card--warning .rate-icon{background:#fff0ee}
+.rate-title{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.rate-price{font-size:26px;font-weight:800;color:var(--gold);margin-bottom:10px}
+.rate-card--warning .rate-price{color:#e74c3c}
+.rate-desc{font-size:13px;color:var(--muted);line-height:1.6}
+.extras-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.extra-card{background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.extra-name{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.extra-desc-txt{font-size:13px;color:var(--muted);line-height:1.5}
+.extra-price-badge{font-size:20px;font-weight:800;color:var(--gold);white-space:nowrap;flex-shrink:0}
+.steps3-wrap{margin-top:72px}
+.steps3{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:40px;position:relative}
+.steps3::before{content:'';position:absolute;top:32px;left:calc(16.67% + 16px);right:calc(16.67% + 16px);height:2px;background:linear-gradient(90deg,var(--gold),var(--gold2));z-index:0}
+.step3{text-align:center;position:relative;z-index:1;padding:0 16px}
+.step3-num{width:64px;height:64px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;border:4px solid #fff;box-shadow:0 4px 16px rgba(13,31,60,.15)}
+.step3-num span{color:var(--gold);font-size:20px;font-weight:800}
+.step3-title{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.step3-desc{color:var(--muted);font-size:13px;line-height:1.6}
+@media(max-width:860px){.rate-cards-grid{grid-template-columns:1fr!important}.extras-grid{grid-template-columns:1fr}.steps3{grid-template-columns:1fr;gap:28px}.steps3::before{display:none}}
+
 /* ─── SERVICE CARD PRICE HOVER ─── */
 .svc-card{position:relative!important;overflow:hidden!important}
 .price-badge{position:absolute;top:18px;right:18px;background:rgba(200,169,110,.15);color:#8a6420;border:1px solid rgba(200,169,110,.4);font-size:12px;font-weight:800;padding:4px 11px;border-radius:999px;white-space:nowrap;z-index:2}
@@ -273,6 +300,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 80px}
       <a href="#how" data-i18n="nav_how" onclick="closeMenu()">Как работаем</a>
       <a href="#why" data-i18n="nav_why" onclick="closeMenu()">О нас</a>
       <a href="#faq" onclick="closeMenu()">FAQ</a>
+      <a href="#pricelist" data-i18n="nav_pricelist" onclick="closeMenu()">Прайс</a>
       <a href="#pricing" data-i18n="nav_pricing" onclick="closeMenu()">Цены</a>
       <a href="#news" data-i18n="nav_news" onclick="closeMenu()">Новости</a>
       <a href="#contact" class="nav-cta" data-i18n="nav_cta" onclick="closeMenu()">Консультация</a>
@@ -590,6 +618,79 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 80px}
   </div>
 </section>
 
+<!-- ═══════ PRICE LIST & HOW WE WORK ═══════ -->
+<section class="section" id="pricelist" style="background:var(--gray)">
+  <div class="section-inner">
+    <div class="section-tag" data-i18n="pl_tag">Прайс-лист</div>
+    <h2 class="section-title" data-i18n="pl_title">Прайс-лист и что входит в услугу</h2>
+    <div class="section-desc" data-i18n="pl_desc">Базовые тарифы по типу оформления. Финальная стоимость зависит от сложности груза и количества кодов.</div>
+
+    <div class="rate-cards-grid">
+      <div class="rate-card">
+        <div class="rate-icon"><i class="fa-solid fa-file-invoice" style="color:var(--gold)"></i></div>
+        <div class="rate-title" data-i18n="rc1_title">1 код ТН ВЭД</div>
+        <div class="rate-price" data-i18n="rc1_price">от 150 GEL</div>
+        <div class="rate-desc" data-i18n="rc1_desc">Стандартное таможенное оформление груза с одним кодом товарной номенклатуры. Включает подачу декларации и расчёт платежей.</div>
+      </div>
+      <div class="rate-card">
+        <div class="rate-icon"><i class="fa-solid fa-layer-group" style="color:var(--gold)"></i></div>
+        <div class="rate-title" data-i18n="rc2_title">Несколько кодов ТН ВЭД</div>
+        <div class="rate-price" data-i18n="rc2_price">по сложности</div>
+        <div class="rate-desc" data-i18n="rc2_desc">Цена рассчитывается индивидуально — зависит от количества позиций в декларации и объёма партии. Уточним за 30 минут.</div>
+      </div>
+      <div class="rate-card rate-card--warning">
+        <div class="rate-icon"><i class="fa-solid fa-magnifying-glass-dollar" style="color:#e74c3c"></i></div>
+        <div class="rate-title" data-i18n="rc3_title">При досмотре</div>
+        <div class="rate-price" data-i18n="rc3_price">ставка × 2</div>
+        <div class="rate-desc" data-i18n="rc3_desc">Если таможня назначает физический досмотр груза, брокерская ставка удваивается — это стандартная практика рынка.</div>
+      </div>
+    </div>
+
+    <h3 style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--navy);margin-top:56px;margin-bottom:6px" data-i18n="pl_extra_title">Дополнительные услуги</h3>
+    <div class="section-desc" style="margin-bottom:0" data-i18n="pl_extra_desc">Оплачиваются отдельно, при необходимости.</div>
+    <div class="extras-grid">
+      <div class="extra-card">
+        <div>
+          <div class="extra-name" data-i18n="ex_mgb_name">Регистрация в МГБ</div>
+          <div class="extra-desc-txt" data-i18n="ex_mgb_desc">Регистрация компании или товара в Министерстве государственной безопасности Грузии.</div>
+        </div>
+        <div class="extra-price-badge">300 GEL</div>
+      </div>
+      <div class="extra-card">
+        <div>
+          <div class="extra-name" data-i18n="ex_minecon_name">Разрешение Министерства экономики</div>
+          <div class="extra-desc-txt" data-i18n="ex_minecon_desc">Разрешение на ввоз в Министерстве экономики Грузии. Необходимо для отдельных категорий товаров.</div>
+        </div>
+        <div class="extra-price-badge">100 GEL<span style="font-size:12px;color:var(--muted);font-weight:500;display:block">за товар</span></div>
+      </div>
+    </div>
+
+    <div class="steps3-wrap">
+      <div class="section-tag" data-i18n="hw3_tag">Процесс</div>
+      <h2 class="section-title" data-i18n="hw3_title">Как мы работаем</h2>
+      <div class="section-desc" data-i18n="hw3_desc">Три простых шага от описания груза до официально оформленных документов.</div>
+      <div class="steps3">
+        <div class="step3">
+          <div class="step3-num"><span>1</span></div>
+          <div class="step3-title" data-i18n="hw3_s1t">Описываете груз</div>
+          <div class="step3-desc" data-i18n="hw3_s1d">Вы описываете груз и отправляете документы — инвойс, упаковочный лист, транспортные накладные.</div>
+        </div>
+        <div class="step3">
+          <div class="step3-num"><span>2</span></div>
+          <div class="step3-title" data-i18n="hw3_s2t">Рассчитываем</div>
+          <div class="step3-desc" data-i18n="hw3_s2d">Мы рассчитываем стоимость и сроки — точный прайс и план оформления в течение 30 минут.</div>
+        </div>
+        <div class="step3">
+          <div class="step3-num"><span>3</span></div>
+          <div class="step3-title" data-i18n="hw3_s3t">Оформляем под ключ</div>
+          <div class="step3-desc" data-i18n="hw3_s3d">Оформляем всё официально под ключ — декларация, разрешения, налоги. Вы получаете готовые документы.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ════════════════════════════════════════ -->
+
 <section class="section pricing-section" id="pricing">
   <div class="section-inner">
     <div class="section-label" data-i18n="pricing_label">Прайс-лист</div>
@@ -801,11 +902,23 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 80px}
 // ─── TRANSLATIONS ───
 const LANGS = {
   ru: {
-    nav_services:'Услуги', nav_how:'Как работаем', nav_why:'О нас', nav_pricing:'Цены', nav_news:'Новости', nav_cta:'Консультация',
+    nav_services:'Услуги', nav_how:'Как работаем', nav_why:'О нас', nav_pricelist:'Прайс', nav_pricing:'Цены', nav_news:'Новости', nav_cta:'Консультация',
     hero_badge:'Работаем 24/7 · Ответ за 30 минут',
     hero_title:'Таможенный брокер<br>в <span>Грузии</span> — быстро,<br>без ошибок и лишних затрат',
     hero_desc:'Растаможка, сертификация, консультации. Работаем с импортёрами из России, Турции, Китая и Европы. AI-консультант онлайн — ответит сразу.',
     hero_btn1:"Спросить Ану · Бесплатно", hero_btn2:"Получить КП",
+    pl_tag:'Прайс-лист', pl_title:'Прайс-лист и что входит в услугу',
+    pl_desc:'Базовые тарифы по типу оформления. Финальная стоимость зависит от сложности груза и количества кодов.',
+    rc1_title:'1 код ТН ВЭД', rc1_price:'от 150 GEL', rc1_desc:'Стандартное таможенное оформление с одним кодом ТН ВЭД. Включает подачу декларации и расчёт платежей.',
+    rc2_title:'Несколько кодов ТН ВЭД', rc2_price:'по сложности', rc2_desc:'Цена рассчитывается индивидуально — зависит от количества позиций и объёма партии. Уточним за 30 минут.',
+    rc3_title:'При досмотре', rc3_price:'ставка × 2', rc3_desc:'Если таможня назначает физический досмотр, брокерская ставка удваивается — стандартная практика рынка.',
+    pl_extra_title:'Дополнительные услуги', pl_extra_desc:'Оплачиваются отдельно, при необходимости.',
+    ex_mgb_name:'Регистрация в МГБ', ex_mgb_desc:'Регистрация компании или товара в Министерстве государственной безопасности Грузии.',
+    ex_minecon_name:'Разрешение Министерства экономики', ex_minecon_desc:'Разрешение на ввоз в Министерстве экономики Грузии. Необходимо для отдельных категорий товаров.',
+    hw3_tag:'Процесс', hw3_title:'Как мы работаем', hw3_desc:'Три простых шага от описания груза до официально оформленных документов.',
+    hw3_s1t:'Описываете груз', hw3_s1d:'Вы описываете груз и отправляете документы — инвойс, упаковочный лист, транспортные накладные.',
+    hw3_s2t:'Рассчитываем', hw3_s2d:'Мы рассчитываем стоимость и сроки — точный прайс и план оформления в течение 30 минут.',
+    hw3_s3t:'Оформляем под ключ', hw3_s3d:'Оформляем всё официально под ключ — декларация, разрешения, налоги. Вы получаете готовые документы.',
         pricing_label:'Прайс-лист', pricing_title:'Прозрачные цены на оформление', pricing_sub:'Фиксированная стоимость известна до начала работы. В каждый тариф включены подбор HS-кода и проверка инвойса.',
     t_popular:'Популярно',
     t1_name:'Простая декларация', t1_for:'Груз стоимостью до 3 000 GEL, 1–2 HS-кода', t1_price:'от 150 GEL', t1_per:'за декларацию', t1_f1:'Подбор HS-кода и расчёт платежей', t1_f2:'Проверка инвойса и упаковочного листа', t1_f3:'Подача декларации в системе', t1_f4:'Оформление 1–2 рабочих дня', t1_cta:'Рассчитать груз',
@@ -871,11 +984,23 @@ const LANGS = {
     ph_name:'Имя Фамилия', form_sent:'✅ Заявка принята!',
   },
   ge: {
-    nav_services:'სერვისები', nav_how:'გამოცდილება', nav_why:'ჩვენს შესახებ', nav_pricing:'ფასები', nav_news:'სიახლეები', nav_cta:'კონსულტაცია',
+    nav_services:'სერვისები', nav_how:'გამოცდილება', nav_why:'ჩვენს შესახებ', nav_pricelist:'ფასები', nav_pricing:'ტარიფები', nav_news:'სიახლეები', nav_cta:'კონსულტაცია',
     hero_badge:'ვმუშაობთ 24/7 · პასუხი 30 წუთში',
     hero_title:'საბაჟო ბროკერი<br><span>საქართველოში</span> — სწრაფად<br>და ჯარიმების გარეშე',
     hero_desc:'განბაჟება, სერტიფიცირება, კონსულტაციები. ვმუშაობთ რუსეთის, თურქეთის, ჩინეთისა და ევროპის იმპორტიორებთან. AI-კონსულტანტი ონლაინ.',
     hero_btn1:"ანას დასვი კითხვა · უფასოდ", hero_btn2:"კომ. წინადადება",
+    pl_tag:'ფასები', pl_title:'ფასების ჩამონათვალი და მომსახურებაში შემავალი',
+    pl_desc:'ძირითადი ტარიფები გაფორმების ტიპის მიხედვით. საბოლოო ღირებულება დამოკიდებულია ტვირთის სირთულეზე.',
+    rc1_title:'1 HS-კოდი', rc1_price:'150 GEL-დან', rc1_desc:'ერთი სასაქონლო კოდის სტანდარტული საბაჟო გაფორმება. მოიცავს დეკლარაციის წარდგენასა და გადასახადების გაანგარიშებას.',
+    rc2_title:'რამდენიმე HS-კოდი', rc2_price:'სირთულის მიხედვით', rc2_desc:'ფასი გამოითვლება ინდივიდუალურად — დამოკიდებულია კოდების რაოდენობასა და ტვირთის მოცულობაზე.',
+    rc3_title:'დათვალიერებისას', rc3_price:'განაკვეთი × 2', rc3_desc:'თუ საბაჟო ფიზიკურ დათვალიერებას ნიშნავს, საბროკერო განაკვეთი გაორმაგდება — ბაზრის სტანდარტული პრაქტიკა.',
+    pl_extra_title:'დამატებითი სერვისები', pl_extra_desc:'გადახდილია ცალკე, საჭიროების შემთხვევაში.',
+    ex_mgb_name:'MGB-ში რეგისტრაცია', ex_mgb_desc:'კომპანიის ან საქონლის რეგისტრაცია სახელმწიფო უსაფრთხოების სამინისტროში.',
+    ex_minecon_name:'ეკონომიკის სამინისტროს ნებართვა', ex_minecon_desc:'ნებართვა ცალკეული კატეგორიის საქონლის შემოსაყვანად ეკონომიკის სამინისტროდან.',
+    hw3_tag:'პროცესი', hw3_title:'როგორ ვმუშაობთ', hw3_desc:'სამი მარტივი ნაბიჯი ტვირთის აღწერიდან ოფიციალურ დოკუმენტამდე.',
+    hw3_s1t:'ტვირთს აღწერთ', hw3_s1d:'თქვენ აღწერთ ტვირთს და გამოგზავნით დოკუმენტებს — ინვოისი, შეფუთვის სია, სატვირთო ნოტა.',
+    hw3_s2t:'ვითვლით', hw3_s2d:'ჩვენ ვითვლით ღირებულებასა და ვადებს — ზუსტ ფასსა და გეგმას 30 წუთში.',
+    hw3_s3t:'ვაფორმებთ გასაღებამდე', hw3_s3d:'ვაფორმებთ ყველაფერს ოფიციალურად — დეკლარაცია, ნებართვები, გადასახადები. თქვენ იღებთ მზა დოკუმენტებს.',
         pricing_label:'ფასები', pricing_title:'გამჭვირვალე ფასები განბაჟებაზე', pricing_sub:'ფიქსირებული ღირებულება ცნობილია მუშაობის დაწყებამდე.',
     t_popular:'პოპულარული',
     t1_name:'მარტივი დეკლარაცია', t1_for:'ტვირთი 3 000 ლარამდე, 1–2 HS-კოდი', t1_price:'150 ლარიდან', t1_per:'ერთ დეკლარაციაზე', t1_f1:'HS-კოდის შერჩევა და გადასახადების გაანგარიშება', t1_f2:'ინვოისის შემოწმება', t1_f3:'დეკლარაციის რეგისტრაცია', t1_f4:'განბაჟება 1–2 სამუშაო დღეში', t1_cta:'ღირებულების გაანგარიშება',
@@ -941,11 +1066,23 @@ const LANGS = {
     ph_name:'სახელი გვარი', form_sent:'✅ მოთხოვნა მიღებულია!',
   },
   en: {
-    nav_services:'Services', nav_how:'Process', nav_why:'About', nav_pricing:'Pricing', nav_news:'News', nav_cta:'Get Consultation',
+    nav_services:'Services', nav_how:'Process', nav_why:'About', nav_pricelist:'Rates', nav_pricing:'Plans', nav_news:'News', nav_cta:'Get Consultation',
     hero_badge:'Available 24/7 · Reply within 30 minutes',
     hero_title:'Customs Broker<br>in <span>Georgia</span> — Fast,<br>Accurate & Cost-Effective',
     hero_desc:'Customs clearance, certification, consultations. We work with importers from Russia, Turkey, China & Europe. AI consultant online — answers instantly.',
     hero_btn1:"Ask Ana · Free", hero_btn2:"Get a Quote",
+    pl_tag:'Price List', pl_title:"Price List & What's Included",
+    pl_desc:'Base rates by declaration type. Final cost depends on cargo complexity and number of HS codes.',
+    rc1_title:'1 HS Code', rc1_price:'from 150 GEL', rc1_desc:'Standard customs clearance with one HS code. Includes declaration filing and duty calculation.',
+    rc2_title:'Multiple HS Codes', rc2_price:'by complexity', rc2_desc:'Price is calculated individually based on line items and shipment volume. We quote in 30 minutes.',
+    rc3_title:'Physical Inspection', rc3_price:'rate × 2', rc3_desc:"If customs assigns a physical inspection, the broker rate doubles — standard market practice.",
+    pl_extra_title:'Additional Services', pl_extra_desc:'Charged separately when required.',
+    ex_mgb_name:'MIA/MGB Registration', ex_mgb_desc:'Registration of a company or product with the Ministry of Internal Affairs / State Security of Georgia.',
+    ex_minecon_name:'Ministry of Economy Permit', ex_minecon_desc:'Import permit from the Ministry of Economy. Required for specific product categories.',
+    hw3_tag:'Process', hw3_title:'How We Work', hw3_desc:'Three simple steps from cargo description to officially cleared documents.',
+    hw3_s1t:'You describe the cargo', hw3_s1d:'You describe the cargo and send documents — invoice, packing list, transport documents.',
+    hw3_s2t:'We calculate', hw3_s2d:'We calculate the cost and timeline — an exact quote and clearance plan within 30 minutes.',
+    hw3_s3t:'We handle everything', hw3_s3d:'We process everything officially end-to-end — declaration, permits, taxes. You receive completed documents.',
         pricing_label:'Pricing', pricing_title:'Transparent clearance pricing', pricing_sub:'Fixed cost agreed before work starts. Every plan includes HS classification and invoice review.',
     t_popular:'Popular',
     t1_name:'Simple declaration', t1_for:'Cargo up to 3,000 GEL, 1–2 HS codes', t1_price:'from 150 GEL', t1_per:'per declaration', t1_f1:'HS code classification and duty calculation', t1_f2:'Invoice and packing list review', t1_f3:'Declaration filing', t1_f4:'Clearance in 1–2 business days', t1_cta:'Get a quote',
