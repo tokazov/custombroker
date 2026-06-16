@@ -1678,39 +1678,39 @@ window.calcCar = function calcCar() {
 
   const fmt = n => n.toLocaleString('ru-RU');
 
-  res.innerHTML = \`
+  res.innerHTML = `
     <div style="background:linear-gradient(135deg,var(--navy) 0%,#1a3a6e 100%);border-radius:14px;padding:20px;color:#fff">
-      <div style="font-size:13px;opacity:.75;margin-bottom:16px;text-align:center">Предварительный расчёт · курс USD/GEL ~\${USD}</div>
+      <div style="font-size:13px;opacity:.75;margin-bottom:16px;text-align:center">Предварительный расчёт · курс USD/GEL ~${USD}</div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px">
         <div style="background:rgba(255,255,255,.1);border-radius:10px;padding:12px;text-align:center">
           <div style="font-size:10px;opacity:.7;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Пошлина</div>
-          <div style="font-size:20px;font-weight:800">\${fmt(duty)} ₾</div>
+          <div style="font-size:20px;font-weight:800">${fmt(duty)} ₾</div>
         </div>
         <div style="background:rgba(255,255,255,.1);border-radius:10px;padding:12px;text-align:center">
           <div style="font-size:10px;opacity:.7;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Акциз</div>
-          <div style="font-size:20px;font-weight:800;\${excise>1000?'color:#f7b731':''}">\${fmt(excise)} ₾</div>
+          <div style="font-size:20px;font-weight:800;${excise>1000?'color:#f7b731':''}">${fmt(excise)} ₾</div>
         </div>
         <div style="background:rgba(255,255,255,.1);border-radius:10px;padding:12px;text-align:center">
           <div style="font-size:10px;opacity:.7;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">НДС (18%)</div>
-          <div style="font-size:20px;font-weight:800">\${fmt(vat)} ₾</div>
+          <div style="font-size:20px;font-weight:800">${fmt(vat)} ₾</div>
         </div>
         <div style="background:rgba(255,255,255,.1);border-radius:10px;padding:12px;text-align:center">
           <div style="font-size:10px;opacity:.7;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Услуги брокера</div>
-          <div style="font-size:20px;font-weight:800;color:#f7b731">от \${fmt(brokerFee)} ₾</div>
+          <div style="font-size:20px;font-weight:800;color:#f7b731">от ${fmt(brokerFee)} ₾</div>
         </div>
       </div>
-      <div style="background:rgba(255,255,255,.15);border-radius:10px;padding:14px;text-align:center;margin-bottom:\${notes.length?'12px':'0'}">
+      <div style="background:rgba(255,255,255,.15);border-radius:10px;padding:14px;text-align:center;margin-bottom:${notes.length?'12px':'0'}">
         <div style="font-size:11px;opacity:.75;margin-bottom:4px">ИТОГО (налоги + брокер)</div>
-        <div style="font-size:28px;font-weight:900;color:#f7b731">\${fmt(grandTotal)} ₾</div>
-        <div style="font-size:11px;opacity:.6;margin-top:2px">≈ \${fmt(Math.round(grandTotal/USD))} USD</div>
+        <div style="font-size:28px;font-weight:900;color:#f7b731">${fmt(grandTotal)} ₾</div>
+        <div style="font-size:11px;opacity:.6;margin-top:2px">≈ ${fmt(Math.round(grandTotal/USD))} USD</div>
       </div>
-      \${notes.length ? '<div style="font-size:12px;opacity:.75;line-height:1.6">' + notes.map(n=>'• '+n).join('<br>') + '</div>' : ''}
+      ${notes.length ? '<div style="font-size:12px;opacity:.75;line-height:1.6">' + notes.map(n=>'• '+n).join('<br>') + '</div>' : ''}
     </div>
     <a href="#contact" onclick="closeMenu()"
       style="display:block;margin-top:12px;text-align:center;background:var(--gold);color:var(--navy);font-weight:700;padding:12px;border-radius:10px;text-decoration:none;font-size:14px">
       📋 Получить точный расчёт от брокера
     </a>
-  \`;
+  `;
 }
 
 window.toggleMenu = toggleMenu;
