@@ -55,6 +55,12 @@ footer a{color:var(--gold);text-decoration:none}
 .news-date{font-size:12px;color:#999;margin-bottom:10px}
 .news-excerpt{font-size:13px;color:#666;line-height:1.5}
 .read-more{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:13px;font-weight:600;color:var(--gold2)}
+.news-card.hidden{display:none}
+.load-more-wrap{text-align:center;margin-top:40px;padding-bottom:20px}
+.load-more-btn{display:inline-flex;align-items:center;gap:10px;background:var(--navy);color:#fff;border:none;padding:14px 36px;border-radius:12px;font-size:15px;font-weight:700;cursor:pointer;transition:.2s;font-family:inherit}
+.load-more-btn:hover{background:#1a3a6c;transform:translateY(-2px)}
+.load-more-btn.all-shown{background:#ccc;cursor:default;transform:none}
+.news-count{font-size:13px;color:#999;margin-top:12px}
 </style>
 </head><body>
 <nav>
@@ -117,7 +123,60 @@ footer a{color:var(--gold);text-decoration:none}
     </a>
 
   </div>
+  <div class="load-more-wrap" id="loadMoreWrap" style="display:none">
+    <button class="load-more-btn" id="loadMoreBtn" onclick="loadMore()">
+      <i class="fa-solid fa-chevron-down"></i> Показать ещё статьи
+    </button>
+    <div class="news-count" id="newsCount"></div>
+  </div>
 </div>
+<script>
+(function(){
+  var BATCH = 9;
+  var cards = Array.from(document.querySelectorAll('.news-card'));
+  var total = cards.length;
+  var shown = Math.min(BATCH, total);
+
+  function init() {
+    // Скрываем карточки начиная с 10-й
+    for (var i = BATCH; i < total; i++) {
+      cards[i].classList.add('hidden');
+    }
+    // Показываем кнопку только если статей больше BATCH
+    if (total > BATCH) {
+      document.getElementById('loadMoreWrap').style.display = 'block';
+      updateCount();
+    }
+  }
+
+  function updateCount() {
+    var remaining = total - shown;
+    var countEl = document.getElementById('newsCount');
+    if (remaining > 0) {
+      countEl.textContent = 'Показано ' + shown + ' из ' + total + ' статей';
+    } else {
+      countEl.textContent = 'Показаны все ' + total + ' статьи';
+    }
+  }
+
+  window.loadMore = function() {
+    var btn = document.getElementById('loadMoreBtn');
+    var newShown = Math.min(shown + BATCH, total);
+    for (var i = shown; i < newShown; i++) {
+      cards[i].classList.remove('hidden');
+    }
+    shown = newShown;
+    updateCount();
+    if (shown >= total) {
+      btn.innerHTML = '<i class="fa-solid fa-check"></i> Все статьи загружены';
+      btn.classList.add('all-shown');
+      btn.onclick = null;
+    }
+  };
+
+  init();
+})();
+</script>
 <footer>
   © 2025 CustomBroker.ge · Таможенный брокер в Грузии · <a href="mailto:custombroker.ge@gmail.com">custombroker.ge@gmail.com</a>
 </footer>
