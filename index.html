@@ -134,7 +134,7 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 80px}
 /* CHAT */
 .chat-btn{position:fixed;bottom:28px;right:28px;width:64px;height:64px;background:linear-gradient(135deg,var(--navy),#1a3a6c);border-radius:50%;border:3px solid var(--gold);box-shadow:0 8px 32px rgba(13,31,60,.4);cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:1001;transition:.3s}
 .chat-btn:hover{transform:scale(1.08);box-shadow:0 12px 40px rgba(200,169,110,.4)}
-body.chat-active .chat-btn{display:none!important}
+body.chat-active .chat-btn{display:none!important;opacity:0!important;pointer-events:none!important;visibility:hidden!important}
 .chat-btn-inner{font-size:26px;transition:.3s}
 .chat-badge{position:absolute;top:-4px;right:-4px;width:20px;height:20px;background:#e74c3c;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;font-weight:700;border:2px solid #fff;animation:badgePulse 2s infinite}
 @keyframes badgePulse{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
@@ -1533,7 +1533,7 @@ window.closeMenu = closeMenu;
 
 </script>
 
-<script src="knowledge_base.js?v=1782051565"></script>
+<script src="knowledge_base.js?v=1782061953"></script>
 <script>
 // Service cards tap for mobile
 (function(){
