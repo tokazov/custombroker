@@ -404,6 +404,49 @@ def git_push(files: list, message: str):
         print(f"  ✗ git error: {e}")
         return False
 
+def update_homepage_news(new_article: dict, topic: dict, date_ru: str):
+    """Обновляем LATEST_NEWS в index.html — всегда показывает 3 последних"""
+    index_path = BASE / 'index.html'
+    if not index_path.exists():
+        return
+    html = index_path.read_text(encoding='utf-8')
+
+    # Находим текущий массив LATEST_NEWS
+    m = re.search(r'var LATEST_NEWS = \[(.*?)\];', html, re.DOTALL)
+    if not m:
+        print("  ⚠ LATEST_NEWS не найден в index.html")
+        return
+
+    try:
+        current = json.loads('[' + m.group(1) + ']')
+    except Exception:
+        current = []
+
+    # Новая статья — вставляем первой
+    new_entry = {
+        "url": f"/news/{new_article['slug']}.html",
+        "tag": topic['tag'],
+        "icon": "fa-file-contract",
+        "date": date_ru,
+        "title": new_article['title'],
+        "excerpt": new_article['meta'][:150]
+    }
+
+    # Оставляем только 3 — новая + 2 старых
+    current.insert(0, new_entry)
+    current = current[:3]
+
+    # Сериализуем обратно в JS-формат
+    def obj_to_js(o):
+        pairs = [f'          {k}:"{v}"' for k, v in o.items()]
+        return "        {\n" + ",\n".join(pairs) + "\n        }"
+
+    new_js = "\n" + ",\n".join([obj_to_js(o) for o in current]) + "\n      "
+    html = re.sub(r'var LATEST_NEWS = \[.*?\];', f'var LATEST_NEWS = [{new_js}];', html, flags=re.DOTALL)
+
+    index_path.write_text(html, encoding='utf-8')
+    print(f"  ✓ index.html — LATEST_NEWS обновлён (3 последних)")
+
 def main(title_hint=None, desc=None, keywords=None):
     print(f"\n📰 CustomBroker AutoNews — {TODAY}")
     print("=" * 50)
@@ -449,6 +492,12 @@ def main(title_hint=None, desc=None, keywords=None):
 
     # Обновляем sitemap
     update_sitemap([slug])
+
+    # Обновляем LATEST_NEWS на главной странице
+    update_homepage_news(
+        {'slug': slug, 'title': article['title'], 'meta': article['meta']},
+        topic, date_ru_short
+    )
 
     # Git push
     files_to_commit = [
