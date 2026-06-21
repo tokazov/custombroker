@@ -1147,9 +1147,11 @@ function buildSystemPrompt(kbContext) {
 function toggleChat() {
   chatOpen = !chatOpen;
   var win = document.getElementById('chatWindow');
+  var btn = document.getElementById('chatBtn');
   win.classList.toggle('open', chatOpen);
-  // Явный display для надёжности на всех мобильных браузерах
   win.style.display = chatOpen ? 'flex' : 'none';
+  // Прячем floating кнопку когда чат открыт — не мешает полю ввода на мобильном
+  btn.style.display = chatOpen ? 'none' : 'flex';
   document.getElementById('chatIcon').innerHTML = chatOpen ? '<i class="fa-solid fa-xmark" style="font-size:22px;color:var(--gold)"></i>' : '<i class="fa-solid fa-comment-dots" style="font-size:26px;color:var(--gold)"></i>';
   if(chatOpen) document.getElementById('chatBadge').style.display = 'none';
 }
