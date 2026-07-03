@@ -1,15 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <url>
     <loc>https://custombroker.ge/</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://custombroker.ge/"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://custombroker.ge/?lang=ka"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://custombroker.ge/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://custombroker.ge/"/>
   </url>
+
+  <url>
+    <loc>https://custombroker.ge/news/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <url>
     <loc>https://custombroker.ge/news/aktsizy-v-gruzii-2025-stavki-na-toplivo-alkogol-tabak-20260621.html</loc>
     <lastmod>2026-06-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
+
+  <url>
+    <loc>https://custombroker.ge/news/car-excise-2025.html</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://custombroker.ge/news/hs-codes-china-2025.html</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://custombroker.ge/news/poti-fiz-2025.html</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
