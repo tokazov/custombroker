@@ -391,13 +391,8 @@ def git_push(files: list, message: str):
         result = subprocess.run(['git', '-C', str(BASE), 'remote', 'get-url', 'origin'],
                                 capture_output=True, text=True, check=True)
         remote_url = result.stdout.strip()
-        if 'github.com' in remote_url and 'https://' in remote_url:
-            auth_url = remote_url.replace('https://', f'https://{token}@')
-            subprocess.run(['git', '-C', str(BASE), 'push', auth_url, 'master'],
-                           check=True, capture_output=True)
-        else:
-            subprocess.run(['git', '-C', str(BASE), 'push', 'origin', 'master'],
-                           check=True, env={**os.environ, 'GIT_TOKEN': token})
+        subprocess.run(['git', '-C', str(BASE), 'push', 'origin', 'master'],
+                       check=True, capture_output=True)
         print(f"  ✓ git push выполнен")
         return True
     except subprocess.CalledProcessError as e:
