@@ -513,6 +513,21 @@ def main(title_hint=None, desc=None, keywords=None):
     msg = f"news({TODAY}): {article['title'][:60]}"
     git_push([str(p) for p in files_to_commit], msg)
 
+    # Деплой на Cloudflare Pages через wrangler
+    cf_token = os.environ.get('CLOUDFLARE_API_TOKEN', '')
+    try:
+        env = {**os.environ, 'CLOUDFLARE_API_TOKEN': cf_token}
+        result = subprocess.run(
+            ['wrangler', 'pages', 'deploy', str(BASE), '--project-name=custombroker', '--branch=main', '--commit-dirty=true'],
+            capture_output=True, text=True, env=env, cwd=str(BASE)
+        )
+        if 'Deployment complete' in result.stdout or result.returncode == 0:
+            print(f"  ✓ Cloudflare Pages задеплоен")
+        else:
+            print(f"  ⚠ wrangler: {result.stderr[:200]}")
+    except Exception as e:
+        print(f"  ⚠ wrangler deploy ошибка: {e}")
+
     print(f"\n✅ Готово! Статья: {SITE_URL}/news/{slug}.html")
     print(f"   Заголовок: {article['title']}")
     print(f"   Тег: {topic['tag']}")
