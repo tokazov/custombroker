@@ -413,7 +413,17 @@ def update_homepage_news(new_article: dict, topic: dict, date_ru: str):
         return
 
     try:
-        current = json.loads('[' + m.group(1) + ']')
+        # JS объекты без кавычек у ключей — парсим через regex по каждому полю
+        js_content = m.group(1)
+        current = []
+        for obj_str in re.findall(r'\{([^}]+)\}', js_content, re.DOTALL):
+            obj = {}
+            for key in ['url', 'tag', 'icon', 'date', 'title', 'excerpt']:
+                km = re.search(rf'{key}\s*:\s*"([^"]*)"', obj_str)
+                if km:
+                    obj[key] = km.group(1)
+            if obj.get('url'):
+                current.append(obj)
     except Exception:
         current = []
 
