@@ -422,14 +422,14 @@ const KNOWLEDGE_BASE = [
 // ══════════════════════════════════════════
 {
   id: "transit-001",
-  title: "Транзитная декларация T1 — суть и применение",
+  title: "Транзитная декларация T1 — оформление у нас",
   url: "https://rs.ge",
-  summary_ru: "Транзитная декларация T1 оформляется при перемещении иностранного груза через Грузию без уплаты пошлин и НДС. Товар следует по определённому маршруту с таможенными пломбами. На весь период транзита предоставляется финансовое обеспечение (гарантия) на сумму потенциальных пошлин. По завершении транзита — закрытие декларации на таможне назначения. Наш брокер оформляет T1 для любых маршрутов через Грузию.",
-  summary_en: "T1 transit declaration: moves foreign goods through Georgia duty-free on fixed route with customs seals. Financial guarantee required for potential duties. Closed at destination customs.",
+  summary_ru: "✅ НОВАЯ УСЛУГА: CustomBroker.ge теперь оформляет транзитные декларации T1. Транзитная декларация T1 оформляется при перемещении иностранного груза через Грузию без уплаты пошлин и НДС. Товар следует по определённому маршруту с таможенными пломбами. Финансовое обеспечение (гарантия) — на сумму потенциальных пошлин. По завершении транзита — закрытие декларации на таможне назначения. Работаем на всех КПП: Красный мост (Азербайджан), Садахло (Армения), Казбеги (Россия), порт Поти, порт Батуми. Стоимость: 100–150 ₾ за декларацию, от 80 ₾ для перевозчиков 10+/мес.",
+  summary_en: "NEW SERVICE: CustomBroker.ge now issues T1 transit declarations. Moves foreign goods through Georgia duty-free on fixed route with customs seals. Financial guarantee required. Works at all checkpoints: Red Bridge (AZ), Sadakhlo (AM), Kazbegi (RU), Poti/Batumi ports. Price: 100–150 GEL per declaration.",
   hs_codes: [],
-  topics: ["транзит","t1","декларация","процедура"],
-  last_verified: "2025-06-01",
-  effective_date: "2024-01-01"
+  topics: ["транзит","t1","декларация","процедура","транзитное оформление"],
+  last_verified: "2026-09-06",
+  effective_date: "2026-09-06"
 },
 {
   id: "transit-002",
