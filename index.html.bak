@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta name="yandex-verification" content="52a4b11c18361f43">
 <meta charset="UTF-8">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Custom Broker Georgia — Customs Broker in Georgia</title>
-<meta name="description" content="Таможенный брокер в Грузии. Таможенное оформление, сертификация, консультации. Работаем с импортёрами из России, Турции, Китая, Европы. AI-консультант онлайн — отвечает сразу.">
+<meta name="description" content="Professional customs services in Georgia. Clearance, certification, 24/7 AI consultant.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -137,12 +133,11 @@ footer{background:var(--navy);color:rgba(255,255,255,.6);padding:48px 24px 80px}
 /* CHAT */
 .chat-btn{position:fixed;bottom:28px;right:28px;width:64px;height:64px;background:linear-gradient(135deg,var(--navy),#1a3a6c);border-radius:50%;border:3px solid var(--gold);box-shadow:0 8px 32px rgba(13,31,60,.4);cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:1001;transition:.3s}
 .chat-btn:hover{transform:scale(1.08);box-shadow:0 12px 40px rgba(200,169,110,.4)}
-body.chat-active .chat-btn{display:none!important;opacity:0!important;pointer-events:none!important;visibility:hidden!important}
 .chat-btn-inner{font-size:26px;transition:.3s}
 .chat-badge{position:absolute;top:-4px;right:-4px;width:20px;height:20px;background:#e74c3c;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;font-weight:700;border:2px solid #fff;animation:badgePulse 2s infinite}
 @keyframes badgePulse{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
 .chat-window{position:fixed;bottom:106px;right:28px;width:380px;height:560px;background:#fff;border-radius:20px;box-shadow:0 24px 80px rgba(13,31,60,.25);z-index:1000;display:none;flex-direction:column;overflow:hidden;transform:scale(.9) translateY(20px);opacity:0;pointer-events:none;transition:.25s cubic-bezier(.34,1.56,.64,1)}
-.chat-window.open{display:flex;transform:scale(1) translateY(0);opacity:1;pointer-events:all}
+.chat-window.open{transform:scale(1) translateY(0);opacity:1;pointer-events:all}
 .chat-header{background:linear-gradient(135deg,var(--navy),#1a3a6c);padding:18px 20px;display:flex;align-items:center;gap:12px;flex-shrink:0}
 .chat-avatar{width:44px;height:44px;background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
 .chat-agent-name{color:#fff;font-weight:700;font-size:15px}
@@ -291,12 +286,6 @@ body.chat-active .chat-btn{display:none!important;opacity:0!important;pointer-ev
 @media(hover:hover){.svc-card:hover .price-panel{transform:translateY(0)}}
 .svc-card.open .price-panel{transform:translateY(0)}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":["LocalBusiness","ProfessionalService"],"name":"Custom Broker Georgia","alternateName":"Таможенный брокер в Грузии","url":"https://custombroker.ge","telephone":"+995322000000","email":"info@custombroker.ge","description":"Таможенный брокер в Грузии. Растаможка, сертификация, СЭЗ Поти, консультации. Работаем с импортёрами из России, Турции, Китая, Европы.","address":{"@type":"PostalAddress","addressLocality":"Тбилиси","addressCountry":"GE"},"areaServed":["Georgia","Russia","Turkey","China","Armenia","Azerbaijan","Kazakhstan"],"serviceType":"Customs Clearance","inLanguage":["ru","ka","en"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"}]}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Сколько стоит растаможка в Грузии?","acceptedAnswer":{"@type":"Answer","text":"Таможенная пошлина: 0%, 5% или 12% в зависимости от товара. НДС 18%. Стоимость услуг брокера — от 150 GEL. Точный расчёт за 30 минут."}},{"@type":"Question","name":"Какие документы нужны для импорта в Грузию?","acceptedAnswer":{"@type":"Answer","text":"Инвойс, упаковочный лист, транспортные документы (CMR/авиа-накладная), сертификат происхождения. Для ряда товаров — дополнительные разрешения."}},{"@type":"Question","name":"Что такое СЭЗ Поти и кому это выгодно?","acceptedAnswer":{"@type":"Answer","text":"СЭЗ Поти и Кутаиси — 0% НДС, 0% таможенных пошлин, 0% налога на прибыль для операций внутри зоны. Идеально для реэкспорта в Россию, Армению, Казахстан и СНГ."}},{"@type":"Question","name":"Как долго идёт таможенное оформление в Грузии?","acceptedAnswer":{"@type":"Answer","text":"Стандартное оформление — 1-3 рабочих дня. Срочное — 1 рабочий день. Готовим документы заранее чтобы избежать задержек."}},{"@type":"Question","name":"Работаете ли вы с физическими лицами?","acceptedAnswer":{"@type":"Answer","text":"Да. Помогаем с ввозом автомобилей, личных вещей при переезде, а также с коммерческими партиями без открытия ИП."}},{"@type":"Question","name":"Что делать если груз задержала таможня Грузии?","acceptedAnswer":{"@type":"Answer","text":"Обратитесь в чат — реагируем в течение часа. Готовим ответ таможне или апелляцию. В большинстве случаев решаем вопрос без штрафов."}}]}
-</script>
 </head>
 <body>
 
@@ -311,6 +300,7 @@ body.chat-active .chat-btn{display:none!important;opacity:0!important;pointer-ev
       <a href="#how" data-i18n="nav_how" onclick="closeMenu()">Как работаем</a>
       <a href="#why" data-i18n="nav_why" onclick="closeMenu()">О нас</a>
       <a href="#faq" onclick="closeMenu()">FAQ</a>
+      <a href="#pricelist" data-i18n="nav_pricelist" onclick="closeMenu()">Прайс</a>
       <a href="#pricing" data-i18n="nav_pricing" onclick="closeMenu()">Цены</a>
       <a href="#news" data-i18n="nav_news" onclick="closeMenu()">Новости</a>
       <a href="#contact" class="nav-cta" data-i18n="nav_cta" onclick="closeMenu()">Консультация</a>
@@ -356,8 +346,6 @@ body.chat-active .chat-btn{display:none!important;opacity:0!important;pointer-ev
     </div>
   </div>
 </section>
-
-
 
 <section class="section" id="services">
   <div class="section-inner">
@@ -408,15 +396,15 @@ body.chat-active .chat-btn{display:none!important;opacity:0!important;pointer-ev
       </div>
 
       <div class="service-card svc-card">
-        <span class="price-badge">по запросу</span>
+        <span class="price-badge">от $800</span>
         <div class="sc-icon"><i class="fa-solid fa-industry" style="font-size:22px;color:var(--gold)"></i></div>
-        <div class="sc-tag" data-i18n="sc4_tag">СИЗ</div>
-        <div class="sc-title" data-i18n="sc4_title">Сопровождение резидентов СИЗ</div>
-        <div class="sc-desc" data-i18n="sc4_desc">Таможенное оформление товаров на въезде и выезде из свободных зон Поти и Кутаиси. Растаможка при выходе в Грузию, реэкспорт в СНГ, доставка через собственную логистику.</div>
+        <div class="sc-tag" data-i18n="sc4_tag">Льготы</div>
+        <div class="sc-title" data-i18n="sc4_title">Регистрация в СЭЗ</div>
+        <div class="sc-desc" data-i18n="sc4_desc">Специальные экономические зоны Поти и Кутаиси: 0% НДС, 0% пошлин для реэкспорта. Поможем зарегистрироваться.</div>
         <div class="price-panel">
-          <div class="pp-row"><span>Стоимость</span><b>индивидуально</b></div>
-          <div class="pp-row"><span>Расчёт</span><b>бесплатно</b></div>
-          <a href="#contact" class="pp-link">Обсудить проект</a>
+          <div class="pp-row"><span>Сопровождение под ключ</span><b>$800–1 500</b></div>
+          <div class="pp-row"><span>Сборы зоны (отдельно)</span><b>от $1 100</b></div>
+          <a href="#contact" class="pp-link">Подобрать зону</a>
         </div>
       </div>
 
@@ -425,26 +413,25 @@ body.chat-active .chat-btn{display:none!important;opacity:0!important;pointer-ev
         <div class="sc-icon"><i class="fa-solid fa-car" style="font-size:22px;color:var(--gold)"></i></div>
         <div class="sc-tag">Автомобили</div>
         <div class="sc-title">Оформление авто</div>
-        <div class="sc-desc">Таможенное оформление автомобилей в Грузии: импорт, экспорт и реэкспорт. Сопровождение и подача документов под ключ.</div>
+        <div class="sc-desc">Таможенное оформление автомобилей в Грузии: импорт, экспорт и реэкспорт. Расчёт акциза, пошлин и НДС — до подачи документов.</div>
         <div class="price-panel">
           <div class="pp-row"><span>Импорт (физлицо)</span><b>от 300 ₾</b></div>
           <div class="pp-row"><span>Импорт (юрлицо / коммерция)</span><b>от 450 ₾</b></div>
           <div class="pp-row"><span>Реэкспорт / транзит авто</span><b>от 300 ₾</b></div>
           <div class="pp-row"><span>Экспорт</span><b>от 200 ₾</b></div>
-          <a href="#contact" class="pp-link">Оставить заявку</a>
+          <a href="#contact" class="pp-link">Рассчитать авто</a>
         </div>
       </div>
 
             <div class="service-card svc-card">
-        <span class="price-badge" style="background:var(--gold);color:var(--navy)">🆕 Новая услуга</span>
+        <span class="price-badge">от 100 ₾</span>
         <div class="sc-icon"><i class="fa-solid fa-truck-moving" style="font-size:22px;color:var(--gold)"></i></div>
-        <div class="sc-tag" data-i18n="sc5_tag">Транзит T1</div>
-        <div class="sc-title" data-i18n="sc5_title">Транзитные декларации T1</div>
-        <div class="sc-desc" data-i18n="sc5_desc">Теперь оформляем транзитные декларации T1 — перемещение грузов через Грузию без уплаты пошлин и НДС. Работаем на всех КПП: Красный мост, Садахло, Казбеги, порт Поти и Батуми.</div>
+        <div class="sc-tag" data-i18n="sc5_tag">Транзит</div>
+        <div class="sc-title" data-i18n="sc5_title">Транзитное оформление</div>
+        <div class="sc-desc" data-i18n="sc5_desc">Грузия — ключевой транзитный коридор между Европой и Азией. Оформляем транзит через все КПП.</div>
         <div class="price-panel">
-          <div class="pp-row"><span>Декларация T1</span><b>от 100 $</b></div>
-          <div class="pp-row"><span>Для перевозчиков 10+/мес</span><b>от 80 $/шт</b></div>
-          <div class="pp-row"><span>Срочное оформление</span><b>+50 ₾</b></div>
+          <div class="pp-row"><span>Декларация T1</span><b>100–150 ₾</b></div>
+          <div class="pp-row"><span>Для перевозчиков 10+/мес</span><b>от 80 ₾/шт</b></div>
           <a href="#contact" class="pp-link">Запросить тариф</a>
         </div>
       </div>
@@ -466,6 +453,76 @@ body.chat-active .chat-btn{display:none!important;opacity:0!important;pointer-ev
     </div>
   </div></section>
 
+
+<section class="section" id="car-calc" style="background:var(--gray)">
+  <div class="section-inner">
+    <div class="section-tag">Калькулятор</div>
+    <div class="section-title">Расчёт растаможки автомобиля</div>
+    <div class="section-desc">Введите параметры авто — получите предварительный расчёт пошлин, акциза и НДС за 5 секунд.</div>
+
+    <div style="max-width:620px;margin:0 auto;background:#fff;border-radius:20px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.08);border:1px solid var(--border)">
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
+        <div>
+          <label style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:6px">Год выпуска</label>
+          <input id="cc-year" type="number" min="1990" max="2026" placeholder="напр. 2019"
+            style="width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:15px;font-family:inherit;box-sizing:border-box;outline:none"
+            onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'">
+        </div>
+        <div>
+          <label style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:6px">Объём двигателя (куб. см)</label>
+          <input id="cc-engine" type="number" min="600" max="8000" placeholder="напр. 1600"
+            style="width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:15px;font-family:inherit;box-sizing:border-box;outline:none"
+            onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'">
+        </div>
+        <div>
+          <label style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:6px">Стоимость авто (USD)</label>
+          <input id="cc-price" type="number" min="500" placeholder="напр. 12000"
+            style="width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:15px;font-family:inherit;box-sizing:border-box;outline:none"
+            onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'">
+        </div>
+        <div>
+          <label style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:6px">Тип операции</label>
+          <select id="cc-type"
+            style="width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:15px;font-family:inherit;box-sizing:border-box;outline:none;background:#fff;cursor:pointer"
+            onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'">
+            <option value="import">Импорт (ввоз)</option>
+            <option value="reexport">Реэкспорт</option>
+            <option value="export">Экспорт (вывоз)</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="margin-bottom:16px">
+        <label style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:6px">Тип владельца</label>
+        <div style="display:flex;gap:10px">
+          <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:14px;padding:10px 16px;border:1.5px solid var(--border);border-radius:10px;flex:1;justify-content:center" id="cc-lbl-individual">
+            <input type="radio" name="cc-owner" value="individual" checked onchange="document.getElementById('cc-lbl-individual').style.borderColor='var(--gold)';document.getElementById('cc-lbl-legal').style.borderColor='var(--border)'"> Физлицо
+          </label>
+          <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:14px;padding:10px 16px;border:1.5px solid var(--border);border-radius:10px;flex:1;justify-content:center" id="cc-lbl-legal">
+            <input type="radio" name="cc-owner" value="legal" onchange="document.getElementById('cc-lbl-legal').style.borderColor='var(--gold)';document.getElementById('cc-lbl-individual').style.borderColor='var(--border)'"> Юрлицо
+          </label>
+        </div>
+      </div>
+
+      <button onclick="calcCar()"
+        style="width:100%;padding:14px;background:var(--navy);color:#fff;border:none;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;letter-spacing:.3px;transition:.2s"
+        onmouseover="this.style.background='var(--gold)';this.style.color='var(--navy)'"
+        onmouseout="this.style.background='var(--navy)';this.style.color='#fff'">
+        🚗 Рассчитать
+      </button>
+
+      <div id="cc-result" style="margin-top:20px"></div>
+
+      <div style="margin-top:16px;font-size:11px;color:var(--muted);text-align:center;line-height:1.6">
+        * Расчёт предварительный. Курс USD/GEL — актуальный. Точные цифры подтверждаются при оформлении.<br>
+        Ставки акциза согласно НК Грузии ст. 188.
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <section class="section how" id="how">
   <div class="section-inner">
     <div class="section-tag" data-i18n="sec_how_tag">Процесс</div>
@@ -479,6 +536,160 @@ body.chat-active .chat-btn{display:none!important;opacity:0!important;pointer-ev
     </div>
   </div>
 </section>
+
+<section class="section" id="why">
+  <div class="section-inner">
+    <div class="why-inner">
+      <div>
+        <div class="section-tag" data-i18n="sec_why_tag">Преимущества</div>
+        <div class="section-title" data-i18n="sec_why_title">Почему выбирают нас</div>
+        <div class="section-desc" data-i18n="sec_why_desc">8 лет работы на таможне Грузии. Знаем все нюансы — от документов до неформальных правил.</div>
+        <div class="why-features">
+          <div class="why-feat"><div class="wf-icon"><i class="fa-solid fa-bolt" style="font-size:18px;color:var(--gold)"></i></div><div><div class="wf-title" data-i18n="feat1_t">Скорость</div><div class="wf-desc" data-i18n="feat1_d">Оформление от 1 дня. Срочные случаи — в день обращения.</div></div></div>
+          <div class="why-feat"><div class="wf-icon"><i class="fa-solid fa-circle-dollar-to-slot" style="font-size:18px;color:var(--gold)"></i></div><div><div class="wf-title" data-i18n="feat2_t">Экономия</div><div class="wf-desc" data-i18n="feat2_d">Оптимизируем HS-коды: снижаем пошлины легально.</div></div></div>
+          <div class="why-feat"><div class="wf-icon"><i class="fa-solid fa-lock" style="font-size:18px;color:var(--gold)"></i></div><div><div class="wf-title" data-i18n="feat3_t">Надёжность</div><div class="wf-desc" data-i18n="feat3_d">0 штрафов по нашей вине за 8 лет работы.</div></div></div>
+          <div class="why-feat"><div class="wf-icon"><i class="fa-solid fa-earth-europe" style="font-size:18px;color:var(--gold)"></i></div><div><div class="wf-title" data-i18n="feat4_t">Все страны</div><div class="wf-desc" data-i18n="feat4_d">Работаем с Китаем, Турцией, ЕС, СНГ, Ираном.</div></div></div>
+          <div class="why-feat"><div class="wf-icon"><i class="fa-solid fa-robot" style="font-size:18px;color:var(--gold)"></i></div><div><div class="wf-title" data-i18n="feat5_t">AI 24/7</div><div class="wf-desc" data-i18n="feat5_d">Консультант Ана ответит в любое время ночи.</div></div></div>
+          <div class="why-feat"><div class="wf-icon"><i class="fa-solid fa-chart-line" style="font-size:18px;color:var(--gold)"></i></div><div><div class="wf-title" data-i18n="feat6_t">Прозрачность</div><div class="wf-desc" data-i18n="feat6_d">Отслеживаете статус груза в реальном времени.</div></div></div>
+        </div>
+      </div>
+      <div class="why-visual">
+        <div class="wv-stat"><div class="wv-label" data-i18n="stat_lbl1">Успешных оформлений</div><div class="wv-val">1 247</div><div class="wv-bar"><div class="wv-fill" style="width:92%"></div></div></div>
+        <div class="wv-stat"><div class="wv-label" data-i18n="stat_lbl2">Клиентов продлили контракт</div><div class="wv-val">88%</div><div class="wv-bar"><div class="wv-fill" style="width:88%"></div></div></div>
+        <div class="wv-stat"><div class="wv-label" data-i18n="stat_lbl3">Среднее время оформления</div><div class="wv-val" data-i18n="stat_val3">1.5 дня</div><div class="wv-bar"><div class="wv-fill" style="width:75%"></div></div></div>
+        <div style="color:rgba(255,255,255,.55);font-size:12px;margin-top:24px;text-transform:uppercase;letter-spacing:.5px" data-i18n="from_label">Работаем с грузами из:</div>
+        <div class="wv-countries">
+          <span class="wv-country">🇨🇳 China</span><span class="wv-country">🇹🇷 Turkey</span><span class="wv-country">🇩🇪 Germany</span><span class="wv-country">🇷🇺 Russia</span><span class="wv-country">🇮🇷 Iran</span><span class="wv-country">🇺🇦 Ukraine</span><span class="wv-country">🇮🇹 Italy</span><span class="wv-country">🇵🇱 Poland</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section faq" id="faq">
+  <div class="section-inner">
+    <div class="section-tag" data-i18n="sec_faq_tag">Частые вопросы</div>
+    <div class="section-title">FAQ</div>
+    <div class="section-desc" data-i18n="sec_faq_desc">Или спросите Ану — она ответит сразу и бесплатно.</div>
+    <div class="faq-list">
+      <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><span data-i18n="faq1_q">Сколько стоит растаможка в Грузии?</span><span class="faq-icon">+</span></div><div class="faq-a" data-i18n="faq1_a">Стоимость зависит от типа товара, его стоимости и HS-кода. Таможенная пошлина в Грузии: 0%, 5% или 12%. Добавляется НДС 18% от таможенной стоимости. Наши услуги — от 150 GEL за стандартное оформление. Точную стоимость рассчитаем за 30 минут.</div></div>
+      <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><span data-i18n="faq2_q">Какие документы нужны для импорта?</span><span class="faq-icon">+</span></div><div class="faq-a" data-i18n="faq2_a">Стандартный пакет: инвойс, упаковочный лист, коносамент/CMR/авианакладная, сертификат происхождения. Для некоторых товаров — сертификаты соответствия, разрешения Минздрава, фитосанитарные заключения. Мы проверим ваш конкретный товар.</div></div>
+      <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><span data-i18n="faq3_q">Что такое СЭЗ Поти и кому это выгодно?</span><span class="faq-icon">+</span></div><div class="faq-a" data-i18n="faq3_a">Свободная экономическая зона в Поти — 0% НДС, 0% пошлин, 0% налога на прибыль для операций внутри зоны. Идеально для реэкспортёров, дистрибьюторов, производителей через Грузию.</div></div>
+      <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><span data-i18n="faq4_q">Как долго идёт таможенное оформление?</span><span class="faq-icon">+</span></div><div class="faq-a" data-i18n="faq4_a">Стандартное оформление — 1-3 рабочих дня при наличии всех документов. Срочное — 1 день. Мы заранее готовим пакет документов, чтобы исключить лишние вопросы.</div></div>
+      <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><span data-i18n="faq5_q">Работаете ли вы с физическими лицами?</span><span class="faq-icon">+</span></div><div class="faq-a" data-i18n="faq5_a">Да, работаем как с юридическими, так и с физическими лицами. Ввоз автомобилей, личных вещей при переезде, коммерческих партий без открытия ИП.</div></div>
+      <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><span data-i18n="faq6_q">Что делать, если груз задержала таможня?</span><span class="faq-icon">+</span></div><div class="faq-a" data-i18n="faq6_a">Срочно звоните нам или пишите в чат — реагируем в течение часа. Анализируем причину задержания, готовим ответ или апелляцию. В большинстве случаев решаем без штрафов.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="section-inner">
+    <div class="contact-inner">
+      <div>
+        <div class="section-tag" data-i18n="sec_contact_tag">Связь</div>
+        <div class="section-title" data-i18n="sec_contact_title">Получите консультацию</div>
+        <div class="section-desc" data-i18n="sec_contact_desc">Ответим в течение 30 минут в рабочее время. Или спросите AI-консультанта Ану прямо сейчас — бесплатно.</div>
+        <div class="contact-info">
+          <div class="ci-item"><div class="ci-icon"><i class="fa-solid fa-location-dot" style="font-size:18px;color:var(--gold)"></i></div><div><div class="ci-label" data-i18n="ci_office">Офис</div><div class="ci-val">Тбилиси, ул. Руставели 12</div></div></div>
+          <div class="ci-item"><div class="ci-icon"><i class="fa-solid fa-phone" style="font-size:18px;color:var(--gold)"></i></div><div><div class="ci-label" data-i18n="ci_phone">Телефон / WhatsApp</div><div class="ci-val">+995 32 XXX XX XX</div></div></div>
+          <div class="ci-item"><div class="ci-icon"><i class="fa-solid fa-envelope" style="font-size:18px;color:var(--gold)"></i></div><div><div class="ci-label">Email</div><div class="ci-val">custombroker.ge@gmail.com</div></div></div>
+          <div class="ci-item"><div class="ci-icon"><i class="fa-solid fa-clock" style="font-size:18px;color:var(--gold)"></i></div><div><div class="ci-label" data-i18n="ci_hours">Рабочее время</div><div class="ci-val" data-i18n="ci_hours_val">Пн-Пт 9:00–18:00 · AI 24/7</div></div></div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="form-title" data-i18n="form_title">Запрос на оформление</div>
+        <div class="form-row">
+          <div class="form-group"><label data-i18n="form_name">Ваше имя</label><input type="text" id="fname" name="name" data-i18n-ph="ph_name" placeholder="Имя Фамилия"></div>
+          <div class="form-group"><label data-i18n="form_phone">Телефон / WhatsApp</label><input type="tel" name="phone" placeholder="+995..."></div>
+        </div>
+        <div class="form-group">
+          <label data-i18n="form_from">Откуда везёте груз</label>
+          <select>
+            <option value="" data-i18n="form_choose">— Выберите страну —</option>
+            <option>China 🇨🇳</option><option>Turkey 🇹🇷</option><option>Germany 🇩🇪</option>
+            <option>Russia 🇷🇺</option><option>Iran 🇮🇷</option><option data-i18n="form_other">Другая страна</option>
+          </select>
+        </div>
+        <div class="form-group"><label data-i18n="form_goods">Тип товара и примерная стоимость</label><textarea name="message" data-i18n-ph="ph_goods" placeholder="Например: электроника, 20 000 USD, 5 тонн..."></textarea></div>
+        <button class="form-submit" onclick="submitForm(this)" data-i18n="form_submit">Отправить заявку →</button>
+        <div class="form-note" data-i18n="form_note">🔒 Данные конфиденциальны · Ответим за 30 минут</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ PRICE LIST & HOW WE WORK ═══════ -->
+<section class="section" id="pricelist" style="background:var(--gray)">
+  <div class="section-inner">
+    <div class="section-tag" data-i18n="pl_tag">Прайс-лист</div>
+    <h2 class="section-title" data-i18n="pl_title">Прайс-лист и что входит в услугу</h2>
+    <div class="section-desc" data-i18n="pl_desc">Базовые тарифы по типу оформления. Финальная стоимость зависит от сложности груза и количества кодов.</div>
+
+    <div class="rate-cards-grid">
+      <div class="rate-card">
+        <div class="rate-icon"><i class="fa-solid fa-file-invoice" style="color:var(--gold)"></i></div>
+        <div class="rate-title" data-i18n="rc1_title">1 код ТН ВЭД</div>
+        <div class="rate-price" data-i18n="rc1_price">от 150 GEL</div>
+        <div class="rate-desc" data-i18n="rc1_desc">Стандартное таможенное оформление груза с одним кодом товарной номенклатуры. Включает подачу декларации и расчёт платежей.</div>
+      </div>
+      <div class="rate-card">
+        <div class="rate-icon"><i class="fa-solid fa-layer-group" style="color:var(--gold)"></i></div>
+        <div class="rate-title" data-i18n="rc2_title">Несколько кодов ТН ВЭД</div>
+        <div class="rate-price" data-i18n="rc2_price">по сложности</div>
+        <div class="rate-desc" data-i18n="rc2_desc">Цена рассчитывается индивидуально — зависит от количества позиций в декларации и объёма партии. Уточним за 30 минут.</div>
+      </div>
+      <div class="rate-card rate-card--warning">
+        <div class="rate-icon"><i class="fa-solid fa-magnifying-glass-dollar" style="color:#e74c3c"></i></div>
+        <div class="rate-title" data-i18n="rc3_title">При досмотре</div>
+        <div class="rate-price" data-i18n="rc3_price">ставка × 2</div>
+        <div class="rate-desc" data-i18n="rc3_desc">Если таможня назначает физический досмотр груза, брокерская ставка удваивается — это стандартная практика рынка.</div>
+      </div>
+    </div>
+
+    <h3 style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--navy);margin-top:56px;margin-bottom:6px" data-i18n="pl_extra_title">Дополнительные услуги</h3>
+    <div class="section-desc" style="margin-bottom:0" data-i18n="pl_extra_desc">Оплачиваются отдельно, при необходимости.</div>
+    <div class="extras-grid">
+      <div class="extra-card">
+        <div>
+          <div class="extra-name" data-i18n="ex_mgb_name">Регистрация в МГБ</div>
+          <div class="extra-desc-txt" data-i18n="ex_mgb_desc">Регистрация компании или товара в Министерстве государственной безопасности Грузии.</div>
+        </div>
+        <div class="extra-price-badge">300 GEL</div>
+      </div>
+      <div class="extra-card">
+        <div>
+          <div class="extra-name" data-i18n="ex_minecon_name">Разрешение Министерства экономики</div>
+          <div class="extra-desc-txt" data-i18n="ex_minecon_desc">Разрешение на ввоз в Министерстве экономики Грузии. Необходимо для отдельных категорий товаров.</div>
+        </div>
+        <div class="extra-price-badge">100 GEL<span style="font-size:12px;color:var(--muted);font-weight:500;display:block">за товар</span></div>
+      </div>
+    </div>
+
+    <div class="steps3-wrap">
+      <div class="section-tag" data-i18n="hw3_tag">Процесс</div>
+      <h2 class="section-title" data-i18n="hw3_title">Как мы работаем</h2>
+      <div class="section-desc" data-i18n="hw3_desc">Три простых шага от описания груза до официально оформленных документов.</div>
+      <div class="steps3">
+        <div class="step3">
+          <div class="step3-num"><span>1</span></div>
+          <div class="step3-title" data-i18n="hw3_s1t">Описываете груз</div>
+          <div class="step3-desc" data-i18n="hw3_s1d">Вы описываете груз и отправляете документы — инвойс, упаковочный лист, транспортные накладные.</div>
+        </div>
+        <div class="step3">
+          <div class="step3-num"><span>2</span></div>
+          <div class="step3-title" data-i18n="hw3_s2t">Рассчитываем</div>
+          <div class="step3-desc" data-i18n="hw3_s2d">Мы рассчитываем стоимость и сроки — точный прайс и план оформления в течение 30 минут.</div>
+        </div>
+        <div class="step3">
+          <div class="step3-num"><span>3</span></div>
+          <div class="step3-title" data-i18n="hw3_s3t">Оформляем под ключ</div>
+          <div class="step3-desc" data-i18n="hw3_s3d">Оформляем всё официально под ключ — декларация, разрешения, налоги. Вы получаете готовые документы.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ════════════════════════════════════════ -->
 
 <section class="section pricing-section" id="pricing">
   <div class="section-inner">
@@ -540,96 +751,9 @@ body.chat-active .chat-btn{display:none!important;opacity:0!important;pointer-ev
     </div>
 
     <p class="pricing-note" data-i18n="pricing_note">Государственные сборы и налоги (пошлина 0/5/12%, НДС 18%, сбор за декларацию) оплачиваются отдельно в казначейство Грузии и не входят в стоимость услуг. Точный расчёт пришлём за 30 минут.</p>
-    <div class="pricing-extras" style="margin-top:16px">
-      <div class="pricing-extra"><span class="extra-tag" style="color:#e74c3c">× 2</span><b>Несколько кодов ТН ВЭД</b><span>При нескольких позициях в декларации стоимость рассчитывается индивидуально — уточним за 30 минут.</span></div>
-      <div class="pricing-extra"><span class="extra-tag" style="color:#e74c3c">× 2</span><b>При досмотре</b><span>Если таможня назначает физический досмотр груза, брокерская ставка удваивается — стандартная практика рынка.</span></div>
-      <div class="pricing-extra"><b>Регистрация в МГБ</b><span>Регистрация компании или товара в Министерстве государственной безопасности.</span><span class="extra-tag" style="color:var(--navy)">300 ₾</span></div>
-      <div class="pricing-extra"><b>Разрешение Министерства экономики</b><span>Необходимо для отдельных категорий товаров.</span><span class="extra-tag" style="color:var(--navy)">100 ₾</span></div>
-    </div>
   </div>
 </section>
 
-
-<section class="section" id="why">
-  <div class="section-inner">
-    <div class="why-inner">
-      <div>
-        <div class="section-tag" data-i18n="sec_why_tag">Преимущества</div>
-        <div class="section-title" data-i18n="sec_why_title">Почему выбирают нас</div>
-        <div class="section-desc" data-i18n="sec_why_desc">8 лет работы на таможне Грузии. Знаем все нюансы — от документов до неформальных правил.</div>
-        <div class="why-features">
-          <div class="why-feat"><div class="wf-icon"><i class="fa-solid fa-bolt" style="font-size:18px;color:var(--gold)"></i></div><div><div class="wf-title" data-i18n="feat1_t">Скорость</div><div class="wf-desc" data-i18n="feat1_d">Оформление от 1 дня. Срочные случаи — в день обращения.</div></div></div>
-          <div class="why-feat"><div class="wf-icon"><i class="fa-solid fa-circle-dollar-to-slot" style="font-size:18px;color:var(--gold)"></i></div><div><div class="wf-title" data-i18n="feat2_t">Экономия</div><div class="wf-desc" data-i18n="feat2_d">Оптимизируем HS-коды: снижаем пошлины легально.</div></div></div>
-          <div class="why-feat"><div class="wf-icon"><i class="fa-solid fa-lock" style="font-size:18px;color:var(--gold)"></i></div><div><div class="wf-title" data-i18n="feat3_t">Надёжность</div><div class="wf-desc" data-i18n="feat3_d">0 штрафов по нашей вине за 8 лет работы.</div></div></div>
-          <div class="why-feat"><div class="wf-icon"><i class="fa-solid fa-earth-europe" style="font-size:18px;color:var(--gold)"></i></div><div><div class="wf-title" data-i18n="feat4_t">Все страны</div><div class="wf-desc" data-i18n="feat4_d">Работаем с Китаем, Турцией, ЕС, СНГ, Ираном.</div></div></div>
-          <div class="why-feat"><div class="wf-icon"><i class="fa-solid fa-robot" style="font-size:18px;color:var(--gold)"></i></div><div><div class="wf-title" data-i18n="feat5_t">AI 24/7</div><div class="wf-desc" data-i18n="feat5_d">Консультант Ана ответит в любое время ночи.</div></div></div>
-          <div class="why-feat"><div class="wf-icon"><i class="fa-solid fa-chart-line" style="font-size:18px;color:var(--gold)"></i></div><div><div class="wf-title" data-i18n="feat6_t">Прозрачность</div><div class="wf-desc" data-i18n="feat6_d">Отслеживаете статус груза в реальном времени.</div></div></div>
-        </div>
-      </div>
-      <div class="why-visual">
-        <div class="wv-stat"><div class="wv-label" data-i18n="stat_lbl1">Успешных оформлений</div><div class="wv-val">1 200+</div><div class="wv-bar"><div class="wv-fill" style="width:92%"></div></div></div>
-        <div class="wv-stat"><div class="wv-label" data-i18n="stat_lbl2">Клиентов продлили контракт</div><div class="wv-val">88%</div><div class="wv-bar"><div class="wv-fill" style="width:88%"></div></div></div>
-        <div class="wv-stat"><div class="wv-label" data-i18n="stat_lbl3">Среднее время оформления</div><div class="wv-val" data-i18n="stat_val3">1.5 дня</div><div class="wv-bar"><div class="wv-fill" style="width:75%"></div></div></div>
-        <div style="color:rgba(255,255,255,.55);font-size:12px;margin-top:24px;text-transform:uppercase;letter-spacing:.5px" data-i18n="from_label">Работаем с грузами из:</div>
-        <div class="wv-countries">
-          <span class="wv-country">🇨🇳 China</span><span class="wv-country">🇹🇷 Turkey</span><span class="wv-country">🇩🇪 Germany</span><span class="wv-country">🇷🇺 Russia</span><span class="wv-country">🇮🇷 Iran</span><span class="wv-country">🇺🇦 Ukraine</span><span class="wv-country">🇮🇹 Italy</span><span class="wv-country">🇵🇱 Poland</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section faq" id="faq">
-  <div class="section-inner">
-    <div class="section-tag" data-i18n="sec_faq_tag">Частые вопросы</div>
-    <div class="section-title">FAQ</div>
-    <div class="section-desc" data-i18n="sec_faq_desc">Или спросите Ану — она ответит сразу и бесплатно.</div>
-    <div class="faq-list">
-      <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><span data-i18n="faq1_q">Сколько стоит растаможка в Грузии?</span><span class="faq-icon">+</span></div><div class="faq-a" data-i18n="faq1_a">Стоимость зависит от типа товара, его стоимости и HS-кода. Таможенная пошлина в Грузии: 0%, 5% или 12%. Добавляется НДС 18% от таможенной стоимости. Наши услуги — от 150 GEL за стандартное оформление. Точную стоимость рассчитаем за 30 минут.</div></div>
-      <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><span data-i18n="faq2_q">Какие документы нужны для импорта?</span><span class="faq-icon">+</span></div><div class="faq-a" data-i18n="faq2_a">Стандартный пакет: инвойс, упаковочный лист, коносамент/CMR/авианакладная, сертификат происхождения. Для некоторых товаров — сертификаты соответствия, разрешения Минздрава, фитосанитарные заключения. Мы проверим ваш конкретный товар.</div></div>
-      <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><span data-i18n="faq3_q">Что такое СЭЗ Поти и кому это выгодно?</span><span class="faq-icon">+</span></div><div class="faq-a" data-i18n="faq3_a">СЭЗ Поти и Кутаиси — это 0% НДС, 0% пошлин, 0% налога на прибыль для операций внутри зоны. Мы берём на себя таможенное оформление при ввозе и выводе товаров, растаможку при выходе на рынок Грузии, реэкспорт в Россию, Армению, Казахстан и СНГ. Нужна регистрация в зоне — подключим проверенного партнёра по корпоративному праву.</div></div>
-      <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><span data-i18n="faq4_q">Как долго идёт таможенное оформление?</span><span class="faq-icon">+</span></div><div class="faq-a" data-i18n="faq4_a">Стандартное оформление — 1-3 рабочих дня при наличии всех документов. Срочное — 1 день. Мы заранее готовим пакет документов, чтобы исключить лишние вопросы.</div></div>
-      <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><span data-i18n="faq5_q">Работаете ли вы с физическими лицами?</span><span class="faq-icon">+</span></div><div class="faq-a" data-i18n="faq5_a">Да, работаем как с юридическими, так и с физическими лицами. Ввоз автомобилей, личных вещей при переезде, коммерческих партий без открытия ИП.</div></div>
-      <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><span data-i18n="faq6_q">Что делать, если груз задержала таможня?</span><span class="faq-icon">+</span></div><div class="faq-a" data-i18n="faq6_a">Срочно звоните нам или пишите в чат — реагируем в течение часа. Анализируем причину задержания, готовим ответ или апелляцию. В большинстве случаев решаем без штрафов.</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="contact">
-  <div class="section-inner">
-    <div class="contact-inner">
-      <div>
-        <div class="section-tag" data-i18n="sec_contact_tag">Связь</div>
-        <div class="section-title" data-i18n="sec_contact_title">Получите консультацию</div>
-        <div class="section-desc" data-i18n="sec_contact_desc">Ответим в течение 30 минут в рабочее время. Или спросите AI-консультанта Ану прямо сейчас — бесплатно.</div>
-        <div class="contact-info">
-          <div class="ci-item"><div class="ci-icon"><i class="fa-solid fa-location-dot" style="font-size:18px;color:var(--gold)"></i></div><div><div class="ci-label" data-i18n="ci_office">Офис</div><div class="ci-val">Тбилиси, ул. Серго Закариадзе 5</div></div></div>
-          <div class="ci-item"><div class="ci-icon"><i class="fa-solid fa-phone" style="font-size:18px;color:var(--gold)"></i></div><div><div class="ci-label" data-i18n="ci_phone">Телефон / WhatsApp</div><div class="ci-val"><a href="tel:+995596616611" style="color:inherit;text-decoration:none">+995 596 616 611</a> · <a href="https://wa.me/995596616611" target="_blank" style="color:var(--gold);text-decoration:none"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></div></div></div>
-          <div class="ci-item"><div class="ci-icon"><i class="fa-solid fa-envelope" style="font-size:18px;color:var(--gold)"></i></div><div><div class="ci-label">Email</div><div class="ci-val">custombroker.ge@gmail.com</div></div></div>
-          <div class="ci-item"><div class="ci-icon"><i class="fa-solid fa-clock" style="font-size:18px;color:var(--gold)"></i></div><div><div class="ci-label" data-i18n="ci_hours">Рабочее время</div><div class="ci-val" data-i18n="ci_hours_val">Пн-Пт 9:00–18:00 · AI 24/7</div></div></div>
-        </div>
-      </div>
-      <div class="contact-form">
-        <div class="form-title" data-i18n="form_title">Запрос на оформление</div>
-        <div class="form-row">
-          <div class="form-group"><label data-i18n="form_name">Ваше имя</label><input type="text" id="fname" name="name" data-i18n-ph="ph_name" placeholder="Имя Фамилия"></div>
-          <div class="form-group"><label data-i18n="form_phone">Телефон / WhatsApp</label><input type="tel" name="phone" placeholder="+995..."></div>
-        </div>
-        <div class="form-group">
-          <label data-i18n="form_from">Откуда везёте груз</label>
-          <select>
-            <option value="" data-i18n="form_choose">— Выберите страну —</option>
-            <option>China 🇨🇳</option><option>Turkey 🇹🇷</option><option>Germany 🇩🇪</option>
-            <option>Russia 🇷🇺</option><option>Iran 🇮🇷</option><option data-i18n="form_other">Другая страна</option>
-          </select>
-        </div>
-        <div class="form-group"><label data-i18n="form_goods">Тип товара и примерная стоимость</label><textarea name="message" data-i18n-ph="ph_goods" placeholder="Например: электроника, 20 000 USD, 5 тонн..."></textarea></div>
-        <button class="form-submit" onclick="submitForm(this)" data-i18n="form_submit">Отправить заявку →</button>
-        <div class="form-note" data-i18n="form_note">🔒 Данные конфиденциальны · Ответим за 30 минут</div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section class="section" id="news">
   <div class="section-inner">
@@ -637,62 +761,43 @@ body.chat-active .chat-btn{display:none!important;opacity:0!important;pointer-ev
     <h2 class="section-title" data-i18n="news_title">Новости таможни и перевозок</h2>
     <p class="section-sub" data-i18n="news_sub">Изменения в законодательстве, ставки пошлин, практические советы импортёрам</p>
     <div class="news-grid" id="newsGrid">
-      <!-- Последние 3 статьи — обновляются автоматически скриптом ниже -->
+
+      <div class="news-card">
+        <div class="news-img"><i class="fa-solid fa-truck-fast" style="color:var(--gold)"></i></div>
+        <div class="news-body">
+          <span class="news-tag" data-i18n="ntag_customs">Таможня</span>
+          <div class="news-date">10 июня 2025</div>
+          <div class="news-title" data-i18n="n1_title">Новые правила ввоза товаров из Китая через Грузию</div>
+          <div class="news-excerpt" data-i18n="n1_text">Служба доходов Грузии обновила процедуру декларирования грузов из КНР: расширен перечень товаров, требующих сертификата происхождения.</div>
+          <a href="#contact" class="news-read" data-i18n="news_read"><i class="fa-solid fa-arrow-right"></i> Подробнее</a>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <div class="news-img"><i class="fa-solid fa-ship" style="color:var(--gold)"></i></div>
+        <div class="news-body">
+          <span class="news-tag" data-i18n="ntag_port">Порт Поти</span>
+          <div class="news-date">28 мая 2025</div>
+          <div class="news-title" data-i18n="n2_title">СЭЗ Поти: обновлённые условия для резидентов 2025</div>
+          <div class="news-excerpt" data-i18n="n2_text">Свободная индустриальная зона Поти расширила список разрешённых видов деятельности. Нулевой НДС и нулевая пошлина сохраняются.</div>
+          <a href="#contact" class="news-read" data-i18n="news_read"><i class="fa-solid fa-arrow-right"></i> Подробнее</a>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <div class="news-img"><i class="fa-solid fa-file-invoice" style="color:var(--gold)"></i></div>
+        <div class="news-body">
+          <span class="news-tag" data-i18n="ntag_duty">Пошлины</span>
+          <div class="news-date">15 мая 2025</div>
+          <div class="news-title" data-i18n="n3_title">Изменение ставок акциза на автомобили: что важно знать</div>
+          <div class="news-excerpt" data-i18n="n3_text">С июня 2025 года акцизный налог на ввоз автомобилей старше 8 лет вырос. Рассчитайте стоимость ввоза до подачи декларации.</div>
+          <a href="#contact" class="news-read" data-i18n="news_read"><i class="fa-solid fa-arrow-right"></i> Подробнее</a>
+        </div>
+      </div>
+
     </div>
-    <div style="text-align:center;margin-top:32px">
-      <a href="/news/" style="display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;padding:12px 28px;border-radius:10px;font-weight:700;text-decoration:none;font-size:15px;transition:.2s" onmouseover="this.style.background='#1a3a6c'" onmouseout="this.style.background='var(--navy)'">
-        <i class="fa-solid fa-newspaper"></i> Все новости таможни
-      </a>
-    </div>
-    <script>
-    (function(){
-      // Данные последних 3 статей — обновляются авто-скриптом при публикации
-      var LATEST_NEWS = [
-        {
-          url:"/news/aktsizy-v-gruzii-2025-stavki-na-toplivo-alkogol-tabak-20260910.html",
-          tag:"Пошлины",
-          icon:"fa-file-contract",
-          date:"10 сен 2026",
-          title:"Акцизы в Грузии 2025: ставки на топливо, алкоголь, табак",
-          excerpt:"Полный справочник по акцизам в Грузии: актуальные ставки на бензин, дизель, алкоголь и табак. Как правильно рассчитать и задекларировать — советы тамо"
-        },
-        {
-          url:"/news/nds-i-poshliny-pri-importe-v-gruziyu-2025-polnyj-gid-20260907.html",
-          tag:"Пошлины",
-          icon:"fa-file-contract",
-          date:"7 сен 2026",
-          title:"НДС и пошлины при импорте в Грузию 2025 — полный гид",
-          excerpt:"Узнайте актуальные ставки НДС и импортных пошлин в Грузии на 2025. Конкретные цифры, исключения и способы оптимизации. Консультация брокера бесплатно."
-        },
-        {
-          url:"/news/tn-ved-kody-gruzii-polnyj-gajd-po-klassifikatsii-tovarov-20260906.html",
-          tag:"Таможня",
-          icon:"fa-file-contract",
-          date:"6 сен 2026",
-          title:"ТН ВЭД коды Грузии: полный гайд по классификации товаров",
-          excerpt:"Разбираетесь в HS кодах и ТН ВЭД для импорта в Грузию? Узнайте, как избежать штрафов и задержек. Экспертный гайд от CustomBroker."
-        }
-      ];
-      var grid = document.getElementById('newsGrid');
-      if (!grid) return;
-      var html = '';
-      LATEST_NEWS.forEach(function(n){
-        html += '<a href="'+n.url+'" class="news-card" style="text-decoration:none;color:inherit;display:block">'
-          +'<div class="news-img"><i class="fa-solid '+n.icon+'" style="color:var(--gold)"></i></div>'
-          +'<div class="news-body">'
-          +'<span class="news-tag">'+n.tag+'</span>'
-          +'<div class="news-date">'+n.date+'</div>'
-          +'<div class="news-title">'+n.title+'</div>'
-          +'<div class="news-excerpt">'+n.excerpt+'</div>'
-          +'<span class="news-read"><i class="fa-solid fa-arrow-right"></i> Подробнее</span>'
-          +'</div></a>';
-      });
-      grid.innerHTML = html;
-    })();
-    </script>
   </div>
 </section>
-
 
 
 <footer>
@@ -707,16 +812,16 @@ body.chat-active .chat-btn{display:none!important;opacity:0!important;pointer-ev
         <a href="#services" data-i18n="sc1_title">Таможенное оформление</a>
         <a href="#services" data-i18n="sc3_title">Сертификация</a>
         <a href="#services" data-i18n="sc2_title">HS-коды</a>
-        <a href="#services" data-i18n="sc4_title">Сопровождение резидентов СИЗ</a>
+        <a href="#services" data-i18n="sc4_title">СЭЗ Поти / Кутаиси</a>
         <a href="#services" data-i18n="sc5_title">Транзит</a>
       </div>
       <div class="footer-col">
         <h4 data-i18n="footer_contacts">Контакты</h4>
-        <a href="https://maps.google.com/?q=Тбилиси,+Серго+Закариадзе+5" target="_blank"><i class="fa-solid fa-location-dot"></i> Тбилиси, Серго Закариадзе 5</a>
-        <a href="tel:+995596616611"><i class="fa-solid fa-phone"></i> +995 596 616 611</a>
-        <a href="mailto:custombroker.ge@gmail.com"><i class="fa-solid fa-envelope"></i> custombroker.ge@gmail.com</a>
+        <a href="#"><i class="fa-solid fa-location-dot"></i> Тбилиси, Руставели 12</a>
+        <a href="#"><i class="fa-solid fa-phone"></i> +995 32 XXX XX XX</a>
+        <a href="#"><i class="fa-solid fa-envelope"></i> custombroker.ge@gmail.com</a>
         <a href="#"><i class="fa-brands fa-telegram"></i> Telegram</a>
-        <a href="https://wa.me/995596616611" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -781,12 +886,11 @@ body.chat-active .chat-btn{display:none!important;opacity:0!important;pointer-ev
       </div>
     </div>
   </div>
-  <div class="chat-quick" id="quickButtons" style="flex-wrap:wrap;gap:5px;padding:8px 12px;">
-    <button class="quick-btn hs-btn" onclick="showScenario('classify')" style="font-size:11px;padding:5px 10px"><i class="fa-solid fa-barcode"></i> Классификация HS</button>
-    <button class="quick-btn" onclick="showScenario('duty')" style="font-size:11px;padding:5px 10px"><i class="fa-solid fa-calculator"></i> Расчёт пошлин</button>
-    <button class="quick-btn" onclick="showScenario('docs')" style="font-size:11px;padding:5px 10px"><i class="fa-solid fa-file-lines"></i> Документы</button>
-    <button class="quick-btn" onclick="showScenario('sez')" style="font-size:11px;padding:5px 10px"><i class="fa-solid fa-industry"></i> СЭЗ / ФИЗ</button>
-    <button class="quick-btn" onclick="showScenario('restrict')" style="font-size:11px;padding:5px 10px"><i class="fa-solid fa-triangle-exclamation"></i> Запреты / FTA</button>
+  <div class="chat-quick" id="quickButtons">
+    <button class="quick-btn hs-btn" onclick="showHsPanel()" data-i18n="q_hs"><i class="fa-solid fa-barcode"></i> HS-код товара</button>
+    <button class="quick-btn" onclick="quickAsk(T.q1)" data-i18n="q1"><i class="fa-solid fa-circle-dollar-to-slot"></i> Стоимость</button>
+    <button class="quick-btn" onclick="quickAsk(T.q2)" data-i18n="q2"><i class="fa-solid fa-file-lines"></i> Документы</button>
+    <button class="quick-btn" onclick="quickAsk(T.q3)" data-i18n="q3"><i class="fa-solid fa-industry"></i> СЭЗ Поти</button>
   </div>
   <div class="chat-input-row">
     <input class="chat-input" id="chatInput" data-i18n-ph="chat_ph" placeholder="Ваш вопрос про таможню..." onkeydown="if(event.key==='Enter')sendMsg()">
@@ -824,7 +928,7 @@ const LANGS = {
     ex2_tag:'−20–30%', ex2_name:'Абонемент импортёра', ex2_desc:'От 5 деклараций в месяц. Личный брокер и приоритет.',
     ex3_tag:'−10%', ex3_name:'Брокер + перевозка', ex3_desc:'Скидка при заказе доставки через Cargo Rapido.',
     pricing_note:'Государственные сборы и налоги (пошлина 0/5/12%, НДС 18%) оплачиваются отдельно. Точный расчёт — за 30 минут.',
-    news_label:'Актуально', news_title:'Новости таможни и перевозок', news_sub:'Изменения в законодательстве, ставки пошлин, практические советы импортёрам', news_read:'Подробнее', ntag_customs:'Таможня', ntag_port:'Порт Поти', ntag_duty:'Пошлины', n1_title:'Новые правила ввоза товаров из Китая через Грузию', n1_text:'Служба доходов Грузии обновила процедуру декларирования грузов из КНР: расширен перечень товаров, требующих сертификата происхождения.', n2_title:'СЭЗ Поти: обновлённые условия для резидентов 2025', n2_text:'Свободная индустриальная зона Поти расширила список разрешённых видов деятельности. Нулевой НДС и нулевая пошлина сохраняются.', n3_title:'Изменение ставок акциза на автомобили: что важно знать', n3_text:'С июня 2025 года акцизный налог на ввоз автомобилей старше 8 лет вырос. Уточните детали оформления до подачи декларации.',
+    news_label:'Актуально', news_title:'Новости таможни и перевозок', news_sub:'Изменения в законодательстве, ставки пошлин, практические советы импортёрам', news_read:'Подробнее', ntag_customs:'Таможня', ntag_port:'Порт Поти', ntag_duty:'Пошлины', n1_title:'Новые правила ввоза товаров из Китая через Грузию', n1_text:'Служба доходов Грузии обновила процедуру декларирования грузов из КНР: расширен перечень товаров, требующих сертификата происхождения.', n2_title:'СЭЗ Поти: обновлённые условия для резидентов 2025', n2_text:'Свободная индустриальная зона Поти расширила список разрешённых видов деятельности. Нулевой НДС и нулевая пошлина сохраняются.', n3_title:'Изменение ставок акциза на автомобили: что важно знать', n3_text:'С июня 2025 года акцизный налог на ввоз автомобилей старше 8 лет вырос. Рассчитайте стоимость ввоза до подачи декларации.',
     stat1:'Грузов оформлено', stat2:'Лет на рынке', stat3:'AI-поддержка',
     card_title:'Наши услуги',
     svc1_name:'Таможенное оформление', svc1_sub:'Импорт, экспорт, транзит',
@@ -838,7 +942,7 @@ const LANGS = {
     sc1_tag:'Основное', sc1_title:'Таможенное оформление', sc1_desc:'Полное сопровождение груза через таможню Грузии. Декларирование, расчёт пошлин, подача документов.',
     sc2_tag:'Точность', sc2_title:'Классификация и HS-коды', sc2_desc:'Правильная классификация товара = минимальная ставка пошлины. Найдём оптимальный HS-код.',
     sc3_tag:'Документы', sc3_title:'Сертификация товаров', sc3_desc:'Получение разрешений, сертификатов соответствия, фитосанитарных и ветеринарных заключений.',
-    sc4_tag:'СИЗ', sc4_title:'Сопровождение резидентов СИЗ', sc4_desc:'Таможенное оформление на въезде и выезде из зон Поти и Кутаиси. Растаможка при выходе в Грузию, реэкспорт в СНГ, доставка через собственную логистику.',
+    sc4_tag:'Льготы', sc4_title:'Регистрация в СЭЗ', sc4_desc:'СЭЗ Поти и Кутаиси: 0% НДС, 0% пошлин для реэкспорта. Поможем зарегистрироваться.',
     sc5_tag:'Транзит', sc5_title:'Транзитное оформление', sc5_desc:'Грузия — ключевой транзитный коридор. Оформляем транзит через все КПП.',
     sc6_tag:'Защита', sc6_title:'Споры и апелляции', sc6_desc:'Оспариваем решения таможни, помогаем при задержаниях и штрафах.',
     sec_how_tag:'Процесс', sec_how_title:'Как мы работаем', sec_how_desc:'Прозрачный процесс от заявки до получения груза.',
@@ -859,7 +963,7 @@ const LANGS = {
     sec_faq_tag:'Частые вопросы', sec_faq_desc:'Или спросите Ану — она ответит сразу и бесплатно.',
     faq1_q:'Сколько стоит растаможка в Грузии?', faq1_a:'Таможенная пошлина: 0%, 5% или 12%. НДС 18%. Услуги — от 150 GEL. Точно рассчитаем за 30 минут.',
     faq2_q:'Какие документы нужны для импорта?', faq2_a:'Инвойс, упаковочный лист, транспортные документы, сертификат происхождения. Для ряда товаров — дополнительные разрешения.',
-    faq3_q:'Что такое СЭЗ Поти и кому это выгодно?', faq3_a:'СЭЗ Поти и Кутаиси — это 0% НДС, 0% пошлин, 0% налога на прибыль для операций внутри зоны. Мы берём на себя таможенное оформление при ввозе и выводе товаров, растаможку при выходе на рынок Грузии, реэкспорт в Россию, Армению, Казахстан и СНГ. Нужна регистрация в зоне — подключим проверенного партнёра по корпоративному праву.',
+    faq3_q:'Что такое СЭЗ Поти и кому это выгодно?', faq3_a:'СЭЗ Поти: 0% НДС, 0% пошлин, 0% налога на прибыль внутри зоны. Идеально для реэкспортёров и дистрибьюторов.',
     faq4_q:'Как долго идёт таможенное оформление?', faq4_a:'Стандартное — 1-3 рабочих дня. Срочное — 1 день. Готовим документы заранее чтобы избежать задержек.',
     faq5_q:'Работаете ли вы с физическими лицами?', faq5_a:'Да. Ввоз авто, личных вещей при переезде, коммерческих партий без открытия ИП.',
     faq6_q:'Что делать, если груз задержала таможня?', faq6_a:'Пишите в чат — реагируем в течение часа. Готовим ответ или апелляцию. В большинстве случаев решаем без штрафов.',
@@ -1023,7 +1127,7 @@ const LANGS = {
     sec_faq_tag:'FAQ', sec_faq_desc:'Or ask Ana — she answers instantly and for free.',
     faq1_q:'How much does customs clearance cost in Georgia?', faq1_a:'Customs duty: 0%, 5%, or 12% depending on HS code. VAT 18%. Our services from 150 GEL. Exact cost calculated within 30 minutes.',
     faq2_q:'What documents are needed for import?', faq2_a:'Standard package: invoice, packing list, bill of lading/CMR/airway bill, certificate of origin. Some goods require additional permits.',
-    faq3_q:'What is Poti FIZ and who benefits?', faq3_a:'Poti & Kutaisi FIZ: 0% VAT, 0% duties, 0% income tax on operations inside the zone. We handle customs clearance on entry/exit, re-export to Russia, Armenia, Kazakhstan and Central Asia, and delivery via Cargo Rapido logistics. Need company registration? We connect you with a trusted legal partner.',
+    faq3_q:'What is Poti FIZ and who benefits?', faq3_a:'Poti Free Industrial Zone: 0% VAT, 0% duties, 0% income tax on operations within the zone. Ideal for re-exporters and distributors.',
     faq4_q:'How long does customs clearance take?', faq4_a:'Standard: 1-3 business days with all documents. Urgent: 1 day. We prepare documents in advance to avoid delays.',
     faq5_q:'Do you work with individuals?', faq5_a:'Yes — vehicle imports, personal belongings, commercial shipments without a registered company.',
     faq6_q:'What to do if customs has detained your cargo?', faq6_a:'Contact us immediately — we respond within 1 hour. We prepare a response or appeal. Most cases resolved without fines.',
@@ -1122,64 +1226,48 @@ function submitForm(btn) {
 let chatOpen = false, isTyping = false;
 let chatHistory = [];
 
-const GEMINI_KEY = document.querySelector('meta[name="gk"]')?.content || '';
+const GEMINI_KEY = "__GEMINI_KEY__"; // placeholder
 
-const SYSTEM_PROMPT_BASE = `Ты — Ана, AI-консультант по таможенному оформлению компании CustomBroker Georgia.
+const SYSTEM_PROMPT = `Ты — Анна, консультант CustomBroker Georgia по таможенному оформлению в Грузии.
 
-КОМПАНИЯ: Таможенный брокер в Грузии, 8+ лет опыта, 1200+ успешных оформлений.
-Телефон / WhatsApp: +995 596 616 611 | Email: custombroker.ge@gmail.com
+РОЛЬ: Дружелюбная, конкретная. Отвечай коротко — 2–5 предложений. Отвечай на языке клиента (RU/GE/EN).
 
-СТИЛЬ: Отвечай на языке клиента (русский/английский/грузинский). Коротко и по делу. Профессиональный тон.
+КЛЮЧЕВЫЕ ФАКТЫ (Грузия):
+- Таможенные пошлины: 0%, 5% или 12% в зависимости от HS-кода
+- НДС на импорт: 18% от таможенной стоимости (CIF)
+- Акцизы: алкоголь, табак, автомобили, топливо
+- СЭЗ Поти и Кутаиси: 0% пошлины, 0% НДС, 0% налог на прибыль
+- Стандартные документы: инвойс, упаковочный лист, транспортный документ (CMR/B/L/AWB)
+- Доп. документы: сертификат происхождения, фитосанитарные/ветеринарные заключения
 
-═══════════════════════════════════════════════════════
-КРИТИЧЕСКИ ВАЖНЫЕ ПРАВИЛА — ОБЯЗАТЕЛЬНЫ В КАЖДОМ ОТВЕТЕ:
-═══════════════════════════════════════════════════════
+ПРАВИЛА ПОВЕДЕНИЯ:
+1. Цены — только ориентировочные (от 150 ₾ простая декларация, от 300 ₾ стандарт, от 450 ₾ сложное). НЕ давать точный расчёт пошлин/НДС — только ориентир + "пришлём расчёт за 30 минут"
+2. Если ответа нет в базе — честно: "уточню у специалиста", предложи оставить контакт
+3. НЕ давать юридических гарантий ("груз точно пропустят")
+4. НЕ консультировать по обходу санкций и занижению стоимости
+5. НЕ выдумывать ставки и статьи законов
+6. Вопросы не по теме (визы, ВНЖ, недвижимость) → "мы занимаемся только таможней"
+7. Один вопрос за раз, не анкета
 
-1. ЦИТИРОВАНИЕ ИСТОЧНИКОВ — ОБЯЗАТЕЛЬНО:
-   Каждый факт о ставках, требованиях или процедурах ДОЛЖЕН сопровождаться ссылкой на источник.
-   Формат: [Источник: Название документа — URL]
-   Пример: "Ставка НДС на импорт — 18% [Источник: Налоговый кодекс Грузии, ст.168 — matsne.gov.ge]"
+ЦЕЛЕВОЕ ДЕЙСТВИЕ — каждый диалог вести к заявке:
+Собрать: (1) что за товар, (2) откуда и куда, (3) стоимость партии, (4) контакт (телефон/Telegram/email)
+После сбора: "Передаю специалисту, расчёт пришлём в течение 30 минут в рабочее время"
 
-2. ЗАПРЕТ НА УГАДЫВАНИЕ:
-   НИКОГДА не называй ставки пошлин, НДС, акцизов, перечни документов из "общих знаний".
-   Используй ТОЛЬКО информацию из базы знаний ниже или признавайся: "Уточню актуальные данные у специалиста."
+ТИПОВЫЕ СЦЕНАРИИ:
+- "Сколько стоит растаможить X?" → ориентир из прайса + 1-2 уточняющих вопроса → заявка
+- "Какие документы нужны?" → перечень + предложить бесплатную проверку комплекта
+- "Что с моим грузом на границе?" → сочувствие, не гадать о причинах → срочная связь со специалистом
+- Вопрос про СЭЗ → спросить "продаёте внутрь Грузии или реэкспорт?"
+- Перевозчик про T1 → схема в 2 предложениях → тариф для парка → заявка
 
-3. ПРЕДУПРЕЖДЕНИЕ О ДАТЕ:
-   Если блок базы знаний старше 90 дней от сегодня (last_verified) — добавь:
-   "⚠️ Данные верифицированы {дата} — рекомендуем уточнить актуальность."
-
-4. ЦЕЛЬ КАЖДОГО ДИАЛОГА — привести к заявке:
-   Шаг 1: Понять товар, маршрут, объём
-   Шаг 2: Дать ориентир из базы знаний + источник
-   Шаг 3: Предложить точный расчёт за 30 минут
-   Шаг 4: Запросить контакт → "Передаю специалисту — расчёт пришлём за 30 минут (9:00–18:00 Тбилиси)"
-
-5. ЗАПРЕЩЕНО: юридические гарантии, консультации по занижению стоимости, обход санкций.
-
-УСЛУГИ И ЦЕНЫ:
-- Простая декларация (1 HS-код): от 150 ₾
-- Стандартное оформление: от 300 ₾  
-- Сложное/многопозиционное: от 450 ₾
-- Срочное оформление: +50% к тарифу
-- Определение HS-кода: от 50 ₾
-- Консультация устная: бесплатно
-
-БАЗА ЗНАНИЙ ПО ТЕКУЩЕМУ ЗАПРОСУ:
-{KB_CONTEXT}
-
-Если база знаний не содержит ответа на вопрос — честно скажи об этом и предложи бесплатную консультацию со специалистом.`;
-
-function buildSystemPrompt(kbContext) {
-  return SYSTEM_PROMPT_BASE.replace('{KB_CONTEXT}', kbContext || 'Нет релевантных данных в базе. Предложи консультацию со специалистом.');
-}
+EMAIL для заявок: custombroker.ge@gmail.com`;
 
 function toggleChat() {
   chatOpen = !chatOpen;
   var win = document.getElementById('chatWindow');
   win.classList.toggle('open', chatOpen);
+  // Явный display для надёжности на всех мобильных браузерах
   win.style.display = chatOpen ? 'flex' : 'none';
-  // CSS-класс на body прячет floating кнопку когда чат открыт
-  document.body.classList.toggle('chat-active', chatOpen);
   document.getElementById('chatIcon').innerHTML = chatOpen ? '<i class="fa-solid fa-xmark" style="font-size:22px;color:var(--gold)"></i>' : '<i class="fa-solid fa-comment-dots" style="font-size:26px;color:var(--gold)"></i>';
   if(chatOpen) document.getElementById('chatBadge').style.display = 'none';
 }
@@ -1340,7 +1428,7 @@ const FAQ_KB = {
   ru: [
     {k:['стоимость','цена','сколько стоит','стоит'],a:'Таможенная пошлина в Грузии: 0%, 5% или 12% в зависимости от HS-кода. НДС 18%. Наши услуги — от 150 GEL за стандартное оформление. Чтобы получить точную стоимость — опишите товар и страну отправки, рассчитаем за 30 минут. 📋'},
     {k:['документ','инвойс','что нужно','пакет'],a:'Стандартный пакет: инвойс, упаковочный лист, транспортные документы (CMR/B&L/авианакладная), сертификат происхождения. Для некоторых товаров — дополнительные разрешения Минздрава, фитосанитарные заключения. Уточните товар — скажу точно.'},
-    {k:['сэз','поти','кутаиси','свободная зона','fiz','fez'],a:'СЭЗ Поти и Кутаиси — 0% НДС, 0% пошлин, 0% налога на прибыль для операций внутри зоны. Идеально для реэкспортёров и дистрибьюторов через Грузию. Таможенное сопровождение резидентов, реэкспорт в СНГ — возьмём на себя. Регистрация в зоне — через партнёра. 🏭'},
+    {k:['сэз','поти','кутаиси','свободная зона','fiz','fez'],a:'СЭЗ Поти и Кутаиси — 0% НДС, 0% пошлин, 0% налога на прибыль для операций внутри зоны. Идеально для реэкспортёров и дистрибьюторов через Грузию. Поможем зарегистрироваться. 🏭'},
     {k:['срок','долго','сколько дней','время'],a:'Стандартное оформление — 1-3 рабочих дня при наличии всех документов. Срочное — 1 день. Мы заранее готовим пакет, чтобы исключить задержки. ⚡'},
     {k:['физическ','физлицо','частное лицо','физик'],a:'Да, работаем с физическими лицами. Ввоз автомобилей, личных вещей при переезде, коммерческих партий без ИП. Пишите — разберём ваш случай.'},
     {k:['задержал','задержан','арестован','проблема','штраф'],a:'Если груз задержала таможня — свяжитесь с нами срочно: реагируем в течение часа. Анализируем причину, готовим ответ или апелляцию. В большинстве случаев решаем без штрафов. 📞'},
@@ -1356,7 +1444,7 @@ const FAQ_KB = {
   en: [
     {k:['cost','price','how much','fee'],a:'Georgian customs duties: 0%, 5%, or 12% depending on HS code. VAT 18%. Our services from 150 GEL. Describe your goods and origin country — we will calculate the exact cost in 30 minutes. 📋'},
     {k:['document','invoice','need','require'],a:'Standard package: commercial invoice, packing list, transport documents (CMR/B/L/AWB), certificate of origin. Some goods require additional permits. Tell us your product — we will confirm.'},
-    {k:['fiz','fez','poti','free zone','kutaisi'],a:'Poti & Kutaisi FIZ: 0% VAT, 0% duties, 0% income tax on operations within the zone. Perfect for re-exporters and distributors. We handle customs clearance and re-export to CIS. Company registration — through our legal partner. 🏭'},
+    {k:['fiz','fez','poti','free zone','kutaisi'],a:'Poti & Kutaisi FIZ: 0% VAT, 0% duties, 0% income tax on operations within the zone. Perfect for re-exporters and distributors. We can help you register. 🏭'},
     {k:['time','long','days','duration','fast'],a:'Standard clearance: 1-3 business days with full documents. Urgent: 1 day. We prepare the package in advance to avoid delays. ⚡'},
     {k:['detained','stuck','held','penalty','fine'],a:'If customs detained your cargo — contact us immediately, we respond within 1 hour. We prepare a response or appeal. Most cases resolved without fines. 📞'},
   ]
@@ -1371,7 +1459,7 @@ function _faqAnswer(text) {
   }
   // Default
   const defaults = {
-    ru: 'Хороший вопрос! Наши специалисты готовы ответить детально. Напишите нам напрямую или оставьте заявку — ответим в течение 30 минут. 📞 +995 596 616 611',
+    ru: 'Хороший вопрос! Наши специалисты готовы ответить детально. Напишите нам напрямую или оставьте заявку — ответим в течение 30 минут. 📞 +995 32 XXX XX XX',
     ge: 'კარგი კითხვაა! ჩვენი სპეციალისტები 30 წუთში გიპასუხებთ. მოგვწერეთ პირდაპირ. 📞',
     en: 'Great question! Our specialists will respond in detail within 30 minutes. Leave a request or contact us directly. 📞'
   };
@@ -1386,38 +1474,14 @@ async function sendMsg() {
   addMsg('user', text);
   isTyping = true; showTyping();
 
-  // 1. Ищем релевантные блоки в базе знаний
-  let kbContext = '';
-  if (typeof kb_search !== 'undefined') {
-    const kbResults = kb_search(text, 4);
-    kbContext = kb_format_context(kbResults);
-    // Предупреждение об устаревших данных (>90 дней)
-    const today = new Date();
-    kbResults.forEach(r => {
-      const verified = new Date(r.last_verified);
-      const daysDiff = Math.floor((today - verified) / 86400000);
-      if (daysDiff > 90) {
-        kbContext += `
-⚠️ Блок "${r.id}" верифицирован ${r.last_verified} — рекомендуем уточнить актуальность.`;
-      }
-    });
-  }
-
-  // 2. Формируем промпт с базой знаний
-  const systemPromptWithKB = buildSystemPrompt(kbContext);
-
-  // 3. Вызов Gemini с доказательным промптом
+  // Try Gemini first
   if(GEMINI_KEY && GEMINI_KEY !== '__GEMINI_KEY__') {
     try {
       chatHistory.push({role:'user', parts:[{text}]});
       const res = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_KEY}`,
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_KEY}`,
         {method:'POST', headers:{'Content-Type':'application/json'},
-         body: JSON.stringify({
-           system_instruction:{parts:[{text:systemPromptWithKB}]},
-           contents:chatHistory,
-           generationConfig:{maxOutputTokens:900,temperature:0.3,thinkingConfig:{thinkingBudget:0}}
-         })}
+         body: JSON.stringify({system_instruction:{parts:[{text:SYSTEM_PROMPT}]}, contents:chatHistory, generationConfig:{maxOutputTokens:400,temperature:0.7}})}
       );
       const data = await res.json();
       const reply = data?.candidates?.[0]?.content?.parts?.[0]?.text;
@@ -1426,22 +1490,22 @@ async function sendMsg() {
         removeTyping(); addMsg('bot', reply);
         isTyping = false; return;
       }
-    } catch(e) { console.error('Gemini error:', e); }
+    } catch(e) {}
   }
 
-  // 4. Fallback — HS lookup или FAQ
-  const hsKeywords = ['hs код', 'hs-код', 'тн вэд', 'hs code', 'классификаци', 'код товара'];
-  const wantsHs = hsKeywords.some(kw => text.toLowerCase().includes(kw));
-  if(wantsHs) {
-    const hsItem = _hsLookup(text);
-    if(hsItem) {
-      await new Promise(r => setTimeout(r, 400));
-      removeTyping(); addMsg('bot', _formatHsAnswer(hsItem, currentLang));
-      isTyping = false; return;
-    }
+  // HS Code lookup
+  const hsItem = _hsLookup(text);
+  if(hsItem) {
+    await new Promise(r => setTimeout(r, 500 + Math.random()*400));
+    const hsReply = _formatHsAnswer(hsItem, currentLang);
+    removeTyping(); addMsg('bot', hsReply);
+    isTyping = false; return;
   }
-  await new Promise(r => setTimeout(r, 500));
-  removeTyping(); addMsg('bot', _faqAnswer(text));
+
+  // Fallback — smart FAQ
+  await new Promise(r => setTimeout(r, 600 + Math.random()*600));
+  const reply = _faqAnswer(text);
+  removeTyping(); addMsg('bot', reply);
   isTyping = false;
 }
 
@@ -1532,36 +1596,128 @@ window.openChat = openChat;
 window.toggleChat = toggleChat;
 window.sendMsg = sendMsg;
 window.quickAsk = quickAsk;
-
-window.showScenario = function showScenario(type) {
-  const scenarios = {
-    classify: 'Помогите классифицировать товар по ТН ВЭД и узнать ставку пошлины. Товар: ',
-    duty: 'Рассчитайте таможенные платежи (пошлина + НДС + акциз) для: ',
-    docs: 'Какие документы нужны для импорта в Грузию? Товар/маршрут: ',
-    sez: 'Расскажите про СЭЗ/ФИЗ Поти — условия, льготы, как оформить груз без пошлин.',
-    restrict: 'Есть ли ограничения или запреты на ввоз/вывоз? Товар: '
-  };
-  const text = scenarios[type] || '';
-  const input = document.getElementById('chatInput');
-  input.value = text;
-  input.focus();
-  document.getElementById('quickButtons').style.display = 'none';
-  if (!['sez'].includes(type)) {
-    // Для сценариев с готовым вопросом (СЭЗ) — сразу отправляем
-  } else {
-    sendMsg();
-  }
-};
 window.setLang = setLang;
 window.toggleFaq = toggleFaq;
 window.submitForm = submitForm;
+
+// ─── CAR CUSTOMS CALCULATOR ───
+window.calcCar = function calcCar() {
+  const year = parseInt(document.getElementById('cc-year').value);
+  const engine = parseInt(document.getElementById('cc-engine').value);
+  const priceUSD = parseFloat(document.getElementById('cc-price').value);
+  const opType = document.getElementById('cc-type').value;
+  const owner = document.querySelector('input[name="cc-owner"]:checked').value;
+  const res = document.getElementById('cc-result');
+
+  if(!year || !engine || !priceUSD) {
+    res.innerHTML = '<div style="color:#e74c3c;font-size:13px;padding:10px;background:#fff5f5;border-radius:8px">⚠️ Заполните все поля</div>';
+    return;
+  }
+  if(year < 1990 || year > 2026) {
+    res.innerHTML = '<div style="color:#e74c3c;font-size:13px;padding:10px;background:#fff5f5;border-radius:8px">⚠️ Год выпуска: 1990–2026</div>';
+    return;
+  }
+
+  const USD = 2.73; // примерный курс
+  const priceGEL = priceUSD * USD;
+  const age = 2026 - year;
+
+  let duty = 0;
+  let excise = 0;
+  let vat = 0;
+  let brokerFee = 300;
+  let notes = [];
+
+  if(opType === 'reexport') {
+    // Реэкспорт — пошлина и акциз 0, только НДС не начисляется
+    duty = 0; excise = 0; vat = 0;
+    brokerFee = 300;
+    notes.push('При реэкспорте пошлина, акциз и НДС не начисляются');
+  } else if(opType === 'export') {
+    duty = 0; excise = 0; vat = 0;
+    brokerFee = 200;
+    notes.push('При экспорте таможенные платежи не начисляются');
+  } else {
+    // Импорт
+    // Пошлина: 0% для легковых авто
+    duty = 0;
+
+    // Акциз зависит от объёма двигателя и возраста (ст. 188 НК Грузии)
+    let excisePerCC = 0;
+    if(engine <= 1800) {
+      if(age <= 3) excisePerCC = 0.05;
+      else if(age <= 7) excisePerCC = 0.10;
+      else excisePerCC = 0.20;
+    } else if(engine <= 3000) {
+      if(age <= 3) excisePerCC = 0.10;
+      else if(age <= 7) excisePerCC = 0.20;
+      else excisePerCC = 0.40;
+    } else {
+      if(age <= 3) excisePerCC = 0.20;
+      else if(age <= 7) excisePerCC = 0.40;
+      else excisePerCC = 0.80;
+    }
+    excise = Math.round(engine * excisePerCC);
+
+    // НДС 18% от (таможенная стоимость + пошлина + акциз)
+    vat = Math.round((priceGEL + duty + excise) * 0.18);
+
+    if(owner === 'legal') {
+      brokerFee = 450;
+      notes.push('Для юрлица — НДС можно зачесть как входящий');
+    } else {
+      brokerFee = 300;
+    }
+
+    if(age > 8) notes.push('⚠️ Авто старше 8 лет — повышенный акциз');
+    if(engine > 3000) notes.push('⚠️ Объём > 3000 куб.см — максимальная ставка акциза');
+  }
+
+  const total = duty + excise + vat;
+  const grandTotal = total + brokerFee;
+
+  const fmt = n => n.toLocaleString('ru-RU');
+
+  res.innerHTML = `
+    <div style="background:linear-gradient(135deg,var(--navy) 0%,#1a3a6e 100%);border-radius:14px;padding:20px;color:#fff">
+      <div style="font-size:13px;opacity:.75;margin-bottom:16px;text-align:center">Предварительный расчёт · курс USD/GEL ~${USD}</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px">
+        <div style="background:rgba(255,255,255,.1);border-radius:10px;padding:12px;text-align:center">
+          <div style="font-size:10px;opacity:.7;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Пошлина</div>
+          <div style="font-size:20px;font-weight:800">${fmt(duty)} ₾</div>
+        </div>
+        <div style="background:rgba(255,255,255,.1);border-radius:10px;padding:12px;text-align:center">
+          <div style="font-size:10px;opacity:.7;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Акциз</div>
+          <div style="font-size:20px;font-weight:800;${excise>1000?'color:#f7b731':''}">${fmt(excise)} ₾</div>
+        </div>
+        <div style="background:rgba(255,255,255,.1);border-radius:10px;padding:12px;text-align:center">
+          <div style="font-size:10px;opacity:.7;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">НДС (18%)</div>
+          <div style="font-size:20px;font-weight:800">${fmt(vat)} ₾</div>
+        </div>
+        <div style="background:rgba(255,255,255,.1);border-radius:10px;padding:12px;text-align:center">
+          <div style="font-size:10px;opacity:.7;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Услуги брокера</div>
+          <div style="font-size:20px;font-weight:800;color:#f7b731">от ${fmt(brokerFee)} ₾</div>
+        </div>
+      </div>
+      <div style="background:rgba(255,255,255,.15);border-radius:10px;padding:14px;text-align:center;margin-bottom:${notes.length?'12px':'0'}">
+        <div style="font-size:11px;opacity:.75;margin-bottom:4px">ИТОГО (налоги + брокер)</div>
+        <div style="font-size:28px;font-weight:900;color:#f7b731">${fmt(grandTotal)} ₾</div>
+        <div style="font-size:11px;opacity:.6;margin-top:2px">≈ ${fmt(Math.round(grandTotal/USD))} USD</div>
+      </div>
+      ${notes.length ? '<div style="font-size:12px;opacity:.75;line-height:1.6">' + notes.map(n=>'• '+n).join('<br>') + '</div>' : ''}
+    </div>
+    <a href="#contact" onclick="closeMenu()"
+      style="display:block;margin-top:12px;text-align:center;background:var(--gold);color:var(--navy);font-weight:700;padding:12px;border-radius:10px;text-decoration:none;font-size:14px">
+      📋 Получить точный расчёт от брокера
+    </a>
+  `;
+}
 
 window.toggleMenu = toggleMenu;
 window.closeMenu = closeMenu;
 
 </script>
 
-<script src="knowledge_base.js?v=1782061953"></script>
 <script>
 // Service cards tap for mobile
 (function(){
